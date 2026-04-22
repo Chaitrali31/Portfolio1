@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Chaitrali Borade — Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0e0d; --accent: #c8522a; --accent2: #e8a87c; --muted: #7a6e66;
+    --bg: #faf8f5; --rule: #e0d8d0; --sidebar: #1e1a17; --sidebar-text: #f5f0eb; --sidebar-muted: #b0a89e;
+    --col-left: 250px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #e8e0d8;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+  .toolbar {
+    position: fixed; top: 0; left: 0; right: 0;
+    background: var(--ink); color: #fff;
+    display: flex; align-items: center; gap: 12px;
+    padding: 10px 24px; z-index: 100;
+    font-family: 'Inter', sans-serif; font-size: 13px;
+  }
+  .toolbar-title { font-weight: 600; margin-right: 8px; color: var(--accent2); }
+  .toolbar-hint { color: #aaa; font-size: 12px; flex: 1; }
+  .btn {
+    background: var(--accent); color: #fff; border: none;
+    border-radius: 5px; padding: 7px 18px; font-size: 13px;
+    font-family: 'Inter', sans-serif; font-weight: 600;
+    cursor: pointer; transition: background 0.2s;
+  }
+  .btn:hover { background: #a8431f; }
+  .page {
+    background: var(--bg);
+    width: 920px; max-width: 100%; margin-top: 60px;
+    display: grid; grid-template-columns: var(--col-left) 1fr;
+    min-height: 1100px;
+    box-shadow: 0 20px 80px rgba(0,0,0,0.25); overflow: hidden;
+  }
+  .sidebar {
+    background: var(--sidebar); color: var(--sidebar-text);
+    padding: 40px 24px; display: flex; flex-direction: column;
+    gap: 26px; position: relative;
+  }
+  .sidebar::after {
+    content: ''; position: absolute;
+    top: 0; right: -1px; bottom: 0; width: 3px;
+    background: linear-gradient(180deg, var(--accent) 0%, transparent 60%);
+  }
+  .photo-wrap {
+    width: 108px; height: 108px; border-radius: 50%;
+    border: 3px solid var(--accent); overflow: hidden;
+    margin: 0 auto 4px; flex-shrink: 0;
+    box-shadow: 0 4px 20px rgba(200,82,42,0.3);
+  }
+  .photo-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+  .name-block { text-align: center; }
+  .name-block h1 {
+    font-family: 'Playfair Display', serif; font-size: 20px;
+    font-weight: 900; line-height: 1.2; color: #fff;
+  }
+  .name-block .tagline {
+    font-size: 10px; font-weight: 500; color: var(--accent2);
+    margin-top: 6px; text-transform: uppercase; letter-spacing: 0.1em; line-height: 1.6;
+  }
+  .s-section-title {
+    font-size: 9px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.18em; color: var(--accent);
+    border-bottom: 1px solid #2e2a26; padding-bottom: 7px; margin-bottom: 11px;
+  }
+  .contact-list { display: flex; flex-direction: column; gap: 7px; }
+  .contact-item {
+    font-size: 11px; color: var(--sidebar-muted);
+    display: flex; gap: 7px; align-items: flex-start; line-height: 1.4;
+  }
+  .contact-icon { color: var(--accent); font-size: 11px; flex-shrink: 0; margin-top: 1px; }
+  .contact-link {
+    color: var(--sidebar-muted); text-decoration: none;
+    word-break: break-all; transition: color 0.15s;
+  }
+  .contact-link:hover { color: var(--accent2); text-decoration: underline; }
+  .skill-group { margin-bottom: 8px; }
+  .skill-group-label {
+    font-size: 9px; font-weight: 700; color: var(--sidebar-muted);
+    text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px;
+  }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+  .skill-tag {
+    background: #2a2520; color: #d8cfc8; font-size: 9.5px;
+    padding: 3px 6px; border-radius: 3px; border: 1px solid #3a3530; line-height: 1.4;
+  }
+  .lang-item { display: flex; flex-direction: column; gap: 2px; margin-bottom: 9px; }
+  .lang-name { font-size: 12px; color: var(--sidebar-text); font-weight: 600; }
+  .lang-level { font-size: 10px; color: var(--sidebar-muted); }
+  .lang-bar { height: 3px; background: #2a2520; border-radius: 2px; margin-top: 4px; overflow: hidden; }
+  .lang-fill { height: 100%; background: var(--accent); border-radius: 2px; }
+  .main {
+    padding: 40px 36px 40px 32px;
+    display: flex; flex-direction: column; gap: 24px;
+  }
+  .main-header { border-bottom: 2px solid var(--ink); padding-bottom: 16px; }
+  .main-header h2 {
+    font-family: 'Playfair Display', serif; font-size: 33px;
+    font-weight: 900; letter-spacing: -0.02em; color: var(--ink); line-height: 1.1;
+  }
+  .main-header .sub {
+    font-size: 11.5px; color: var(--muted); margin-top: 5px;
+    font-weight: 400; letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  .header-pills {
+    display: flex; flex-wrap: wrap; gap: 7px; margin-top: 11px;
+  }
+  .pill {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: 10.5px; font-weight: 600;
+    padding: 4px 11px; border-radius: 20px; line-height: 1.3;
+  }
+  .pill-green { background: #edf7ee; border: 1px solid #b0d9b5; color: #2e7d3f; }
+  .pill-slate { background: #eef2f8; border: 1px solid #b8c8e0; color: #2a4570; }
+  .pill-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+  .pill-green .pill-dot { background: #2e7d3f; }
+  .pill-slate .pill-dot { background: #2a4570; }
+  .section-title {
+    font-size: 9px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.2em; color: var(--accent);
+    display: flex; align-items: center; gap: 10px; margin-bottom: 16px;
+  }
+  .section-title::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+  .job { margin-bottom: 18px; }
+  .job:last-child { margin-bottom: 0; }
+  .job-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 2px; }
+  .job-title {
+    font-family: 'Playfair Display', serif; font-size: 13.5px;
+    font-weight: 700; color: var(--ink);
+  }
+  .job-period {
+    font-size: 10px; color: var(--muted); white-space: nowrap;
+    font-weight: 500; background: #f0ece8; padding: 2px 7px; border-radius: 3px;
+  }
+  .job-company {
+    font-size: 11px; color: var(--muted); margin-bottom: 8px;
+    display: flex; gap: 5px; align-items: center; flex-wrap: wrap;
+  }
+  .job-company .sep { color: var(--rule); }
+  .job-company .sector { color: var(--accent); font-weight: 600; font-size: 10px; }
+  .job-bullets { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+  .job-bullets li {
+    font-size: 11.5px; color: #3a3530; line-height: 1.6;
+    padding-left: 14px; position: relative;
+  }
+  .job-bullets li::before {
+    content: '▸'; position: absolute; left: 0;
+    color: var(--accent); font-size: 9px; top: 4px;
+  }
+  .metric { font-weight: 700; color: var(--accent); }
+  .bottom-cols {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+  }
+  .edu-item { margin-bottom: 10px; }
+  .edu-title { font-size: 12px; font-weight: 600; color: var(--ink); }
+  .edu-sub { font-size: 10.5px; color: var(--muted); margin-top: 2px; }
+  .edu-year { font-size: 10px; color: var(--muted); font-weight: 500; margin-top: 2px; }
+  .cert-main-item { margin-bottom: 10px; }
+  .cert-main-title { font-size: 12px; font-weight: 600; color: var(--ink); }
+  .cert-main-org { font-size: 10.5px; color: var(--muted); margin-top: 2px; }
+  [contenteditable] { outline: none; }
+  [contenteditable]:hover { background: rgba(200,82,42,0.05); border-radius: 2px; }
+  [contenteditable]:focus { background: rgba(200,82,42,0.08); border-radius: 2px; box-shadow: 0 0 0 1.5px var(--accent); }
+  .edit-hint {
+    position: fixed; bottom: 20px; right: 20px;
+    background: var(--ink); color: #ccc; font-size: 11px;
+    padding: 8px 14px; border-radius: 6px; opacity: 0.8;
+    pointer-events: none; font-family: 'Inter', sans-serif; transition: opacity 1s;
+  }
+  @media print {
+    body { background: none; padding: 0; }
+    .toolbar, .edit-hint { display: none; }
+    .page { margin: 0; box-shadow: none; width: 100%; }
+    [contenteditable]:hover, [contenteditable]:focus { background: none; box-shadow: none; }
+  }
+  @media (max-width: 768px) {
+    .page { grid-template-columns: 1fr; }
+    .sidebar { padding: 30px 20px; }
+    .main { padding: 30px 20px; }
+    .bottom-cols { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <span class="toolbar-title">✦ Resume</span>
+  <span class="toolbar-hint">Click any text to edit · Changes save in-browser</span>
+  <button class="btn" onclick="window.print()">🖨 Print / Save PDF</button>
+  <a href="index.html" class="btn" style="text-decoration:none;margin-left:8px;">← Back to Portfolio</a>
+</div>
+
+<div class="page">
+  <aside class="sidebar">
+    <div>
+      <div class="photo-wrap">
+        <img src="chaitrali-photo.jpeg" alt="Chaitrali Borade">
+      </div>
+      <div class="name-block" style="margin-top:12px">
+        <h1 contenteditable="true">Chaitrali<br>Borade</h1>
+        <div class="tagline" contenteditable="true">Social Media Manager<br>Content Strategy · Community<br>Campaign Management</div>
+      </div>
+    </div>
+
+    <div>
+      <div class="s-section-title">Contact</div>
+      <div class="contact-list">
+        <div class="contact-item"><span class="contact-icon">✉</span><a href="mailto:chaitrali.borade01@gmail.com" class="contact-link">chaitrali.borade01@gmail.com</a></div>
+        <div class="contact-item"><span class="contact-icon">☎</span><span contenteditable="true">+49 155 670 593 98</span></div>
+        <div class="contact-item"><span class="contact-icon">⌖</span><span contenteditable="true">Residenzstrasse, 13409 Berlin, Germany</span></div>
+        <div class="contact-item"><span class="contact-icon">in</span><a href="https://linkedin.com/in/chaitrali-borade" target="_blank" class="contact-link">linkedin.com/in/chaitrali-borade</a></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="s-section-title">Personal Details</div>
+      <div class="contact-list">
+        <div class="contact-item"><span class="contact-icon">◈</span><span contenteditable="true">Date of Birth: 31 January 1985</span></div>
+        <div class="contact-item"><span class="contact-icon">◈</span><span contenteditable="true">Place of Birth: Mumbai, India</span></div>
+        <div class="contact-item"><span class="contact-icon">◈</span><span contenteditable="true">Nationality: Indian</span></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="s-section-title">Skills & Tools</div>
+      <div class="skill-group">
+        <div class="skill-group-label">Platforms</div>
+        <div class="skill-tags">
+          <span class="skill-tag" contenteditable="true">Instagram</span>
+          <span class="skill-tag" contenteditable="true">Facebook</span>
+          <span class="skill-tag" contenteditable="true">YouTube</span>
+          <span class="skill-tag" contenteditable="true">LinkedIn</span>
+          <span class="skill-tag" contenteditable="true">Meta Business Suite</span>
+        </div>
+      </div>
+      <div class="skill-group" style="margin-top:7px">
+        <div class="skill-group-label">Content & Creative</div>
+        <div class="skill-tags">
+          <span class="skill-tag" contenteditable="true">Editorial Planning</span>
+          <span class="skill-tag" contenteditable="true">Reels &amp; Shorts</span>
+          <span class="skill-tag" contenteditable="true">Canva</span>
+          <span class="skill-tag" contenteditable="true">AI Workflows</span>
+        </div>
+      </div>
+      <div class="skill-group" style="margin-top:7px">
+        <div class="skill-group-label">Campaigns & Analytics</div>
+        <div class="skill-tags">
+          <span class="skill-tag" contenteditable="true">Meta Ads Manager</span>
+          <span class="skill-tag" contenteditable="true">Google Analytics</span>
+          <span class="skill-tag" contenteditable="true">A/B Testing</span>
+          <span class="skill-tag" contenteditable="true">Performance Reporting</span>
+        </div>
+      </div>
+      <div class="skill-group" style="margin-top:7px">
+        <div class="skill-group-label">CRM & Tools</div>
+        <div class="skill-tags">
+          <span class="skill-tag" contenteditable="true">Salesforce</span>
+          <span class="skill-tag" contenteditable="true">Locobuzz</span>
+          <span class="skill-tag" contenteditable="true">OneDirect CRM</span>
+          <span class="skill-tag" contenteditable="true">MS Excel (Adv.)</span>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="s-section-title">Languages</div>
+      <div class="lang-item">
+        <span class="lang-name" contenteditable="true">English</span>
+        <span class="lang-level" contenteditable="true">Native / C2</span>
+        <div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div>
+      </div>
+      <div class="lang-item">
+        <span class="lang-name" contenteditable="true">German</span>
+        <span class="lang-level" contenteditable="true">A2 (B1 in progress · VHS Berlin)</span>
+        <div class="lang-bar"><div class="lang-fill" style="width:25%"></div></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="main-header">
+      <h2 contenteditable="true">Social Media<br>Manager</h2>
+      <div class="sub" contenteditable="true">10+ Years driving brand growth, community & conversion</div>
+      <div class="header-pills">
+        <span class="pill pill-green"><span class="pill-dot"></span><span contenteditable="true">Available Immediately · Full-time · Berlin</span></span>
+        <span class="pill pill-slate"><span class="pill-dot"></span><span contenteditable="true">Valid residence permit · Unrestricted labour market access</span></span>
+      </div>
+    </div>
+
+    <section>
+      <div class="section-title">Experience</div>
+
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title" contenteditable="true">Social Media Manager</div>
+          <div class="job-period" contenteditable="true">Oct 2022 – Jan 2026</div>
+        </div>
+        <div class="job-company">
+          <span contenteditable="true">Kotak Mahindra Prime Ltd</span>
+          <span class="sep">·</span>
+          <span class="sector" contenteditable="true">Financial Services (NBFC)</span>
+          <span class="sep">·</span>
+          <span contenteditable="true">~8,500 employees · Mumbai</span>
+        </div>
+        <ul class="job-bullets"><li contenteditable="true">Partnered with Product, Legal, and Compliance to capture marketing requirements, refined positioning via competitor analysis, and built the editorial calendar — stakeholder-approved content deployed on schedule.</li><li contenteditable="true">Led agency collaboration on short-form video strategy (Reels, Shorts) and A/B testing — <b class='metric'>28% engagement growth</b> and <b class='metric'>22% QoQ CTR improvement</b>.</li><li contenteditable="true">Implemented AI-assisted production workflows and redesigned content funnel — <b class='metric'>35% reduction in turnaround time</b> and <b class='metric'>18% lift in lead-to-application conversion</b>.</li><li contenteditable="true">Planned departmental events and coordinated dealer network engagement to drive sales and strengthen partner relationships.</li></ul>
+      </div>
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title" contenteditable="true">Senior Manager – Social Media & CRM</div>
+          <div class="job-period" contenteditable="true">Jul 2019 – Oct 2022</div>
+        </div>
+        <div class="job-company">
+          <span contenteditable="true">Kotak Mahindra Bank Ltd</span>
+          <span class="sep">·</span>
+          <span class="sector" contenteditable="true">Banking</span>
+          <span class="sep">·</span>
+          <span contenteditable="true">~116,000 employees · Mumbai</span>
+        </div>
+        <ul class="job-bullets"><li contenteditable="true">Led ORM team managing community of <b class='metric'>1.5M+ Facebook</b> and <b class='metric'>271K+ Instagram</b> followers — adapted global brand messaging for regional audiences.</li><li contenteditable="true">Delivered <b class='metric'>+15% YoY improvement</b> in customer retention through community-led engagement programmes.</li><li contenteditable="true">Drove value-focused product storytelling resulting in <b class='metric'>12% increase</b> in cross-sell adoption.</li></ul>
+      </div>
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title" contenteditable="true">Team Leader – ORM & Social Media</div>
+          <div class="job-period" contenteditable="true">Oct 2016 – Mar 2019</div>
+        </div>
+        <div class="job-company">
+          <span contenteditable="true">Tata Business Support Services (Tata CLiQ)</span>
+          <span class="sep">·</span>
+          <span class="sector" contenteditable="true">E-Commerce</span>
+          <span class="sep">·</span>
+          <span contenteditable="true">~2,700 employees</span>
+        </div>
+        <ul class="job-bullets"><li contenteditable="true">Led ORM line of business — managed brand interactions across platforms, maintaining <b class='metric'>95%+ SLA adherence</b>.</li><li contenteditable="true">Supervised cross-channel teams (email, chat, inbound & outbound + ORM) — <b class='metric'>~20% improvement in CSAT</b>.</li><li contenteditable="true">Analysed social feedback and implemented structured resolution frameworks — <b class='metric'>~18% reduction</b> in negative sentiment.</li></ul>
+      </div>
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title" contenteditable="true">Team Leader – Customer Operations</div>
+          <div class="job-period" contenteditable="true">Aug 2015 – Jul 2016</div>
+        </div>
+        <div class="job-company">
+          <span contenteditable="true">ANI Technologies (Ola Cabs)</span>
+          <span class="sep">·</span>
+          <span class="sector" contenteditable="true">Logistics</span>
+          <span class="sep">·</span>
+          <span contenteditable="true">~7,000 employees</span>
+        </div>
+        <ul class="job-bullets"><li contenteditable="true">Led inbound/outbound call centre team — high service quality and consistent SLA adherence maintained.</li><li contenteditable="true">Supported launch of Ola Share — managed customer queries, onboarding comms and issue resolution during rollout.</li></ul>
+      </div>
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title" contenteditable="true">Subject Matter Expert – Communication Training</div>
+          <div class="job-period" contenteditable="true">Oct 2007 – Aug 2015</div>
+        </div>
+        <div class="job-company">
+          <span contenteditable="true">Sutherland Global Services</span>
+          <span class="sep">·</span>
+          <span class="sector" contenteditable="true">BPO & Digital Transformation</span>
+          <span class="sep">·</span>
+          <span contenteditable="true">~40,000 employees</span>
+        </div>
+        <ul class="job-bullets"><li contenteditable="true">Designed communication training programmes for customer support teams — <b class='metric'>25% improvement</b> in quality scores.</li><li contenteditable="true">Optimised scripts and service messaging — <b class='metric'>15% reduction</b> in handling time and <b class='metric'>18% improvement</b> in first-contact resolution.</li></ul>
+      </div>
+    </section>
+
+    <div class="bottom-cols">
+      <section>
+        <div class="section-title">Education</div>
+        <div class="edu-item">
+          <div>
+            <div class="edu-title" contenteditable="true">Bachelor's Degree</div>
+            <div class="edu-sub" contenteditable="true">Bharatiya Vidya Bhavan, Mumbai, India</div>
+          </div>
+          <div class="edu-year" contenteditable="true">2005</div>
+        </div>
+      </section>
+      <section>
+        <div class="section-title">Certifications</div>
+        <div class="cert-main-item">
+          <div class="cert-main-title" contenteditable="true">AI/ML for Geodata Analysis</div>
+          <div class="cert-main-org" contenteditable="true">ISRO (Indian Space Research Organisation) · 2024</div>
+        </div>
+        <div class="cert-main-item">
+          <div class="cert-main-title" contenteditable="true">Advanced Certificate – Digital Marketing & Communication</div>
+          <div class="cert-main-org" contenteditable="true">MICA (UpGrad) · 2022 · Modules: Social Media Strategy, Content Marketing, Performance Campaigns, Analytics</div>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+
+<div class="edit-hint" id="hint">✎ Click any text to edit</div>
+
+<script>
+  document.querySelectorAll('[contenteditable]').forEach((el, i) => {
+    const key = 'resume_en_v3_' + i;
+    try { const s = localStorage.getItem(key); if (s) el.innerHTML = s; } catch(e) {}
+    el.addEventListener('input', () => { try { localStorage.setItem(key, el.innerHTML); } catch(e) {} });
+  });
+  setTimeout(() => { const h = document.getElementById('hint'); if(h) h.style.opacity='0'; }, 4000);
+</script>
+</body>
+</html>
