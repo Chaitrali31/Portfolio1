@@ -965,12 +965,6 @@
   
   .contact-item a:hover { color: var(--accent-light); }
   
-  .contact-form {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 20px;
-    padding: 40px;
-  }
   
   
   
@@ -1010,7 +1004,7 @@
   
   /* Print */
   @media print {
-    nav, .hero-cta-group, .contact-form, footer { display: none; }
+    nav, .hero-cta-group, footer { display: none; }
     .hero { min-height: auto; padding: 40px 24px; }
     .hero-bg { background: white; }
     .hero-content { color: var(--ink); }
@@ -1070,7 +1064,8 @@
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <a href="mailto:chaitrali.borade01@gmail.com" class="nav-cta">Get in Touch</a>
+    <div style="display:flex;align-items:center;gap:12px;">
+        <a href="mailto:chaitrali.borade01@gmail.com" class="nav-cta">Get in Touch</a>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" style="background:none;border:none;cursor:pointer;padding:8px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background 0.2s;margin-left:16px;">
       <svg id="sunIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;color:var(--ink);">
         <circle cx="12" cy="12" r="5"></circle>
@@ -1087,6 +1082,7 @@
         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
       </svg>
     </button>
+    </div>
   </div>
 </nav>
 
