@@ -385,6 +385,9 @@
   
   .about-image {
     position: relative;
+    background: var(--cream);
+    border-radius: 16px;
+    min-height: 300px;
   }
   
   .about-image img {
@@ -654,20 +657,20 @@
   }
   
   .campaign-image {
-    height: 220px;
     background: var(--charcoal);
     position: relative;
     overflow: hidden;
+    border-radius: 16px 16px 0 0;
   }
-  
+
   .campaign-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    display: block;
     transition: transform 0.5s;
   }
-  
-  .campaign-card:hover .campaign-image img { transform: scale(1.05); }
+
+  .campaign-card:hover .campaign-image img { transform: scale(1.02); }
   
   .campaign-badge {
     position: absolute;
@@ -1142,7 +1145,7 @@
   </div>
   <div class="about-grid">
     <div class="about-image">
-      <img src="chembur-photo.png" alt="Chaitrali Borade - Social Media Manager">
+      <img src="chembur-photo.png" alt="Chaitrali Borade - Social Media Manager" style="display:block;">
     </div>
     <div class="about-text">
       <p>I am a Social Media Manager with <strong>10+ years of hands-on experience</strong> building brand communities, driving engagement, and converting social presence into measurable business outcomes. My career spans <strong>financial services (NBFC & Banking)</strong>, <strong>e-commerce</strong>, <strong>logistics</strong>, and <strong>BPO/digital transformation</strong> — giving me a unique ability to navigate complex stakeholder environments and regulated industries.</p>
