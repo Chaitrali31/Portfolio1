@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Chaitrali Borade — Performance Marketing & Social Media Specialist with 7+ years experience. Expert in Meta Ads, CTR/CPC optimisation, conversion funnels, and data-driven campaign execution. Based in Berlin, Germany.">
-<title>Chaitrali Borade — Performance Marketing & Social Media | Berlin</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="Chaitrali Borade — Customer Experience & Digital Operations. Berlin, Deutschland.">
+<meta name="author" content="Chaitrali Borade">
+<title>Chaitrali Borade — Customer Experience & Digital Operations | Berlin</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
+
   :root {
+    --bg: #faf8f5;
+    --surface: #ffffff;
     --ink: #0f0e0d;
     --charcoal: #1a1816;
     --slate: #3a3530;
     --muted: #7a6e66;
     --warm: #b0a89e;
     --cream: #f5f0eb;
-    --bg: #faf8f5;
+    --border: #e0d8d0;
     --accent: #c8522a;
     --accent-light: #e8a87c;
     --accent-dark: #a8431f;
@@ -22,1185 +26,1027 @@
     --success-bg: #edf7ee;
     --info: #2a4570;
     --info-bg: #eef2f8;
-    --border: #e0d8d0;
     --shadow: 0 4px 24px rgba(15,14,13,0.08);
     --shadow-lg: 0 20px 80px rgba(15,14,13,0.15);
+    --gradient-hero: linear-gradient(135deg, rgba(15,14,13,0.88) 0%, rgba(26,24,22,0.75) 50%, rgba(15,14,13,0.92) 100%);
+    --card-hover: translateY(-4px);
+  }
+
+  [data-theme="dark"] {
+    --bg: #0f0f1a;
+    --surface: #1a1a2e;
+    --ink: #f1f1f1;
+    --charcoal: #16213e;
+    --slate: #a0a0a0;
+    --muted: #7a7a9a;
+    --warm: #a0a0a0;
+    --cream: #1a1a2e;
+    --border: #2a2a4a;
+    --accent: #e94560;
+    --accent-light: #ff6b6b;
+    --accent-dark: #c73e54;
+    --success: #00d9a5;
+    --success-bg: rgba(0,217,165,0.1);
+    --info: #4a90e2;
+    --info-bg: rgba(74,144,226,0.1);
+    --shadow: 0 4px 24px rgba(0,0,0,0.4);
+    --shadow-lg: 0 20px 80px rgba(0,0,0,0.6);
+    --gradient-hero: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+    --card-hover: translateY(-4px);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
-
   body {
     font-family: 'Inter', sans-serif;
     background: var(--bg);
     color: var(--ink);
-    line-height: 1.6;
+    line-height: 1.55;
     overflow-x: hidden;
+    transition: background 0.4s, color 0.4s;
   }
-
-  /* Typography */
   h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
 
-  /* Navigation */
+  /* Language Toggle */
+  .lang-switch {
+    display: flex; gap: 8px; align-items: center; margin-right: 12px;
+  }
+  .lang-switch a {
+    font-size: 12px; font-weight: 600; text-decoration: none; color: var(--slate);
+    padding: 4px 8px; border-radius: 4px; transition: all 0.2s;
+  }
+  .lang-switch a.active { background: var(--accent); color: white; }
+  .lang-switch a:hover:not(.active) { color: var(--accent); }
+
+  /* Nav */
   nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
+    position: fixed; top: 0; left: 0; right: 0;
     background: rgba(250,248,245,0.92);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border);
     z-index: 1000;
-    padding: 0 24px;
+    transition: background 0.4s, border-color 0.4s;
   }
-
+  [data-theme="dark"] nav {
+    background: rgba(15,15,26,0.95);
+  }
   .nav-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 56px;
+    max-width: 1200px; margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: center;
+    height: 64px; padding: 0 24px;
   }
-
   .nav-logo {
     font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 18px;
-    color: var(--ink);
-    text-decoration: none;
+    font-weight: 700; font-size: 18px; color: var(--ink); text-decoration: none;
   }
-
   .nav-logo span { color: var(--accent); }
-
   .nav-links {
-    display: flex;
-    gap: 32px;
-    list-style: none;
+    display: flex; gap: 28px; list-style: none;
   }
-
   .nav-links a {
-    text-decoration: none;
-    color: var(--slate);
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    transition: color 0.2s;
-    position: relative;
+    text-decoration: none; color: var(--slate); font-size: 13px;
+    font-weight: 500; letter-spacing: 0.02em; transition: color 0.2s; position: relative;
   }
-
   .nav-links a:hover { color: var(--accent); }
-
   .nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: -4px; left: 0;
-    width: 0; height: 2px;
-    background: var(--accent);
-    transition: width 0.3s;
+    content: ''; position: absolute; bottom: -4px; left: 0;
+    width: 0; height: 2px; background: var(--accent); transition: width 0.3s;
   }
-
   .nav-links a:hover::after { width: 100%; }
-
   .nav-cta {
-    background: var(--accent);
-    color: white;
-    padding: 8px 20px;
-    border-radius: 6px;
-    font-size: 13px;
-    font-weight: 600;
-    text-decoration: none;
+    background: var(--accent); color: white; padding: 8px 20px;
+    border-radius: 6px; font-size: 13px; font-weight: 600; text-decoration: none;
     transition: background 0.2s;
   }
-
   .nav-cta:hover { background: var(--accent-dark); }
-
-  /* Hero Section */
-  .hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    padding: 80px 24px 60px;
+  .theme-toggle {
+    background: none; border: 1px solid var(--border); color: var(--slate);
+    padding: 6px 14px; border-radius: 6px; font-size: 13px; cursor: pointer;
+    transition: all 0.2s; margin-left: 12px;
   }
+  .theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
 
+  /* Hero */
+  .hero {
+    min-height: 100vh; display: flex; align-items: center;
+    position: relative; overflow: hidden; padding: 120px 24px 80px;
+  }
   .hero-bg {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(135deg, rgba(15,14,13,0.85) 0%, rgba(26,24,22,0.7) 50%, rgba(15,14,13,0.9) 100%);
+    position: absolute; inset: 0;
+    background: var(--gradient-hero);
     z-index: 1;
   }
-
   .hero-image {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    position: absolute; inset: 0;
     background: linear-gradient(135deg, #1a1816 0%, #2d2520 50%, #1a1816 100%);
     z-index: 0;
   }
-
+  [data-theme="dark"] .hero-image {
+    background: radial-gradient(circle at 80% 20%, rgba(233,69,96,0.12) 0%, transparent 50%), linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+  }
   .hero-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 32px;
-    align-items: center;
-    position: relative;
-    z-index: 2;
+    max-width: 800px; margin: 0 auto;
+    position: relative; z-index: 2;
   }
-
   .hero-content { color: white; }
-
-  .hero-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 24px;
-  }
-
+  .hero-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
   .pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600;
   }
-
   .pill-green {
-    background: rgba(46,125,63,0.2);
-    border: 1px solid rgba(46,125,63,0.4);
-    color: #7dd87d;
+    background: rgba(46,125,63,0.2); border: 1px solid rgba(46,125,63,0.4); color: #7dd87d;
   }
-
   .pill-amber {
-    background: rgba(232,168,124,0.15);
-    border: 1px solid rgba(232,168,124,0.3);
-    color: var(--accent-light);
+    background: rgba(232,168,124,0.15); border: 1px solid rgba(232,168,124,0.3); color: var(--accent-light);
   }
-
-  .pill-dot {
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    background: currentColor;
+  .pill-blue {
+    background: rgba(42,69,112,0.2); border: 1px solid rgba(42,69,112,0.4); color: #7da8d8;
   }
-
+  .pill-dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
   .pill-green .pill-dot { animation: pulse 2s infinite; }
-
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.4; }
-  }
-
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
   .hero h1 {
-    font-size: clamp(32px, 4.5vw, 56px);
-    font-weight: 900;
-    line-height: 1.1;
-    margin-bottom: 16px;
-    letter-spacing: -0.02em;
+    font-size: clamp(36px, 5vw, 64px); font-weight: 900; line-height: 1.08;
+    margin-bottom: 16px; letter-spacing: -0.02em;
   }
-
-  .hero h1 em {
-    font-style: italic;
-    color: var(--accent-light);
-  }
-
+  .hero h1 em { font-style: italic; color: var(--accent-light); }
   .hero-subtitle {
-    font-size: clamp(16px, 2vw, 20px);
-    font-weight: 300;
-    color: var(--warm);
-    margin-bottom: 24px;
-    line-height: 1.5;
+    font-size: clamp(16px, 2vw, 20px); font-weight: 300; color: var(--warm);
+    margin-bottom: 24px; line-height: 1.5;
   }
-
   .hero-location {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 14px;
-    color: var(--warm);
-    margin-bottom: 32px;
+    display: flex; align-items: center; gap: 8px;
+    font-size: 14px; color: var(--warm); margin-bottom: 32px;
   }
-
-  .hero-cta-group {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-
+  .hero-cta-group { display: flex; gap: 16px; flex-wrap: wrap; }
   .btn-primary {
-    background: var(--accent);
-    color: white;
-    padding: 14px 32px;
-    border-radius: 8px;
-    font-size: 15px;
-    font-weight: 600;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.2s;
-    border: none;
-    cursor: pointer;
+    background: var(--accent); color: white; padding: 14px 32px;
+    border-radius: 8px; font-size: 15px; font-weight: 600; text-decoration: none;
+    display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s; border: none; cursor: pointer;
   }
-
-  .btn-primary:hover {
-    background: var(--accent-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(200,82,42,0.3);
-  }
-
+  .btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,82,42,0.3); }
+  [data-theme="dark"] .btn-primary:hover { box-shadow: 0 8px 24px rgba(233,69,96,0.3); }
   .btn-secondary {
-    background: transparent;
-    color: white;
-    padding: 14px 32px;
-    border-radius: 8px;
-    font-size: 15px;
-    font-weight: 600;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    border: 1px solid rgba(255,255,255,0.3);
-    transition: all 0.2s;
+    background: transparent; color: white; padding: 14px 32px; border-radius: 8px;
+    font-size: 15px; font-weight: 600; text-decoration: none;
+    display: inline-flex; align-items: center; gap: 8px;
+    border: 1px solid rgba(255,255,255,0.3); transition: all 0.2s;
   }
+  .btn-secondary:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.5); }
 
-  .btn-secondary:hover {
-    background: rgba(255,255,255,0.1);
-    border-color: rgba(255,255,255,0.5);
-  }
-
-  .hero-visual {
-    position: relative;
-  }
-
-  .hero-card {
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 20px;
-    padding: 24px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero-card::before {
-    content: '';
-    position: absolute;
-    top: -50%; right: -50%;
-    width: 200%; height: 200%;
-    background: radial-gradient(circle, rgba(200,82,42,0.1) 0%, transparent 70%);
-    animation: rotate 20s linear infinite;
-  }
-
-  @keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-
-  .hero-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    position: relative;
-    z-index: 1;
-  }
-
-  .hero-stat {
-    text-align: center;
-  }
-
-  .hero-stat-number {
-    font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    font-weight: 900;
-    color: white;
-    line-height: 1;
-  }
-
-  .hero-stat-number span {
-    font-size: 18px;
-    color: var(--accent-light);
-  }
-
-  .hero-stat-label {
-    font-size: 12px;
-    color: var(--warm);
-    margin-top: 6px;
-    font-weight: 500;
-  }
-
-  /* Section Styles */
-  section {
-    padding: 60px 24px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .section-header {
-    margin-bottom: 32px;
-  }
-
+  /* Sections */
+  section { padding: 72px 24px; max-width: 1200px; margin: 0 auto; }
+  .section-header { margin-bottom: 40px; }
   .section-label {
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--accent);
-    margin-bottom: 12px;
+    font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.2em; color: var(--accent); margin-bottom: 10px;
   }
-
   .section-title {
-    font-size: clamp(26px, 3.5vw, 40px);
-    font-weight: 900;
-    line-height: 1.15;
-    color: var(--ink);
-    margin-bottom: 16px;
+    font-size: clamp(28px, 3.5vw, 42px); font-weight: 900;
+    line-height: 1.12; color: var(--ink); margin-bottom: 12px;
   }
+  .section-title em { font-style: italic; color: var(--accent); }
+  .section-desc { font-size: 17px; color: var(--muted); max-width: 640px; line-height: 1.6; }
 
-  .section-title em {
-    font-style: italic;
-    color: var(--accent);
-  }
-
-  .section-desc {
-    font-size: 17px;
-    color: var(--muted);
-    max-width: 600px;
-    line-height: 1.6;
-  }
-
-  /* About Section */
+  /* About / Framework */
   .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 32px;
-    align-items: start;
+    display: grid; grid-template-columns: 1fr 1.3fr; gap: 40px; align-items: start;
   }
-
   .about-image {
-    position: relative;
-    background: var(--cream);
-    border-radius: 16px;
-    min-height: 300px;
+    position: relative; background: var(--cream); border-radius: 16px;
+    overflow: hidden;
   }
-
   .about-image img {
-    width: 100%;
-    border-radius: 16px;
+    width: 100%; display: block; border-radius: 16px;
     box-shadow: var(--shadow-lg);
   }
-
   .about-image::after {
-    content: '';
-    position: absolute;
-    bottom: -20px; right: -20px;
-    width: 100%; height: 100%;
-    border: 3px solid var(--accent);
-    border-radius: 16px;
-    z-index: -1;
+    content: ''; position: absolute; bottom: -16px; right: -16px;
+    width: 100%; height: 100%; border: 3px solid var(--accent);
+    border-radius: 16px; z-index: -1;
   }
-
-  .about-text {
-    font-size: 16px;
-    line-height: 1.8;
-    color: var(--slate);
-  }
-
-  .about-text p { margin-bottom: 20px; }
-
+  .about-text { font-size: 15.5px; line-height: 1.75; color: var(--slate); }
+  .about-text p { margin-bottom: 16px; }
   .about-highlights {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-top: 20px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 20px;
   }
-
-  .about-highlight {
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-  }
-
+  .about-highlight { display: flex; gap: 12px; align-items: flex-start; }
   .about-highlight-icon {
-    width: 40px; height: 40px;
-    background: var(--cream);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    flex-shrink: 0;
+    width: 40px; height: 40px; background: var(--cream); border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; flex-shrink: 0; font-weight: 700; color: var(--accent);
   }
-
   .about-highlight-text h4 {
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--ink);
-    margin-bottom: 4px;
+    font-family: 'Inter', sans-serif; font-size: 13.5px; font-weight: 700;
+    color: var(--ink); margin-bottom: 3px;
   }
+  .about-highlight-text p { font-size: 12.5px; color: var(--muted); margin: 0; }
 
-  .about-highlight-text p {
-    font-size: 13px;
-    color: var(--muted);
-    margin: 0;
+  .framework-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 24px; }
+  .framework-card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+    padding: 28px; transition: all 0.3s;
   }
-
-  /* Timeline */
-  .timeline {
-    position: relative;
-    padding-left: 28px;
+  .framework-card:hover { transform: var(--card-hover); border-color: var(--accent); box-shadow: var(--shadow-lg); }
+  .framework-card .icon {
+    width: 44px; height: 44px; background: var(--accent); border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; margin-bottom: 16px; color: white;
   }
-
-  .timeline::before {
-    content: '';
-    position: absolute;
-    left: 8px; top: 0; bottom: 0;
-    width: 2px;
-    background: var(--border);
+  .framework-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 4px; color: var(--ink); }
+  .framework-card .de-sub { font-size: 13px; color: var(--accent); font-weight: 600; margin-bottom: 10px; }
+  .framework-card p { font-size: 14px; color: var(--muted); line-height: 1.65; }
+  .framework-card ul { list-style: none; margin-top: 10px; }
+  .framework-card ul li {
+    font-size: 13px; color: var(--muted); padding: 4px 0; padding-left: 18px; position: relative;
   }
+  .framework-card ul li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
 
-  .timeline-item {
-    position: relative;
-    padding-bottom: 24px;
-  }
-
-  .timeline-item:last-child { padding-bottom: 0; }
-
-  .timeline-dot {
-    position: absolute;
-    left: -24px; top: 4px;
-    width: 18px; height: 18px;
-    background: white;
-    border: 3px solid var(--accent);
-    border-radius: 50%;
-    z-index: 1;
-  }
-
-  .timeline-item.active .timeline-dot {
-    background: var(--accent);
-    box-shadow: 0 0 0 6px rgba(200,82,42,0.15);
-  }
-
-  .timeline-content {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: var(--shadow);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-
-  .timeline-content:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-  }
-
-  .timeline-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 8px;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .timeline-title {
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--ink);
-  }
-
-  .timeline-period {
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--accent);
-    background: var(--cream);
-    padding: 4px 10px;
-    border-radius: 4px;
-    white-space: nowrap;
-  }
-
-  .timeline-company {
-    font-size: 14px;
-    color: var(--muted);
-    margin-bottom: 12px;
-  }
-
-  .timeline-company .sector {
-    color: var(--accent);
-    font-weight: 600;
-  }
-
-  .timeline-achievements {
-    list-style: none;
-  }
-
-  .timeline-achievements li {
-    font-size: 13px;
-    color: var(--slate);
-    padding-left: 16px;
-    position: relative;
-    margin-bottom: 6px;
-    line-height: 1.5;
-  }
-
-  .timeline-achievements li::before {
-    content: '▸';
-    position: absolute;
-    left: 0;
-    color: var(--accent);
-    font-size: 10px;
-  }
-
-  .timeline-achievements .metric {
-    color: var(--accent);
-    font-weight: 700;
-  }
-
-  /* Metrics Grid */
-  .metrics-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
-  }
-
+  /* Metrics */
+  .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
   .metric-card {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 20px;
-    text-align: center;
-    transition: all 0.3s;
-    position: relative;
-    overflow: hidden;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+    padding: 28px 20px; text-align: center; transition: all 0.3s; position: relative; overflow: hidden;
   }
-
   .metric-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 4px;
-    background: var(--accent);
-    transform: scaleX(0);
-    transition: transform 0.3s;
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: var(--accent); transform: scaleX(0); transition: transform 0.3s;
   }
-
   .metric-card:hover::before { transform: scaleX(1); }
-
-  .metric-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-  }
-
+  .metric-card:hover { transform: var(--card-hover); box-shadow: var(--shadow-lg); }
   .metric-number {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px;
-    font-weight: 900;
-    color: var(--ink);
-    line-height: 1;
-    margin-bottom: 8px;
+    font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 900;
+    color: var(--ink); line-height: 1; margin-bottom: 6px;
   }
+  .metric-number span { font-size: 18px; color: var(--accent); }
+  .metric-label { font-size: 13px; font-weight: 600; color: var(--slate); margin-bottom: 3px; }
+  .metric-context { font-size: 11px; color: var(--muted); }
 
-  .metric-number span {
-    font-size: 20px;
-    color: var(--accent);
+  /* Timeline / Experience */
+  .timeline { position: relative; padding-left: 28px; }
+  .timeline::before {
+    content: ''; position: absolute; left: 8px; top: 0; bottom: 0;
+    width: 2px; background: var(--border);
   }
-
-  .metric-label {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--slate);
-    margin-bottom: 4px;
+  .timeline-item { position: relative; padding-bottom: 32px; }
+  .timeline-item:last-child { padding-bottom: 0; }
+  .timeline-dot {
+    position: absolute; left: -24px; top: 4px; width: 18px; height: 18px;
+    background: var(--bg); border: 3px solid var(--accent); border-radius: 50%; z-index: 1;
   }
-
-  .metric-context {
-    font-size: 11px;
-    color: var(--muted);
+  .timeline-item.active .timeline-dot {
+    background: var(--accent); box-shadow: 0 0 0 5px rgba(200,82,42,0.12);
   }
-
-  /* Campaign Gallery */
-  .campaigns-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 16px;
+  [data-theme="dark"] .timeline-item.active .timeline-dot {
+    box-shadow: 0 0 0 5px rgba(233,69,96,0.15);
   }
+  .timeline-content {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+    padding: 24px; box-shadow: var(--shadow); transition: all 0.3s;
+  }
+  .timeline-content:hover { transform: var(--card-hover); box-shadow: var(--shadow-lg); }
+  .timeline-header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    margin-bottom: 8px; flex-wrap: wrap; gap: 8px;
+  }
+  .timeline-title { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700; color: var(--ink); }
+  .timeline-period {
+    font-size: 12px; font-weight: 600; color: var(--accent); background: var(--cream);
+    padding: 4px 10px; border-radius: 4px; white-space: nowrap;
+  }
+  .timeline-company { font-size: 13.5px; color: var(--muted); margin-bottom: 12px; }
+  .timeline-company .sector { color: var(--accent); font-weight: 600; }
+  .timeline-body { font-size: 14px; color: var(--slate); line-height: 1.7; }
+  .timeline-body ul { list-style: none; margin: 0; padding: 0; }
+  .timeline-body li {
+    padding: 5px 0 5px 18px; position: relative;
+  }
+  .timeline-body li::before {
+    content: '→'; position: absolute; left: 0; color: var(--accent); font-weight: 700; font-size: 12px;
+  }
+  .timeline-skills {
+    margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border);
+    font-size: 12.5px; color: var(--muted);
+  }
+  .timeline-skills strong { color: var(--accent); font-weight: 700; }
 
+  /* Campaigns */
+  .campaigns-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
   .campaign-card {
-    background: white;
-    border-radius: 16px;
-    overflow: hidden;
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow);
-    transition: all 0.3s;
+    background: var(--surface); border-radius: 16px; overflow: hidden;
+    border: 1px solid var(--border); box-shadow: var(--shadow); transition: all 0.3s;
   }
-
-  .campaign-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-lg);
-  }
-
+  .campaign-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
   .campaign-image {
-    background: var(--charcoal);
-    position: relative;
-    overflow: hidden;
-    border-radius: 16px 16px 0 0;
+    background: var(--charcoal); position: relative; overflow: hidden;
+    border-radius: 16px 16px 0 0; aspect-ratio: 16/10;
   }
-
   .campaign-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.5s;
+    width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s;
   }
-
-  .campaign-card:hover .campaign-image img { transform: scale(1.02); }
-
+  .campaign-card:hover .campaign-image img { transform: scale(1.03); }
   .campaign-badge {
-    position: absolute;
-    top: 16px; left: 16px;
-    background: var(--accent);
-    color: white;
-    padding: 4px 12px;
-    border-radius: 4px;
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    position: absolute; top: 14px; left: 14px; background: var(--accent); color: white;
+    padding: 4px 12px; border-radius: 4px; font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.05em;
   }
-
-  .campaign-content {
-    padding: 16px;
+  .campaign-eu-badge {
+    position: absolute; top: 14px; right: 14px; background: var(--success); color: white;
+    padding: 4px 12px; border-radius: 4px; font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.05em;
   }
-
+  .campaign-content { padding: 20px; }
   .campaign-festival {
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--accent);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 8px;
+    font-size: 12px; font-weight: 700; color: var(--accent);
+    text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px;
   }
-
-  .campaign-title {
-    font-family: 'Inter', sans-serif;
-    font-size: 17px;
-    font-weight: 700;
-    color: var(--ink);
-    margin-bottom: 8px;
-  }
-
-  .campaign-desc {
-    font-size: 13px;
-    color: var(--muted);
-    line-height: 1.6;
-    margin-bottom: 16px;
-  }
-
-  .campaign-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-
+  .campaign-title { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700; color: var(--ink); margin-bottom: 10px; }
+  .campaign-desc { font-size: 13px; color: var(--muted); line-height: 1.65; margin-bottom: 14px; }
+  .campaign-tags { display: flex; flex-wrap: wrap; gap: 6px; }
   .campaign-tag {
-    background: var(--cream);
-    color: var(--slate);
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-size: 11px;
-    font-weight: 500;
+    background: var(--cream); color: var(--slate); padding: 4px 10px;
+    border-radius: 4px; font-size: 11px; font-weight: 500;
+  }
+  .campaign-eu-note {
+    background: var(--success-bg); border-left: 3px solid var(--success);
+    padding: 10px 14px; margin-top: 12px; font-size: 12px; color: var(--success); font-weight: 600;
+    border-radius: 0 8px 8px 0;
   }
 
   /* Skills */
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 16px;
-  }
-
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
   .skill-category {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 20px;
-    box-shadow: var(--shadow);
+    background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+    padding: 22px; box-shadow: var(--shadow); transition: all 0.3s;
   }
-
-  .skill-category-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 20px;
-  }
-
+  .skill-category:hover { transform: var(--card-hover); box-shadow: var(--shadow-lg); }
+  .skill-category-header { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
   .skill-category-icon {
-    width: 44px; height: 44px;
-    background: var(--cream);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
+    width: 42px; height: 42px; background: var(--cream); border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; font-weight: 700; color: var(--accent);
   }
-
-  .skill-category-title {
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--ink);
-  }
-
-  .skill-list {
-    list-style: none;
-  }
-
+  .skill-category-title { font-family: 'Inter', sans-serif; font-size: 14.5px; font-weight: 700; color: var(--ink); }
+  .skill-list { list-style: none; }
   .skill-list li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid var(--border);
-    font-size: 13px;
-    color: var(--slate);
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 9px 0; border-bottom: 1px solid var(--border);
+    font-size: 13px; color: var(--slate);
   }
-
   .skill-list li:last-child { border-bottom: none; }
-
   .skill-level {
-    font-size: 11px;
-    font-weight: 600;
-    padding: 2px 8px;
-    border-radius: 4px;
+    font-size: 10.5px; font-weight: 600; padding: 2px 8px; border-radius: 4px;
   }
-
   .skill-expert { background: var(--success-bg); color: var(--success); }
   .skill-advanced { background: var(--info-bg); color: var(--info); }
+  .skill-basic { background: var(--cream); color: var(--muted); }
 
-  /* Certifications */
-  .certs-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 16px;
+  /* Analysis */
+  .analysis-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .analysis-card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 28px;
+    transition: all 0.3s;
   }
+  .analysis-card:hover { transform: var(--card-hover); box-shadow: var(--shadow-lg); }
+  .analysis-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 4px; color: var(--ink); }
+  .analysis-card .de-title { color: var(--accent); font-size: 14px; font-weight: 600; margin-bottom: 14px; }
+  .analysis-card .context {
+    background: var(--cream); padding: 12px 16px; border-radius: 8px;
+    font-size: 13.5px; color: var(--muted); margin-bottom: 14px; border-left: 3px solid var(--accent);
+    line-height: 1.6;
+  }
+  [data-theme="dark"] .analysis-card .context { background: var(--charcoal); }
+  .fishbone-cats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .fishbone-cat {
+    background: var(--cream); padding: 10px 14px; border-radius: 8px; font-size: 12.5px; color: var(--slate); line-height: 1.5;
+  }
+  [data-theme="dark"] .fishbone-cat { background: var(--charcoal); }
+  .fishbone-cat strong { color: var(--accent); display: block; margin-bottom: 2px; font-size: 12px; }
+  .result-box {
+    background: var(--success-bg); border: 1px solid rgba(46,125,63,0.25); border-radius: 8px;
+    padding: 12px 16px; margin-top: 14px; font-size: 13px; color: var(--success); font-weight: 600;
+  }
+  .swot-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .swot-item { padding: 12px; border-radius: 8px; font-size: 12.5px; line-height: 1.5; }
+  .swot-s { background: var(--success-bg); border-left: 3px solid var(--success); color: var(--slate); }
+  .swot-w { background: rgba(255,193,7,0.08); border-left: 3px solid #ffc107; color: var(--slate); }
+  .swot-o { background: rgba(200,82,42,0.08); border-left: 3px solid var(--accent); color: var(--slate); }
+  .swot-t { background: rgba(160,160,160,0.08); border-left: 3px solid var(--muted); color: var(--slate); }
+  [data-theme="dark"] .swot-s { background: rgba(0,217,165,0.08); }
+  [data-theme="dark"] .swot-w { background: rgba(255,193,7,0.06); }
+  [data-theme="dark"] .swot-o { background: rgba(233,69,96,0.08); }
+  [data-theme="dark"] .swot-t { background: rgba(160,160,160,0.06); }
+  .swot-item strong { display: block; margin-bottom: 4px; font-size: 13px; color: var(--ink); }
 
-  .cert-card {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 20px;
-    box-shadow: var(--shadow);
+  /* Testimonials */
+  .testimonial-card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+    padding: 28px; box-shadow: var(--shadow); position: relative; max-width: 800px; margin: 0 auto;
+  }
+  .testimonial-card .quote-mark {
+    font-size: 56px; color: var(--accent); line-height: 1; position: absolute;
+    top: 16px; left: 24px; opacity: 0.18; font-family: 'Playfair Display', serif;
+  }
+  .testimonial-text {
+    font-size: 14px; color: var(--slate); line-height: 1.75; margin-bottom: 18px;
+    padding-left: 12px; position: relative; z-index: 1;
+  }
+  .testimonial-author { display: flex; align-items: center; gap: 14px; border-top: 1px solid var(--border); padding-top: 18px; }
+  .testimonial-avatar {
+    width: 44px; height: 44px; background: var(--cream); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; font-weight: 700; color: var(--accent);
+  }
+  .testimonial-author-name { font-size: 14px; font-weight: 700; color: var(--ink); }
+  .testimonial-author-role { font-size: 12px; color: var(--muted); }
+
+  /* Hobbies */
+  .hobbies-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .hobby-card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+    padding: 28px; text-align: center; transition: all 0.3s;
+  }
+  .hobby-card:hover { transform: var(--card-hover); box-shadow: var(--shadow-lg); border-color: var(--accent); }
+  .hobby-card .emoji { font-size: 2.4rem; margin-bottom: 10px; }
+  .hobby-card h4 { font-size: 15px; font-weight: 700; margin-bottom: 3px; color: var(--ink); }
+  .hobby-card .de-hobby { font-size: 12px; color: var(--accent); font-weight: 600; margin-bottom: 8px; }
+  .hobby-card p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+  /* Awards */
+  .awards-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .award-item {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+    padding: 16px 18px; font-size: 13.5px; line-height: 1.5; color: var(--slate);
     transition: all 0.2s;
   }
+  .award-item:hover { border-color: var(--accent); }
+  .award-item strong { color: var(--accent); }
+  .award-item span { color: var(--muted); font-size: 12px; display: block; margin-top: 2px; }
 
-  .cert-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
+  /* Certs */
+  .certs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+  .cert-card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+    padding: 22px; box-shadow: var(--shadow); transition: all 0.2s;
   }
+  .cert-card:hover { transform: var(--card-hover); box-shadow: var(--shadow-lg); }
+  .cert-year { font-size: 12px; font-weight: 700; color: var(--accent); margin-bottom: 6px; }
+  .cert-title { font-family: 'Inter', sans-serif; font-size: 15.5px; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+  .cert-org { font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+  .cert-modules { font-size: 12px; color: var(--slate); line-height: 1.5; }
 
-  .cert-year {
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--accent);
-    margin-bottom: 8px;
+  /* Why Germany Section */
+  .why-germany-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .why-germany-card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+    padding: 28px; transition: all 0.3s;
   }
-
-  .cert-title {
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--ink);
-    margin-bottom: 6px;
-  }
-
-  .cert-org {
-    font-size: 13px;
-    color: var(--muted);
-    margin-bottom: 8px;
-  }
-
-  .cert-modules {
-    font-size: 12px;
-    color: var(--slate);
-    line-height: 1.5;
+  .why-germany-card:hover { transform: var(--card-hover); box-shadow: var(--shadow-lg); border-color: var(--accent); }
+  .why-germany-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; color: var(--ink); }
+  .why-germany-card p { font-size: 14px; color: var(--muted); line-height: 1.65; }
+  .why-germany-card .icon {
+    width: 44px; height: 44px; background: var(--accent); border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; margin-bottom: 16px; color: white;
   }
 
   /* Contact */
-  .contact-section {
-    background: var(--charcoal);
-    color: white;
-    padding: 60px 24px;
-  }
-
+  .contact-section { background: var(--charcoal); color: white; padding: 72px 24px; }
   .contact-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
-    align-items: center;
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;
   }
-
-  .contact-content h2 {
-    font-size: clamp(28px, 4vw, 40px);
-    font-weight: 900;
-    margin-bottom: 16px;
-  }
-
-  .contact-content h2 em {
-    font-style: italic;
-    color: var(--accent-light);
-  }
-
-  .contact-content p {
-    font-size: 16px;
-    color: var(--warm);
-    margin-bottom: 32px;
-    line-height: 1.6;
-  }
-
-  .contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .contact-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 14px;
-  }
-
+  .contact-content h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 900; margin-bottom: 14px; color: white; }
+  .contact-content h2 em { font-style: italic; color: var(--accent-light); }
+  .contact-content > p { font-size: 16px; color: var(--warm); margin-bottom: 28px; line-height: 1.6; }
+  .contact-info { display: flex; flex-direction: column; gap: 14px; }
+  .contact-item { display: flex; align-items: center; gap: 12px; font-size: 14px; }
   .contact-item-icon {
-    width: 40px; height: 40px;
-    background: rgba(255,255,255,0.08);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    flex-shrink: 0;
+    width: 40px; height: 40px; background: rgba(255,255,255,0.08); border-radius: 10px;
+    display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; color: white;
   }
-
-  .contact-item a {
-    color: var(--warm);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
+  .contact-item a { color: var(--warm); text-decoration: none; transition: color 0.2s; }
   .contact-item a:hover { color: var(--accent-light); }
+  .contact-meta {
+    margin-top: 28px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 13px; color: var(--warm); line-height: 1.7;
+  }
+  .contact-meta strong { color: white; }
+  .contact-cta-box {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px; padding: 32px;
+  }
+  .contact-cta-box h3 { font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 12px; color: white; }
+  .contact-cta-box p { color: var(--warm); font-size: 14px; line-height: 1.6; margin-bottom: 22px; }
 
   /* Footer */
   footer {
-    background: var(--ink);
-    color: var(--warm);
-    padding: 24px 24px;
-    text-align: center;
-    font-size: 13px;
+    background: var(--ink); color: var(--warm); padding: 28px 24px; text-align: center; font-size: 13px;
   }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer .impressum { margin-top: 10px; font-size: 11.5px; color: var(--muted); line-height: 1.6; }
+  footer .impressum a { color: var(--accent); }
+  footer .datenschutz { margin-top: 8px; font-size: 11.5px; color: var(--muted); line-height: 1.6; }
+  footer .datenschutz a { color: var(--accent); }
+  footer .legal-links { margin-top: 12px; display: flex; justify-content: center; gap: 16px; }
+  footer .legal-links a { color: var(--warm); font-size: 12px; }
+
+  /* Fade In */
+  .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.5s ease, transform 0.5s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
 
   /* Mobile */
   @media (max-width: 768px) {
     .nav-links { display: none; }
-    .hero-inner { grid-template-columns: 1fr; }
+    .lang-switch { display: none; }
     .about-grid { grid-template-columns: 1fr; }
     .contact-inner { grid-template-columns: 1fr; }
+    .framework-grid { grid-template-columns: 1fr; }
+    .analysis-grid { grid-template-columns: 1fr; }
+    .hobbies-grid { grid-template-columns: 1fr; }
+    .awards-grid { grid-template-columns: 1fr; }
+    .why-germany-grid { grid-template-columns: 1fr; }
     .about-highlights { grid-template-columns: 1fr; }
-    .hero-stats { grid-template-columns: 1fr 1fr; }
-    section { padding: 40px 24px; }
+    section { padding: 48px 24px; }
     .timeline { padding-left: 24px; }
     .timeline-dot { left: -20px; }
   }
 
-  /* Scroll animations */
-  .fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-
-  .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
   /* Print */
   @media print {
-    nav, .hero-cta-group, footer { display: none; }
+    nav, .theme-toggle, footer { display: none; }
     .hero { min-height: auto; padding: 40px 24px; }
-    .hero-bg { background: white; }
-    .hero-content { color: var(--ink); }
-    section { padding: 40px 24px; }
+    section { padding: 36px 24px; }
   }
 
-  /* Dark Mode */
-  body.dark-mode {
-    --bg: #0f0e0d;
-    --ink: #f5f0eb;
-    --charcoal: #1a1816;
-    --slate: #b0a89e;
-    --muted: #7a6e66;
-    --warm: #3a3530;
-    --cream: #2a2520;
-    --border: #3a3530;
-  }
 
-  body.dark-mode nav {
-    background: rgba(15, 14, 13, 0.92);
-    border-bottom-color: var(--border);
-  }
+/* ===== CRITICAL FIX: Proper Language Hiding ===== */
+/* When DE is active, hide EN elements completely */
+[data-lang="de"] .lang-en {
+  display: none !important;
+  visibility: hidden !important;
+  position: absolute !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+}
 
-  body.dark-mode .timeline-content,
-  body.dark-mode .metric-card,
-  body.dark-mode .campaign-card,
-  body.dark-mode .skill-category,
-  body.dark-mode .cert-card {
-    background: var(--charcoal);
-    border-color: var(--border);
-  }
+/* When EN is active, hide DE elements completely */
+[data-lang="en"] .lang-de {
+  display: none !important;
+  visibility: hidden !important;
+  position: absolute !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+}
 
-  body.dark-mode .about-highlight-icon,
-  body.dark-mode .skill-category-icon {
-    background: var(--cream);
-  }
+/* ===== NAV FIX: Separate UL per language ===== */
+.nav-links-wrapper {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
 
-  body.dark-mode .campaign-tag,
-  body.dark-mode .timeline-period {
-    background: var(--cream);
-  }
+.nav-links-wrapper .nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-  /* Target Role Banner */
-  .target-role-banner {
-    background: var(--cream);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 16px 20px;
-    margin-bottom: 24px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
+/* ===== HERO PILLS FIX ===== */
+.hero-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+  min-height: 32px;
+  align-items: center;
+}
 
-  .target-role-banner .icon {
-    width: 48px;
-    height: 48px;
-    background: var(--accent);
-    color: white;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    flex-shrink: 0;
-  }
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  line-height: 1.4;
+  flex-shrink: 0;
+}
 
-  .target-role-banner h3 {
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--ink);
-    margin-bottom: 4px;
-  }
+/* ===== LANGUAGE SWITCHER ===== */
+.lang-switch {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  margin-right: 12px;
+  background: var(--cream);
+  border-radius: 8px;
+  padding: 3px;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+[data-theme="dark"] .lang-switch {
+  background: var(--charcoal);
+  border-color: var(--border);
+}
+.lang-switch button {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--slate);
+  padding: 5px 12px;
+  border-radius: 6px;
+  transition: all 0.2s;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  white-space: nowrap;
+}
+.lang-switch button.active {
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 2px 8px rgba(200,82,42,0.3);
+}
+[data-theme="dark"] .lang-switch button.active {
+  box-shadow: 0 2px 8px rgba(233,69,96,0.3);
+}
+.lang-switch button:hover:not(.active) { color: var(--accent); }
 
-  .target-role-banner p {
-    font-size: 13px;
-    color: var(--muted);
-    margin: 0;
-  }
+/* ===== NAV ACTIONS ===== */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
 
-  /* Tools Grid */
-  .tools-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
-    margin-top: 24px;
-  }
+/* ===== CONTACT FIXES ===== */
+.contact-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
 
-  .tool-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 16px;
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    font-size: 13px;
-    color: var(--slate);
-  }
+/* ===== FOOTER FIXES ===== */
+footer .legal-links {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
 
-  .tool-item::before {
-    content: '▸';
-    color: var(--accent);
-    font-size: 10px;
-  }
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .nav-links-wrapper { display: none; }
+  .nav-inner { padding: 0 16px; }
+  .lang-switch { margin-right: 8px; }
+  .lang-switch button { padding: 4px 10px; font-size: 11px; }
+  .nav-cta { padding: 6px 14px; font-size: 12px; }
+}
 
-  /* Work Permit Badge */
-  .work-permit-info {
-    background: var(--success-bg);
-    border: 1px solid rgba(46,125,63,0.3);
-    border-radius: 8px;
-    padding: 12px 16px;
-    margin-top: 16px;
-    font-size: 12px;
-    color: var(--success);
-  }
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .contact-inner { grid-template-columns: 1fr; }
+  .framework-grid { grid-template-columns: 1fr; }
+  .analysis-grid { grid-template-columns: 1fr; }
+  .hobbies-grid { grid-template-columns: 1fr; }
+  .awards-grid { grid-template-columns: 1fr; }
+  .why-germany-grid { grid-template-columns: 1fr; }
+  .about-highlights { grid-template-columns: 1fr; }
+  section { padding: 48px 24px; }
+  .timeline { padding-left: 24px; }
+  .timeline-dot { left: -20px; }
+  .hero { padding: 100px 24px 60px; min-height: auto; }
+  .hero h1 { font-size: clamp(28px, 8vw, 48px); }
+  .hero-pills { gap: 6px; }
+  .pill { font-size: 11px; padding: 4px 10px; }
+  .hero-cta-group { flex-direction: column; }
+  .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+}
 
-  .work-permit-info strong {
-    display: block;
-    margin-bottom: 4px;
-    font-weight: 700;
-  }
-
+@media print {
+  nav, .theme-toggle, footer, .lang-switch { display: none; }
+  .hero { min-height: auto; padding: 40px 24px; }
+  section { padding: 36px 24px; }
+  .lang-en, .lang-de { display: block !important; visibility: visible !important; position: static !important; width: auto !important; height: auto !important; margin: 0 !important; padding: 0 !important; clip: auto !important; }
+}
 </style>
 </head>
-<body>
+<body data-lang="de">
 
 <!-- Navigation -->
 <nav>
   <div class="nav-inner">
     <a href="#" class="nav-logo">Chaitrali <span>Borade</span></a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#campaigns">Campaigns</a></li>
-      <li><a href="#metrics">Performance Impact</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div style="display:flex;align-items:center;gap:12px;">
-      <a href="mailto:chaitrali.borade01@gmail.com" class="nav-cta">Get in Touch</a>
+    <div class="nav-links-wrapper">
+      <ul class="nav-links lang-de">
+        <li><a href="#about">Profil</a></li>
+        <li><a href="#experience">Berufserfahrung</a></li>
+        <li><a href="#campaigns">Kampagnen</a></li>
+        <li><a href="#metrics">Kennzahlen</a></li>
+        <li><a href="#skills">Kompetenzen</a></li>
+        <li><a href="#why-germany">Warum Deutschland</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+      <ul class="nav-links lang-en">
+        <li><a href="#about">Profile</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#campaigns">Campaigns</a></li>
+        <li><a href="#metrics">Impact</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#why-germany">Why Germany</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="nav-actions">
+      <div class="lang-switch">
+        <button id="btn-de" class="active" onclick="switchLang('de')" title="Deutsch">DE</button>
+        <button id="btn-en" onclick="switchLang('en')" title="English">EN</button>
+      </div>
+      <a href="mailto:chaitrali.borade01@gmail.com" class="nav-cta lang-de">Kontakt aufnehmen</a>
+      <a href="mailto:chaitrali.borade01@gmail.com" class="nav-cta lang-en">Get in Touch</a>
+      <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">🌓</button>
     </div>
   </div>
 </nav>
 
-<!-- Hero Section -->
+<!-- Hero -->
 <section class="hero">
   <div class="hero-image"></div>
   <div class="hero-bg"></div>
   <div class="hero-inner">
     <div class="hero-content">
       <div class="hero-pills">
-        <span class="pill pill-green"><span class="pill-dot"></span>Performance Marketing & Social Media</span>
+        <span class="pill pill-green"><span class="pill-dot"></span><span class="lang-de">Sofort verfügbar</span><span class="lang-en">Open to Work</span></span>
         <span class="pill pill-amber">Berlin, Germany</span>
-        <span class="pill pill-amber">German A2 (B1 in progress)</span>
-        <span class="pill pill-amber">Unrestricted Labour Market Access</span>
+        <span class="pill pill-blue lang-de">Unbeschränkter Arbeitsmarktzugang</span>
+        <span class="pill pill-amber lang-en">Unrestricted Labour Market</span>
+        <span class="pill pill-amber lang-de">Deutsch B1 · Englisch C2</span>
+        <span class="pill pill-amber lang-en">German B1 · English C2</span>
       </div>
-      <h1>Performance Marketing <em>& Social Media</em></h1>
-      <p class="hero-subtitle">Seven years in performance marketing and social media. Track record: CTR +22% QoQ, conversion funnel +18%, production time −35%. Industries: financial services, e-commerce, BPO. Based in Berlin.</p>
+      <h1>Customer Experience <em>& <span class="lang-de">Digitale Operations</span><span class="lang-en">Digital Operations</span></em></h1>
+      <p class="hero-subtitle lang-de">7+ Jahre Berufserfahrung in Performance Marketing, Social Media und Contact Centre Operations. Branchen: Finanzdienstleistungen, E-Commerce, Logistik, BPO.</p>
+      <p class="hero-subtitle lang-en">Seven years shaping digital operations, customer experience, and performance marketing across fintech, e-commerce, and BPO.</p>
       <div class="hero-location">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Berlin, Germany
+        <span class="lang-de">Residenzstrasse, 13409 Berlin · Sofort verfügbar</span>
+        <span class="lang-en">Berlin, Germany · Immediate start</span>
       </div>
       <div class="hero-cta-group">
-        <a href="#campaigns" class="btn-primary">View Campaign Work</a>
-        <a href="Chaitrali_Borade_CV.pdf" class="btn-secondary" download>Download CV (PDF)</a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="hero-card">
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <div class="hero-stat-number">7<span>+</span></div>
-            <div class="hero-stat-label">Years in Performance Marketing</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-number">+28<span>%</span></div>
-            <div class="hero-stat-label">Engagement Growth</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-number">+22<span>%</span></div>
-            <div class="hero-stat-label">QoQ CTR Improvement</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-number">+18<span>%</span></div>
-            <div class="hero-stat-label">Lead-to-App Conversion</div>
-          </div>
-        </div>
+        <a href="#campaigns" class="btn-primary lang-de">Kampagnen ansehen</a>
+        <a href="#campaigns" class="btn-primary lang-en">See Campaign Work</a>
+        <a href="#contact" class="btn-secondary lang-de">Kontaktieren</a>
+        <a href="#contact" class="btn-secondary lang-en">Contact Me</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- About Section -->
+<!-- About -->
 <section id="about">
-  <div class="section-header">
-    <div class="section-label">About</div>
-    <h2 class="section-title">Performance Marketing & Social Media Specialist</h2>
-    <p class="section-desc">Eighteen-year career across industries, with seven years focused on social media strategy, community management, and performance marketing.</p>
-  </div>
-
-  <div class="target-role-banner">
-    <div class="icon">&#9733;</div>
-    <div>
-      <h3>Target Role: Performance Marketing & Social Media Specialist</h3>
-      <p>Seeking full-time roles in Berlin or remote.</p>
-    </div>
+  <div class="lang-de"><div class="section-header">
+    <div class="section-label">Profil</div>
+    <h2 class="section-title">Berufliches Profil</h2>
+    <p class="section-desc">Verbindung von operativer Umsetzung und strategischer Planung durch datengetriebene Methodik und strukturierte Prozesse.</p>
   </div>
 
   <div class="about-grid">
     <div class="about-image">
-      <img src="chembur-photo.jpeg" alt="Chaitrali Borade - Social Media Manager" style="display:block;">
+      <img src="https://chaitrali31.github.io/Portfolio1/assets/profile.jpg" alt="Chaitrali Borade — Professionelles Bewerbungsfoto">
     </div>
     <div class="about-text">
-      <p style="font-size:15px;color:var(--muted);margin-bottom:20px;">Performance marketing and social media specialist. Seven years of hands-on execution in regulated industries (financial services, e-commerce, BPO).</p>
-
-      <ul style="list-style:none;padding:0;margin-bottom:20px;">
-        <li style="font-size:14px;color:var(--slate);padding:6px 0;border-bottom:1px solid var(--border);padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:var(--accent);font-weight:700;">&#9654;</span> <strong>Experience:</strong> 7+ years in performance marketing, social media, and community management</li>
-        <li style="font-size:14px;color:var(--slate);padding:6px 0;border-bottom:1px solid var(--border);padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:var(--accent);font-weight:700;">&#9654;</span> <strong>Sectors:</strong> Financial services (NBFC, retail banking), e-commerce, logistics, BPO</li>
-        <li style="font-size:14px;color:var(--slate);padding:6px 0;border-bottom:1px solid var(--border);padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:var(--accent);font-weight:700;">&#9654;</span> <strong>Results:</strong> Engagement +28%, CTR +22% QoQ, production time −35%, conversion +18%</li>
-        <li style="font-size:14px;color:var(--slate);padding:6px 0;border-bottom:1px solid var(--border);padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:var(--accent);font-weight:700;">&#9654;</span> <strong>Methods:</strong> Meta Ads execution, A/B testing, funnel optimisation, DSGVO-compliant campaigns</li>
-        <li style="font-size:14px;color:var(--slate);padding:6px 0;padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:var(--accent);font-weight:700;">&#9654;</span> <strong>Background:</strong> 11 years in customer operations → transitioned to digital marketing (2016)</li>
-      </ul>
-
-      <div class="work-permit-info" style="margin-top:12px;">
-        <strong>Work Authorisation</strong>
-        Unrestricted labour market access for Germany.
-      </div>
+      <p><strong>7+ Jahre Erfahrung</strong> in Performance Marketing und Digital Operations. Zuvor 11 Jahre in Kundenbetreuung und Contact Centre Management. Branchen: NBFC (Kfz-Finanzierung), Retail Banking, E-Commerce, Logistik, BPO.</p>
+      <p>Bei <strong>Kotak Mahindra Prime</strong> Aufbau der Social-Media-Präsenz von Grund auf, Einführung von QR-Code-Lead-Capture in 150+ Filialen, Integration mit Salesforce und OneDirect, Aufbau eines 40-Sitz Contact Centre mit ~35% Lead-Conversion-Rate. Sämtliche Initiativen mit Legal und Compliance abgestimmt — vollständige DSGVO-Konformität.</p>
+      <p>Bei <strong>Kotak Bank</strong> ORM-Management für Communities mit 1,5M+ Facebook- und 271K+ Instagram-Followern. Bei <strong>Tata CLiQ</strong> Aufbau der ORM-Abteilung von Null auf 95%+ SLA-Einhaltung.</p>
+      <p>Arbeitsweise geprägt von <strong>Sachlichkeit, Gründlichkeit und messbaren Ergebnissen</strong>. Jede kreative Entscheidung basiert auf Funnel-Stage-Analyse, jede Zielgruppensegmentierung auf Verhaltensdaten, jeder Report beantwortet eine konkrete Geschäftsfrage.</p>
 
       <div class="about-highlights">
         <div class="about-highlight">
           <div class="about-highlight-icon">P</div>
           <div class="about-highlight-text">
-            <h4>Platform Management</h4>
-            <p>Meta Business Suite, Instagram, Facebook, YouTube, LinkedIn</p>
+            <h4>Plattform-Expertise</h4>
+            <p>Meta Ads Manager, Instagram, Facebook, LinkedIn — Expert-Level</p>
           </div>
         </div>
         <div class="about-highlight">
           <div class="about-highlight-icon">C</div>
           <div class="about-highlight-text">
-            <h4>Cross-Cultural Campaigns</h4>
-            <p>Festival and seasonal campaigns adapted for regional audiences in 6+ languages</p>
+            <h4>Interkulturelle Kompetenz</h4>
+            <p>Festival-Kampagnen in 6+ Sprachen, übertragbar auf EU-Märkte</p>
           </div>
         </div>
         <div class="about-highlight">
           <div class="about-highlight-icon">A</div>
           <div class="about-highlight-text">
-            <h4>Process & Funnel Optimisation</h4>
-            <p>AI-assisted workflows + A/B testing reducing production time by 35% and improving conversion by 18%</p>
+            <h4>Prozessoptimierung</h4>
+            <p>AI-Workflows, A/B-Testing, 35% schnellere Produktionszyklen</p>
+          </div>
+        </div>
+        <div class="about-highlight">
+          <div class="about-highlight-icon">D</div>
+          <div class="about-highlight-text">
+            <h4>Datenanalyse</h4>
+            <p>ROI/ROAS-Dashboards, Google Analytics, wöchentliche Reporting</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="framework-grid" style="margin-top:48px;">
+    <div class="framework-card">
+      <div class="icon">👤</div>
+      <h3>Wer ich bin</h3>
+      <p class="de-sub">Hintergrund & DNA</p>
+      <p>7+ Jahre in Performance Marketing und Digital Operations. 11 Jahre Kundenbetreuung zuvor. Branchen: NBFC, Retail Banking, E-Commerce, Logistik, BPO. Ansässig in Berlin mit unbeschränktem Arbeitsmarktzugang.</p>
+      <ul>
+        <li>Meta Ads Execution & Funnel-Optimierung</li>
+        <li>Interkulturelle Kampagnen in 6+ Sprachen</li>
+        <li>DSGVO-konforme Kampagnenarchitektur</li>
+        <li>Contact Centre Aufbau & Betrieb</li>
+      </ul>
+    </div>
+    <div class="framework-card">
+      <div class="icon">🎯</div>
+      <h3>Was ich liefere</h3>
+      <p class="de-sub">Kompetenzen & Mehrwert</p>
+      <p>Messbare Ergebnisse durch diszipliniertes Experimentieren, strukturierte Analyse und Stakeholder-Alignment vom Kickoff bis zur Retrospektive.</p>
+      <ul>
+        <li>A/B-Tests & iterative CTR-Verbesserungen</li>
+        <li>AI-gestützte Creative Pipelines (ChatGPT, Canva AI)</li>
+        <li>Ishikawa & SWOT für Root-Cause-Analyse</li>
+        <li>100% Stakeholder-Freigabe bei Content-Kalendern</li>
+        <li>ROI/ROAS-Tracking & wöchentliche Dashboards</li>
+      </ul>
+    </div>
+  </div></div>
+  <div class="lang-en"><div class="section-header">
+    <div class="section-label">Profile</div>
+    <h2 class="section-title">Value Proposition</h2>
+    <p class="section-desc">From customer operations to digital marketing — I bridge execution and strategy with data-driven clarity.</p>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-image">
+      <img src="https://chaitrali31.github.io/Portfolio1/assets/profile.jpg" alt="Chaitrali Borade">
+    </div>
+    <div class="about-text">
+      <p>I spent eleven years in customer operations before pivoting to digital marketing in 2016. That operational backbone shapes how I run campaigns today — every creative decision is tied to a funnel stage, every audience segment is rooted in behaviour, and every report answers a business question.</p>
+      <p>At Kotak Mahindra Prime, I built the brand's social presence from scratch, launched a 40-seat lead conversion centre, and rolled out QR-based lead capture across 150+ branches — all while keeping Legal and Compliance in the loop from day one. At Kotak Bank, I managed ORM for communities of 1.5M+ on Facebook and 271K+ on Instagram. At Tata CLiQ, I took ORM from zero to 95%+ SLA adherence.</p>
+      <p>I work across Meta Business Suite, Google Analytics, Salesforce, and AI-assisted creative workflows. GDPR/DSGVO compliance is baked into my process, not bolted on afterwards.</p>
+
+      <div class="about-highlights">
+        <div class="about-highlight">
+          <div class="about-highlight-icon">P</div>
+          <div class="about-highlight-text">
+            <h4>Platform Mastery</h4>
+            <p>Meta Ads Manager, Instagram, Facebook, LinkedIn</p>
+          </div>
+        </div>
+        <div class="about-highlight">
+          <div class="about-highlight-icon">C</div>
+          <div class="about-highlight-text">
+            <h4>Cross-Cultural Reach</h4>
+            <p>Festival and seasonal campaigns in 6+ languages</p>
+          </div>
+        </div>
+        <div class="about-highlight">
+          <div class="about-highlight-icon">A</div>
+          <div class="about-highlight-text">
+            <h4>Funnel Optimisation</h4>
+            <p>AI workflows, A/B testing, 35% faster production cycles</p>
           </div>
         </div>
         <div class="about-highlight">
           <div class="about-highlight-icon">D</div>
           <div class="about-highlight-text">
             <h4>Performance Analytics</h4>
-            <p>Meta Ads Manager, Google Analytics, A/B testing, ROI reporting</p>
+            <p>ROI/ROAS dashboards, Google Analytics, weekly reporting</p>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <div class="framework-grid" style="margin-top:48px;">
+    <div class="framework-card">
+      <div class="icon">👤</div>
+      <h3>Who I Am</h3>
+      <p class="de-sub">Background & DNA</p>
+      <p>7+ years in performance marketing and digital operations. 11 years in customer ops before that. Industries: NBFC, retail banking, e-commerce, logistics, BPO. Based in Berlin with unrestricted labour market access.</p>
+      <ul>
+        <li>Meta Ads execution & funnel optimisation</li>
+        <li>Cross-cultural campaigns in 6+ languages</li>
+        <li>GDPR-compliant campaign architecture</li>
+        <li>Contact centre launch & operations</li>
+      </ul>
+    </div>
+    <div class="framework-card">
+      <div class="icon">🎯</div>
+      <h3>What I Deliver</h3>
+      <p class="de-sub">Skills & Value</p>
+      <p>Measurable outcomes through disciplined experimentation, structured analysis, and stakeholder alignment from kickoff to retrospective.</p>
+      <ul>
+        <li>A/B tests & iterative CTR improvements</li>
+        <li>AI-assisted creative pipelines (ChatGPT, Canva AI)</li>
+        <li>Ishikawa & SWOT for root-cause clarity</li>
+        <li>100% stakeholder approval rate on calendars</li>
+        <li>ROI/ROAS tracking & weekly dashboards</li>
+      </ul>
+    </div>
+  </div></div>
 </section>
 
-<!-- Experience Timeline -->
+<!-- Metrics -->
+<section id="metrics">
+  <div class="lang-de"><div class="section-header">
+    <div class="section-label">Kennzahlen</div>
+    <h2 class="section-title">Messbare Ergebnisse</h2>
+    <p class="section-desc">Klar attribuierbare Outcomes aus Operations und Community Management.</p>
+  </div>
+  <div class="metrics-grid">
+    <div class="metric-card">
+      <div class="metric-number">1,5M<span>+</span></div>
+      <div class="metric-label">Facebook-Community</div>
+      <div class="metric-context">ORM-Management bei Kotak Bank</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-number">271K<span>+</span></div>
+      <div class="metric-label">Instagram-Follower</div>
+      <div class="metric-context">ORM-Management bei Kotak Bank</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-number">40</div>
+      <div class="metric-label">Mitarbeiter</div>
+      <div class="metric-context">Contact Centre aufgebaut bei Kotak Prime</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-number">95<span>%+</span></div>
+      <div class="metric-label">SLA-Einhaltung</div>
+      <div class="metric-context">Tata CLiQ ORM-Abteilung</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-number">35<span>%</span></div>
+      <div class="metric-label">Lead-Conversion</div>
+      <div class="metric-context">Kotak Prime Contact Centre</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-number">150<span>+</span></div>
+      <div class="metric-label">Filialen</div>
+      <div class="metric-context">QR-Lead-Capture implementiert</div>
+    </div>
+  </div></div>
+  <div class="lang-en"><div class="section-header">
+    <div class="section-label">Impact</div>
+    <h2 class="section-title">Numbers That Matter</h2>
+    <p class="section-desc">Clear, attributable outcomes from operations and community management.</p>
+  </div>
+  <div class="metrics-grid">
+    <div class="metric-card">
+      <div class="metric-number">1.5M<span>+</span></div>
+      <div class="metric-label">Facebook Community</div>
+      <div class="metric-context">ORM management at Kotak Bank</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-number">271K<span>+</span></div>
+      <div class="metric-label">Instagram Followers</div>
+      <div class="metric-context">ORM management at Kotak Bank</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-number">40</div>
+      <div class="metric-label">Officers</div>
+      <div class="metric-context">Contact centre launched at Kotak Prime</div>
+    </div>
+  </div></div>
+</section>
+
+<!-- Experience -->
 <section id="experience">
-  <div class="section-header">
-    <div class="section-label">Career Timeline</div>
-    <h2 class="section-title">Professional Experience</h2>
-    <p class="section-desc">Eighteen-year career across five roles and four industries, with seven years in social media and digital marketing.</p>
+  <div class="lang-de"><div class="section-header">
+    <div class="section-label">Berufserfahrung</div>
+    <h2 class="section-title">Werdegang</h2>
+    <p class="section-desc">18 Jahre in 5 Positionen und 4 Branchen — die letzten 7 Jahre in Digital Operations und Customer Experience.</p>
   </div>
 
   <div class="timeline">
@@ -1211,15 +1057,20 @@
           <div class="timeline-title">Performance Marketing & Social Media Manager</div>
           <div class="timeline-period">10/2022 – 01/2026</div>
         </div>
-        <div class="timeline-company">
-          Kotak Mahindra Prime Ltd · <span class="sector">Financial Services (NBFC)</span> · Mumbai · ca. 8,500 employees
+        <div class="timeline-company">Kotak Mahindra Prime Ltd · <span class="sector">Finanzdienstleistungen (NBFC)</span> · Mumbai · ~8.500 Mitarbeiter</div>
+        <div class="timeline-body">
+          <ul>
+            <li>Aufbau der Instagram- und Facebook-Präsenz von Grund auf; monatliche Kampagnen mit Agenturen, 24h Turnaround.</li>
+            <li>QR-Code-Lead-Capture in 150+ Filialen, Integration mit Salesforce und OneDirect — Beschwerden um 5% reduziert.</li>
+            <li>WhatsApp Business API mit CRM-Integration zur Automatisierung von Enterprise-Kommunikation.</li>
+            <li>Echtzeit-Creative-Produktion und Social Strategy für Händler-Promotions.</li>
+            <li>Aufbau eines 40-Sitz Lead-Conversion Contact Centre von Null, Wissensdatenbank-Zentralisierung, ~35% Lead-Conversion.</li>
+            <li>Community Management mit &lt;10-min Response Time, zero Crisis-Eskalationen.</li>
+            <li>Legal- und Compliance-Freigabe aller Initiativen, vollständige DSGVO/DSGVO-Alignment.</li>
+            <li>Abrechnung und Rechnungsstellung für externe Dienstleister.</li>
+          </ul>
         </div>
-        <ul class="timeline-achievements">
-          <li>Coordinated with Product, Legal, and Compliance to deliver editorial calendars — 100% stakeholder approval rate</li>
-          <li>Executed Reels/Shorts strategy with agency partners; A/B tested creative and copy → <span class="metric">28% engagement growth</span>, <span class="metric">22% QoQ CTR improvement</span></li>
-          <li>Redesigned content funnel with AI-assisted workflows (ChatGPT, Canva AI) → turnaround time <span class="metric">−35%</span>, lead-to-application conversion <span class="metric">+18%</span></li>
-          <li>Led dealer network engagement programmes to support quarterly sales targets</li>
-        </ul>
+        <div class="timeline-skills"><strong>Schlüsselkompetenzen:</strong> Meta Ads Manager · A/B-Testing · Salesforce · WhatsApp Business API · DSGVO-Compliance</div>
       </div>
     </div>
 
@@ -1227,17 +1078,20 @@
       <div class="timeline-dot"></div>
       <div class="timeline-content">
         <div class="timeline-header">
-          <div class="timeline-title">Senior Manager — Social Media & Online Reputation Management (ORM)</div>
+          <div class="timeline-title">Senior Manager — Social Media & ORM</div>
           <div class="timeline-period">07/2019 – 10/2022</div>
         </div>
-        <div class="timeline-company">
-          Kotak Mahindra Bank Ltd · <span class="sector">Banking</span> · Mumbai · ca. 116,000 employees
+        <div class="timeline-company">Kotak Mahindra Bank Ltd · <span class="sector">Retail Banking</span> · Mumbai · ~116.000 Mitarbeiter</div>
+        <div class="timeline-body">
+          <ul>
+            <li>ORM-Management für 1,5M+ Facebook- und 271K+ Instagram-Communities.</li>
+            <li>Adaption globaler Brand Messaging für regionale Zielgruppen in diversen Märkten.</li>
+            <li>Community-Engagement-Programme, Kundenbindung um 15% YoY gesteigert.</li>
+            <li>Produkt-Storytelling-Kampagnen für Cross-Sell-Initiativen, Adoptionsrate um 12% verbessert.</li>
+            <li>Brand-Konsistenz und regulatorische Compliance in stark regulierter Branche.</li>
+          </ul>
         </div>
-        <ul class="timeline-achievements">
-          <li>Led ORM team managing communities of <span class="metric">1.5 million Facebook</span> and <span class="metric">271,000 Instagram</span> followers; adapted global brand messaging for regional audiences</li>
-          <li>Community engagement programmes → customer retention <span class="metric">+15% YoY</span></li>
-          <li>Drove product storytelling resulting in <span class="metric">12% increase</span> in cross-sell adoption</li>
-        </ul>
+        <div class="timeline-skills"><strong>Schlüsselkompetenzen:</strong> Community Management · ORM · Content Strategy · Interkulturelles Marketing · Stakeholder Management</div>
       </div>
     </div>
 
@@ -1248,14 +1102,17 @@
           <div class="timeline-title">Team Leader — ORM & Social Media</div>
           <div class="timeline-period">10/2016 – 03/2019</div>
         </div>
-        <div class="timeline-company">
-          Tata Business Support Services (Tata CLiQ) · <span class="sector">E-Commerce</span> · ca. 2,700 employees
+        <div class="timeline-company">Tata Business Support Services (Tata CLiQ) · <span class="sector">E-Commerce</span> · ~2.700 Mitarbeiter</div>
+        <div class="timeline-body">
+          <ul>
+            <li>Aufbau der ORM-Abteilung von Null während der Wachstumsphase von Tata CLiQ.</li>
+            <li>Führung cross-channel Teams (E-Mail, Chat, Inbound, Outbound, Social) mit 95%+ SLA-Einhaltung.</li>
+            <li>Ishikawa-Analyse zur Identifikation von Root Causes hinter Service-Lücken.</li>
+            <li>CSAT um ~20% verbessert, negatives Sentiment um ~18% reduziert.</li>
+            <li>Brand-Interaktionen über alle Plattformen mit strukturierten Eskalations-Frameworks.</li>
+          </ul>
         </div>
-        <ul class="timeline-achievements">
-          <li>Led ORM line of business; managed brand interactions across platforms with <span class="metric">95%+ service level agreement (SLA) adherence</span></li>
-          <li>Supervised cross-channel teams (email, chat, inbound and outbound + ORM); achieved approximately <span class="metric">20% improvement in customer satisfaction score (CSAT)</span></li>
-          <li>Analysed social feedback and implemented structured resolution frameworks; reduced negative sentiment by approximately <span class="metric">18%</span></li>
-        </ul>
+        <div class="timeline-skills"><strong>Schlüsselkompetenzen:</strong> ORM · Team Leadership · Ishikawa-Analyse · SLA Management · Cross-Channel Operations</div>
       </div>
     </div>
 
@@ -1266,13 +1123,16 @@
           <div class="timeline-title">Team Leader — Customer Operations</div>
           <div class="timeline-period">08/2015 – 07/2016</div>
         </div>
-        <div class="timeline-company">
-          ANI Technologies (Ola Cabs) · <span class="sector">Logistics</span> · ca. 7,000 employees
+        <div class="timeline-company">ANI Technologies (Ola Cabs) · <span class="sector">Logistik</span> · ~7.000 Mitarbeiter</div>
+        <div class="timeline-body">
+          <ul>
+            <li>Führung von Inbound- und Outbound-Call-Centre-Operationen während des Ola Share Launches.</li>
+            <li>Kundenanfragen, Onboarding-Kommunikation und Issue Resolution im Massenmaßstab.</li>
+            <li>SLA-Einhaltung und Qualitätsstandards während rapiden Wachstums.</li>
+            <li>Unterstützung des Go-to-Market für neues Ride-Sharing-Produkt.</li>
+          </ul>
         </div>
-        <ul class="timeline-achievements">
-          <li>Led inbound/outbound call centre team; maintained SLA adherence and quality standards</li>
-          <li>Supported Ola Share launch: customer queries, onboarding communications, issue resolution</li>
-        </ul>
+        <div class="timeline-skills"><strong>Schlüsselkompetenzen:</strong> Call Centre Operations · Launch Support · SLA Management · Quality Assurance · Training Delivery</div>
       </div>
     </div>
 
@@ -1283,277 +1143,668 @@
           <div class="timeline-title">Subject Matter Expert — Communication Training</div>
           <div class="timeline-period">10/2007 – 08/2015</div>
         </div>
-        <div class="timeline-company">
-          Sutherland Global Services · <span class="sector">BPO & Digital Transformation</span> · ca. 40,000 employees
+        <div class="timeline-company">Sutherland Global Services · <span class="sector">BPO</span> · ~40.000 Mitarbeiter</div>
+        <div class="timeline-body">
+          <ul>
+            <li>Konzeption von Kommunikationstrainings für Kundensupport-Teams.</li>
+            <li>Optimierung von Skripten und Service-Messaging, Handling Time um 15% reduziert.</li>
+            <li>Quality Scores um 25% verbessert, First-Contact-Resolution um 18% gesteigert.</li>
+            <li>Mehrere Auszeichnungen für Floor Support und SME-Leadership.</li>
+            <li>Echtzeit-Floor-Support für operative Exzellenz.</li>
+          </ul>
         </div>
-        <ul class="timeline-achievements">
-          <li>Designed communication training programmes for customer support teams; improved quality scores by <span class="metric">25%</span></li>
-          <li>Script and service messaging optimisation → handling time <span class="metric">−15%</span>, first-contact resolution <span class="metric">+18%</span></li>
-        </ul>
+        <div class="timeline-skills"><strong>Schlüsselkompetenzen:</strong> Communication Training · Skript-Optimierung · Quality Assurance · Floor Support · SME Leadership</div>
       </div>
     </div>
+  </div></div>
+  <div class="lang-en"><div class="section-header">
+    <div class="section-label">Career</div>
+    <h2 class="section-title">Professional Journey</h2>
+    <p class="section-desc">Eighteen years across five roles and four industries — the last seven in digital operations and customer experience.</p>
   </div>
+
+  <div class="timeline">
+    <div class="timeline-item active">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <div class="timeline-title">Performance Marketing & Social Media Manager</div>
+          <div class="timeline-period">10/2022 – 01/2026</div>
+        </div>
+        <div class="timeline-company">Kotak Mahindra Prime Ltd · <span class="sector">Financial Services (NBFC)</span> · Mumbai · ~8,500 employees</div>
+        <div class="timeline-body">
+          <ul>
+            <li>Built the brand's first Instagram and Facebook presence from scratch; partnered with agencies to ship one campaign per month on a 24-hour turnaround.</li>
+            <li>Deployed QR codes across 150+ branches for lead capture, integrated with Salesforce and OneDirect — reduced complaints 5%.</li>
+            <li>Launched WhatsApp Business API integrated with CRM to automate enterprise communication workflows.</li>
+            <li>Directed real-time creative production and social strategy for dealer-partner promotions.</li>
+            <li>Built a 40-seat lead conversion contact centre from zero, centralising knowledge bases and hitting ~35% lead conversion.</li>
+            <li>Led community management with sub-10-minute response times and zero crisis escalations.</li>
+            <li>Secured Legal and Compliance sign-off on all initiatives with full GDPR/DSGVO alignment.</li>
+            <li>Managed departmental financial operations including billing and vendor invoicing.</li>
+          </ul>
+        </div>
+        <div class="timeline-skills"><strong>Key Skills:</strong> Meta Ads Manager · A/B Testing · Salesforce · WhatsApp Business API · GDPR Compliance</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <div class="timeline-title">Senior Manager — Social Media & ORM</div>
+          <div class="timeline-period">07/2019 – 10/2022</div>
+        </div>
+        <div class="timeline-company">Kotak Mahindra Bank Ltd · <span class="sector">Retail Banking</span> · Mumbai · ~116,000 employees</div>
+        <div class="timeline-body">
+          <ul>
+            <li>Managed ORM for 1.5M+ Facebook and 271K+ Instagram communities.</li>
+            <li>Adapted global brand messaging for regional audiences across diverse markets.</li>
+            <li>Drove community engagement programmes that lifted customer retention 15% YoY.</li>
+            <li>Ran product storytelling campaigns for cross-sell initiatives, improving adoption 12%.</li>
+            <li>Maintained brand consistency and regulatory compliance in a heavily regulated sector.</li>
+          </ul>
+        </div>
+        <div class="timeline-skills"><strong>Key Skills:</strong> Community Management · ORM · Content Strategy · Cross-Cultural Marketing · Stakeholder Management</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <div class="timeline-title">Team Leader — ORM & Social Media</div>
+          <div class="timeline-period">10/2016 – 03/2019</div>
+        </div>
+        <div class="timeline-company">Tata Business Support Services (Tata CLiQ) · <span class="sector">E-Commerce</span> · ~2,700 employees</div>
+        <div class="timeline-body">
+          <ul>
+            <li>Built the ORM line of business from zero during Tata CLiQ's growth phase.</li>
+            <li>Supervised cross-channel teams (email, chat, inbound, outbound, social) with 95%+ SLA adherence.</li>
+            <li>Applied Ishikawa analysis to identify root causes behind service gaps.</li>
+            <li>Improved CSAT roughly 20% and trimmed negative sentiment around 18%.</li>
+            <li>Managed brand interactions across all platforms with structured resolution frameworks.</li>
+          </ul>
+        </div>
+        <div class="timeline-skills"><strong>Key Skills:</strong> ORM · Team Leadership · Ishikawa Analysis · SLA Management · Cross-Channel Operations</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <div class="timeline-title">Team Leader — Customer Operations</div>
+          <div class="timeline-period">08/2015 – 07/2016</div>
+        </div>
+        <div class="timeline-company">ANI Technologies (Ola Cabs) · <span class="sector">Logistics</span> · ~7,000 employees</div>
+        <div class="timeline-body">
+          <ul>
+            <li>Led inbound and outbound call centre operations during the Ola Share launch.</li>
+            <li>Handled customer queries, onboarding communications, and issue resolution at scale.</li>
+            <li>Maintained SLA adherence and quality standards through rapid growth.</li>
+            <li>Supported go-to-market execution for a new ride-sharing product.</li>
+          </ul>
+        </div>
+        <div class="timeline-skills"><strong>Key Skills:</strong> Call Centre Operations · Launch Support · SLA Management · Quality Assurance · Training Delivery</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <div class="timeline-title">Subject Matter Expert — Communication Training</div>
+          <div class="timeline-period">10/2007 – 08/2015</div>
+        </div>
+        <div class="timeline-company">Sutherland Global Services · <span class="sector">BPO</span> · ~40,000 employees</div>
+        <div class="timeline-body">
+          <ul>
+            <li>Designed communication training programmes for customer support teams.</li>
+            <li>Optimised scripts and service messaging, cutting handling time 15%.</li>
+            <li>Improved quality scores 25% and first-contact resolution 18%.</li>
+            <li>Earned multiple awards for floor support and SME leadership.</li>
+            <li>Provided real-time floor support for operational excellence.</li>
+          </ul>
+        </div>
+        <div class="timeline-skills"><strong>Key Skills:</strong> Communication Training · Script Optimisation · Quality Assurance · Floor Support · SME Leadership</div>
+      </div>
+    </div>
+  </div></div>
 </section>
 
-<!-- Metrics Section -->
-<section id="metrics">
-  <div class="section-header">
-    <div class="section-label">Performance Impact</div>
-    <h2 class="section-title">Performance Impact</h2>
-    <p class="section-desc">Quantified results from campaigns, social media operations, and performance marketing.</p>
-  </div>
-
-  <div class="metrics-grid">
-    <div class="metric-card">
-      <div class="metric-number">1.5M<span>+</span></div>
-      <div class="metric-label">Facebook Community</div>
-      <div class="metric-context">Community management at Kotak Bank</div>
-    </div>
-    <div class="metric-card">
-      <div class="metric-number">271K<span>+</span></div>
-      <div class="metric-label">Instagram Followers</div>
-      <div class="metric-context">Organic growth through content strategy</div>
-    </div>
-    <div class="metric-card">
-      <div class="metric-number">+28<span>%</span></div>
-      <div class="metric-label">Engagement Growth</div>
-      <div class="metric-context">Reels-focused strategy at Kotak Prime</div>
-    </div>
-    <div class="metric-card">
-      <div class="metric-number">+22<span>%</span></div>
-      <div class="metric-label">QoQ CTR Improvement</div>
-      <div class="metric-context">A/B testing of creative and copy</div>
-    </div>
-    <div class="metric-card">
-      <div class="metric-number">-35<span>%</span></div>
-      <div class="metric-label">Production Time</div>
-      <div class="metric-context">AI-assisted workflow optimisation</div>
-    </div>
-    <div class="metric-card">
-      <div class="metric-number">+18<span>%</span></div>
-      <div class="metric-label">Lead-to-App Conversion</div>
-      <div class="metric-context">Content funnel redesign</div>
-    </div>
-    <div class="metric-card">
-      <div class="metric-number">+15<span>%</span></div>
-      <div class="metric-label">YoY Customer Retention</div>
-      <div class="metric-context">Community engagement programmes</div>
-    </div>
-    <div class="metric-card">
-      <div class="metric-number">95<span>%+</span></div>
-      <div class="metric-label">SLA Adherence</div>
-      <div class="metric-context">ORM management at Tata CLiQ</div>
-    </div>
-    <div class="metric-card">
-      <div class="metric-number">15<span>+</span></div>
-      <div class="metric-label">Team Members Led</div>
-      <div class="metric-context">Cross-functional teams at Kotak Prime & Tata CLiQ</div>
-    </div>
-  </div>
-</section>
-
-<!-- Campaign Gallery -->
+<!-- Campaigns -->
 <section id="campaigns">
-  <div class="section-header">
-    <div class="section-label">Selected Work</div>
-    <h2 class="section-title">Campaign Portfolio</h2>
-    <p class="section-desc">Campaign systems demonstrating execution methodology, creative strategy, and performance optimisation — adaptable across EU markets.</p>
+  <div class="lang-de"><div class="section-header">
+    <div class="section-label">Ausgewählte Arbeiten</div>
+    <h2 class="section-title">Kampagnen-Portfolio</h2>
+    <p class="section-desc">Festival- und Saison-Kampagnen für Indien — strukturiert übertragbar auf EU-Märkte.</p>
   </div>
-
   <div class="campaigns-grid">
     <div class="campaign-card">
       <div class="campaign-image">
-        <img src="creative-diwali.png" alt="Diwali Campaign - New Car Loan">
+        <img src="https://chaitrali31.github.io/Portfolio1/assets/diwali.jpg" alt="Diwali Kampagne">
+        <span class="campaign-badge">Neuwagen-Finanzierung</span>
+        <span class="campaign-eu-badge">EU-Transfer: Weihnachten</span>
+      </div>
+      <div class="campaign-content">
+        <div class="campaign-festival">Diwali</div>
+        <h3 class="campaign-title">"Is Diwali, Nayi Khushiyan Celebrate Kijiye"</h3>
+        <p class="campaign-desc">Während Diwali — Höchstsaison für Autokäufe — entwickelte ich eine PAN-India-Kampagne, die die Dhanteras-Tradition (Fahrzeugkäufe) nutzte. Kernbotschaft: unkomplizierte Finanzierung mit minimaler Dokumentation. Kreative mit Ringelblumen-Girlanden und Pooja-Thali, Pre-Approval-CTA über Reels, Stories und Static Formate. A/B-Tests etablierten ein wiederverwendbares Festival-Framework.</p>
+        <div class="campaign-tags"><span class="campaign-tag">Festival-Marketing</span><span class="campaign-tag">PAN India</span><span class="campaign-tag">A/B-getestet</span></div>
+        <div class="campaign-eu-note">🇪🇺 <strong>EU-Transfer:</strong> Direkt übertragbar auf Weihnachts-/Neujahrs-Autopromotionen in Deutschland — saisonale Kaufintensität, Familien-Geschenke-Framing, emotionale Storytelling.</div>
+      </div>
+    </div>
+    <div class="campaign-card">
+      <div class="campaign-image">
+        <img src="https://chaitrali31.github.io/Portfolio1/assets/holi.jpg" alt="Holi Kampagne">
+        <span class="campaign-badge">Neuwagen-Finanzierung</span>
+        <span class="campaign-eu-badge">EU-Transfer: Frühling</span>
+      </div>
+      <div class="campaign-content">
+        <div class="campaign-festival">Holi</div>
+        <h3 class="campaign-title">"Drive Home Your Favourite Car with Colourful Flavours of Holi"</h3>
+        <p class="campaign-desc">Holi fällt mit dem Ende des Geschäftsjahres zusammen (Bonus-Zahlungen). Farbpalette von Diwali-Gold zu Elektro-Blau, Pink und Gelb. Positionierung als Top-Up zu Bonus-Zahlungen mit 100% On-Road-Funding. Zwei-Fahrzeug-Showcase (Sedan + SUV) über Reels, Stories, Static Posts. A/B-Tests von Farbpaletten gegen CTA-Varianten, Zielgruppensegmentierung nach Bonus-Empfängern.</p>
+        <div class="campaign-tags"><span class="campaign-tag">Farbstrategie</span><span class="campaign-tag">Multi-Format</span><span class="campaign-tag">Segmentiert</span></div>
+        <div class="campaign-eu-note">🇪🇺 <strong>EU-Transfer:</strong> Frühlings-/Sommer-Kampagne für Urlaubs- und Bonus-Saison — Farbpsychologie und Segmentierung nach Einkommensgruppen anwendbar.</div>
+      </div>
+    </div>
+    <div class="campaign-card">
+      <div class="campaign-image">
+        <img src="https://chaitrali31.github.io/Portfolio1/assets/onam.jpg" alt="Onam Kampagne">
+        <span class="campaign-badge">Top-Up-Kredit</span>
+        <span class="campaign-eu-badge">EU-Transfer: Regional</span>
+      </div>
+      <div class="campaign-content">
+        <div class="campaign-festival">Onam</div>
+        <h3 class="campaign-title">"Enjoy the Harvest That Never Ends"</h3>
+        <p class="campaign-desc">Onam erforderte tiefe regionale Kerala-Narrative statt generischer pan-India-Bildsprache. Kampagne mit Kasavu-Tracht, Schirmen und Blumenkörben. Top-Up-Kredit als kontinuierlicher Wohlstand positioniert — flexible Raten: höher in Ernte-Monaten, niedriger in Aussaat-Monaten. Lokalisierte Copy und A/B-Tests regionaler gegen Stock-Bilder.</p>
+        <div class="campaign-tags"><span class="campaign-tag">Regional</span><span class="campaign-tag">Südindien</span><span class="campaign-tag">Lokalisiert</span></div>
+        <div class="campaign-eu-note">🇪🇺 <strong>EU-Transfer:</strong> Regionale Lokalisierung für Bayern (Oktoberfest), Baden-Württemberg oder Norddeutschland — Erntefest-Framing und flexible Zahlungsstrukturen.</div>
+      </div>
+    </div>
+    <div class="campaign-card">
+      <div class="campaign-image">
+        <img src="https://chaitrali31.github.io/Portfolio1/assets/ganesh.jpg" alt="Ganesh Chaturthi Kampagne">
+        <span class="campaign-badge">Format-Innovation</span>
+        <span class="campaign-eu-badge">EU-Transfer: Grid-System</span>
+      </div>
+      <div class="campaign-content">
+        <div class="campaign-festival">Ganesh Chaturthi</div>
+        <h3 class="campaign-title">3-Part Grid: "Shree Ganesh Karein Nayi Gaadi Ka"</h3>
+        <p class="campaign-desc">Für Maharashtra und Gujarat: Vighnaharta-Konzept — Kredit nicht als Schulden, sondern als göttliche Hindernisbeseitigung für ein neues Fahrzeug. Dreiteiliges Instagram-Grid als Single Canvas: Einladung links, Gottheit mit CTA in der Mitte, Kreditversprechen rechts. A/B-Tests gegen Standard-Single-Posts über Meta Ads Manager mit segmentierten Zielgruppen.</p>
+        <div class="campaign-tags"><span class="campaign-tag">Grid-Design</span><span class="campaign-tag">Instagram</span><span class="campaign-tag">Modular</span></div>
+        <div class="campaign-eu-note">🇪🇺 <strong>EU-Transfer:</strong> Modulares Grid-System für jede saisonale Kampagne — Weihnachten, Ostern, Sommerferien — mit lokaler Symbolik und CTA-Integration.</div>
+      </div>
+    </div>
+    <div class="campaign-card">
+      <div class="campaign-image">
+        <img src="https://chaitrali31.github.io/Portfolio1/assets/christmas.jpg" alt="Weihnachts-Kampagne">
+        <span class="campaign-badge">Neuwagen-Finanzierung</span>
+        <span class="campaign-eu-badge">EU-ready</span>
+      </div>
+      <div class="campaign-content">
+        <div class="campaign-festival">Weihnachten</div>
+        <h3 class="campaign-title">"Wishing You a Christmas Full of New Beginnings"</h3>
+        <p class="campaign-desc">Jahresende mit Hersteller-Altbestands-Ausverkauf. EU-Markt-ready Kampagne: Kredit als Schleife am Auto — Familiengeschenk statt Finanzprodukt. Abkehr von Diwali-Wohlstandsbotschaft hin zu emotionalem Storytelling: Familie im Auto, Weihnachtsmann über festlicher Stadt. Multi-Format Video und Social Execution, A/B-Tests emotional vs. promotionale Messaging.</p>
+        <div class="campaign-tags"><span class="campaign-tag">Saisonal</span><span class="campaign-tag">EU-Kontext</span><span class="campaign-tag">Emotional</span></div>
+        <div class="campaign-eu-note">🇪🇺 <strong>EU-ready:</strong> Direkt für deutsche Weihnachts- und Neujahrs-Autopromotionen geeignet — emotionale Storytelling-Vorlage mit familienorientiertem Framing.</div>
+      </div>
+    </div>
+  </div></div>
+  <div class="lang-en"><div class="section-header">
+    <div class="section-label">Selected Work</div>
+    <h2 class="section-title">Campaign Portfolio</h2>
+    <p class="section-desc">Festival and seasonal systems built for India — structured to translate across EU markets.</p>
+  </div>
+  <div class="campaigns-grid">
+    <div class="campaign-card">
+      <div class="campaign-image">
+        <img src="https://chaitrali31.github.io/Portfolio1/assets/diwali.jpg" alt="Diwali Campaign">
         <span class="campaign-badge">New Car Loan</span>
       </div>
       <div class="campaign-content">
         <div class="campaign-festival">Diwali</div>
         <h3 class="campaign-title">"Is Diwali, Nayi Khushiyan Celebrate Kijiye"</h3>
-        <p class="campaign-desc" style="font-size:12px;color:var(--accent);font-weight:600;margin-bottom:4px;">Execution: Meta Ads Manager · Canva · A/B Testing · Audience Segmentation</p>
-        <p class="campaign-desc">Festival campaign: vehicle ownership as new beginning. Visual: couple with SUV, rangoli, fireworks. Message: hassle-free loans during high-spend season. EU adaptability: seasonal messaging framework transferable to Christmas/New Year auto promotions.</p>
-        <div class="campaign-tags">
-          <span class="campaign-tag">Festival Marketing</span>
-          <span class="campaign-tag">Product Launch</span>
-          <span class="campaign-tag">Print + Social</span>
-        </div>
+        <p class="campaign-desc">During Diwali — peak season for auto purchases — new car deliveries faced long waiting periods and customers needed pre-approval to negotiate at dealerships. I developed a PAN-India campaign leveraging the Dhanteras tradition of vehicle purchases, positioning hassle-free loans and minimal paperwork as the core message. The creative featured a new car adorned with marigold garlands and a pooja thali, with a pre-approval CTA deployed across Reels, Stories, and static formats. A/B testing of creative and copy variants established a reusable festival framework, strengthened brand recall, and directly translates to EU Christmas/New Year auto promotions.</p>
+        <div class="campaign-tags"><span class="campaign-tag">Festival Marketing</span><span class="campaign-tag">PAN India</span><span class="campaign-tag">A/B Tested</span></div>
       </div>
     </div>
-
     <div class="campaign-card">
       <div class="campaign-image">
-        <img src="creative-holi.png" alt="Holi Campaign - New Car Loan">
+        <img src="https://chaitrali31.github.io/Portfolio1/assets/holi.jpg" alt="Holi Campaign">
         <span class="campaign-badge">New Car Loan</span>
       </div>
       <div class="campaign-content">
         <div class="campaign-festival">Holi</div>
         <h3 class="campaign-title">"Drive Home Your Favourite Car with Colourful Flavours of Holi"</h3>
-        <p class="campaign-desc" style="font-size:12px;color:var(--accent);font-weight:600;margin-bottom:4px;">Execution: Meta Ads Manager · Canva · A/B Testing · Audience Segmentation</p>
-        <p class="campaign-desc">Colour psychology in auto finance. Two-vehicle showcase (sedan + SUV) against festive backdrop. Benefit: up to 100% on-road funding. Formats: Reels, Stories, static posts. EU adaptability: spring/summer campaign framework for European markets.</p>
-        <div class="campaign-tags">
-          <span class="campaign-tag">Colour Strategy</span>
-          <span class="campaign-tag">Multi-Format</span>
-          <span class="campaign-tag">Festival</span>
-        </div>
+        <p class="campaign-desc">Holi coincides with financial year-end bonuses, making it a high-intent window for vehicle purchases. I shifted the colour palette from Diwali gold to electric blue, hot pink, and bright yellow, positioning the loan as a top-up to Holi bonuses with 100% on-road funding and quick approvals. A two-vehicle showcase (sedan + SUV) ran across Reels, Stories, and static posts, with A/B tests pitting colour palettes against CTA variants and audiences segmented by bonus recipients. The result was a spring/summer campaign framework and a colour strategy transferable to European seasonal auto campaigns.</p>
+        <div class="campaign-tags"><span class="campaign-tag">Colour Strategy</span><span class="campaign-tag">Multi-Format</span><span class="campaign-tag">Segmented</span></div>
       </div>
     </div>
-
     <div class="campaign-card">
       <div class="campaign-image">
-        <img src="creative-onam-topup.png" alt="Onam Campaign - Top-Up Loan">
+        <img src="https://chaitrali31.github.io/Portfolio1/assets/onam.jpg" alt="Onam Campaign">
         <span class="campaign-badge">Top-Up Loan</span>
       </div>
       <div class="campaign-content">
         <div class="campaign-festival">Onam</div>
         <h3 class="campaign-title">"Enjoy the Harvest That Never Ends"</h3>
-        <p class="campaign-desc" style="font-size:12px;color:var(--accent);font-weight:600;margin-bottom:4px;">Execution: Meta Ads Manager · Canva · A/B Testing · Audience Segmentation</p>
-        <p class="campaign-desc">Regional localisation (South India). Visual: traditional couple with umbrella and flower basket. Product: top-up loan as continuous prosperity. Trust signal: EMI Protect. EU adaptability: harvest festival framework transferable to European seasonal campaigns.</p>
-        <div class="campaign-tags">
-          <span class="campaign-tag">Regional</span>
-          <span class="campaign-tag">Top-Up Loan</span>
-          <span class="campaign-tag">Onam</span>
-        </div>
+        <p class="campaign-desc">Onam demanded a deeply local Kerala narrative rather than generic pan-India imagery. I developed a regional campaign built around Kasavu attire, umbrellas, and flower baskets, positioning the top-up loan as continuous prosperity with flexible EMIs — higher during harvest months, lower during sowing. The creative ran with localised copy and A/B tests comparing regional imagery against stock visuals. This established a regional localisation framework and a harvest-festival product story adaptable to European seasonal campaigns.</p>
+        <div class="campaign-tags"><span class="campaign-tag">Regional</span><span class="campaign-tag">South India</span><span class="campaign-tag">Localised</span></div>
       </div>
     </div>
-
     <div class="campaign-card">
       <div class="campaign-image">
-        <img src="creative-ganesh.png" alt="Ganesh Chaturthi Campaign - Grid Format">
+        <img src="https://chaitrali31.github.io/Portfolio1/assets/ganesh.jpg" alt="Ganesh Chaturthi Campaign">
         <span class="campaign-badge">Format Innovation</span>
       </div>
       <div class="campaign-content">
         <div class="campaign-festival">Ganesh Chaturthi</div>
         <h3 class="campaign-title">3-Part Grid: "Shree Ganesh Karein Nayi Gaadi Ka"</h3>
-        <p class="campaign-desc" style="font-size:12px;color:var(--accent);font-weight:600;margin-bottom:4px;">Execution: Meta Ads Manager · Canva · A/B Testing · Audience Segmentation</p>
-        <p class="campaign-desc">Instagram grid as single canvas (3-part format). Left: guest invitation. Center: deity imagery with CTA. Right: loan promise. Goal: visual impact and scroll retention. EU adaptability: modular grid system works for any seasonal campaign.</p>
-        <div class="campaign-tags">
-          <span class="campaign-tag">Grid Design</span>
-          <span class="campaign-tag">Format Innovation</span>
-          <span class="campaign-tag">Instagram</span>
-        </div>
+        <p class="campaign-desc">For Maharashtra and Gujarat, I used the Vighnaharta concept to position the loan not as debt, but as divine obstacle removal for a new vehicle. I designed a three-part Instagram grid functioning as a single canvas — guest invitation on the left, deity imagery with CTA in the centre, and loan promise on the right — built for scroll retention and visual impact. A/B tests against standard single posts, executed through Meta Ads Manager with segmented audiences, produced a modular grid system reusable for any seasonal campaign including European festival layouts.</p>
+        <div class="campaign-tags"><span class="campaign-tag">Grid Design</span><span class="campaign-tag">Instagram</span><span class="campaign-tag">Modular</span></div>
       </div>
     </div>
-      <div class="campaign-card">
+    <div class="campaign-card">
       <div class="campaign-image">
-        <video src="creative-christmas.mp4" autoplay muted loop playsinline style="width:100%;height:auto;display:block;border-radius:16px 16px 0 0;" poster="creative-christmas-poster.jpg"></video>
+        <img src="https://chaitrali31.github.io/Portfolio1/assets/christmas.jpg" alt="Christmas Campaign">
         <span class="campaign-badge">New Car Loan</span>
       </div>
       <div class="campaign-content">
         <div class="campaign-festival">Christmas</div>
         <h3 class="campaign-title">"Wishing You a Christmas Full of New Beginnings"</h3>
-        <p class="campaign-desc" style="font-size:12px;color:var(--accent);font-weight:600;margin-bottom:4px;">Execution: Meta Ads Manager · Canva · A/B Testing · Audience Segmentation</p>
-        <p class="campaign-desc">Seasonal campaign (EU market). Visual: family in car viewing Santa's sleigh over festive city. Emotional storytelling: vehicle ownership as holiday milestone. Direct EU-market creative execution.</p>
-        <div class="campaign-tags">
-          <span class="campaign-tag">Seasonal Marketing</span>
-          <span class="campaign-tag">EU Context</span>
-          <span class="campaign-tag">Video + Social</span>
-        </div>
+        <p class="campaign-desc">At year-end, with manufacturers pushing old stock, I developed an EU-market-ready Christmas campaign treating the loan as a ribbon on the car — a family gift rather than a financial product. Moving away from Diwali prosperity messaging, I used emotional storytelling showing a family in their car watching Santa's sleigh over a festive city. The multi-format video and social execution was A/B tested for emotional versus promotional messaging, establishing a seasonal framework and emotional storytelling template for European Christmas and New Year auto promotions.</p>
+        <div class="campaign-tags"><span class="campaign-tag">Seasonal</span><span class="campaign-tag">EU Context</span><span class="campaign-tag">Emotional</span></div>
       </div>
     </div>
+  </div></div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+  <div class="lang-de"><div class="section-header">
+    <div class="section-label">Kompetenzen</div>
+    <h2 class="section-title">Tools & Expertise</h2>
+    <p class="section-desc">Stack aufgebaut über 7 Jahre praktischer Umsetzung.</p>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-category">
+      <div class="skill-category-header"><div class="skill-category-icon">P</div><div class="skill-category-title">Plattformen & Umsetzung</div></div>
+      <ul class="skill-list">
+        <li>Meta Business Suite <span class="skill-level skill-expert">Sehr gute Kenntnisse</span></li>
+        <li>Meta Ads Manager <span class="skill-level skill-expert">Sehr gute Kenntnisse</span></li>
+        <li>Instagram Strategie <span class="skill-level skill-expert">Sehr gute Kenntnisse</span></li>
+        <li>Facebook Community <span class="skill-level skill-expert">Sehr gute Kenntnisse</span></li>
+        <li>LinkedIn Kampagnen <span class="skill-level skill-advanced">Gute Kenntnisse</span></li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <div class="skill-category-header"><div class="skill-category-icon">C</div><div class="skill-category-title">Creative & Content</div></div>
+      <ul class="skill-list">
+        <li>Editorial Planning <span class="skill-level skill-expert">Sehr gute Kenntnisse</span></li>
+        <li>Reels & Shorts <span class="skill-level skill-expert">Sehr gute Kenntnisse</span></li>
+        <li>Canva & Photoshop <span class="skill-level skill-expert">Sehr gute Kenntnisse</span></li>
+        <li>AI Workflows (ChatGPT, Canva AI) <span class="skill-level skill-advanced">Gute Kenntnisse</span></li>
+        <li>Copy & Script Development <span class="skill-level skill-advanced">Gute Kenntnisse</span></li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <div class="skill-category-header"><div class="skill-category-icon">A</div><div class="skill-category-title">Analyse & Optimierung</div></div>
+      <ul class="skill-list">
+        <li>Google Analytics <span class="skill-level skill-expert">Sehr gute Kenntnisse</span></li>
+        <li>A/B-Testing <span class="skill-level skill-expert">Sehr gute Kenntnisse</span></li>
+        <li>Funnel-Analyse <span class="skill-level skill-expert">Sehr gute Kenntnisse</span></li>
+        <li>ROI / ROAS Reporting <span class="skill-level skill-expert">Sehr gute Kenntnisse</span></li>
+        <li>GDPR / DSGVO Compliance <span class="skill-level skill-expert">Sehr gute Kenntnisse</span></li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <div class="skill-category-header"><div class="skill-category-icon">O</div><div class="skill-category-title">CRM & Operations</div></div>
+      <ul class="skill-list">
+        <li>Salesforce <span class="skill-level skill-advanced">Gute Kenntnisse</span></li>
+        <li>Locobuzz <span class="skill-level skill-advanced">Gute Kenntnisse</span></li>
+        <li>CRM-Segmentierung <span class="skill-level skill-advanced">Gute Kenntnisse</span></li>
+        <li>Excel & Budget Planning <span class="skill-level skill-expert">Sehr gute Kenntnisse</span></li>
+        <li>Stakeholder Management <span class="skill-level skill-expert">Sehr gute Kenntnisse</span></li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <div class="skill-category-header"><div class="skill-category-icon">S</div><div class="skill-category-title">Sprachen</div></div>
+      <ul class="skill-list">
+        <li>Deutsch <span class="skill-level skill-advanced">B1 (Ziel: B2 bis Q4 2026)</span></li>
+        <li>Englisch <span class="skill-level skill-expert">C2 — Verhandlungssicher</span></li>
+        <li>Hindi <span class="skill-level skill-expert">Muttersprache</span></li>
+        <li>Marathi <span class="skill-level skill-expert">Muttersprache</span></li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <div class="skill-category-header"><div class="skill-category-icon">T</div><div class="skill-category-title">Technologie & Weiterbildung</div></div>
+      <ul class="skill-list">
+        <li>Python (Data Science) <span class="skill-level skill-basic">Grundkenntnisse</span></li>
+        <li>Google Ads AI-Powered <span class="skill-level skill-advanced">Gute Kenntnisse</span></li>
+        <li>WhatsApp Business API <span class="skill-level skill-advanced">Gute Kenntnisse</span></li>
+        <li>Datenschutzrecht (DSGVO) <span class="skill-level skill-expert">Sehr gute Kenntnisse</span></li>
+      </ul>
+    </div>
+  </div></div>
+  <div class="lang-en"><div class="section-header">
+    <div class="section-label">Capabilities</div>
+    <h2 class="section-title">Tools & Expertise</h2>
+    <p class="section-desc">Stack built over seven years of hands-on execution.</p>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-category">
+      <div class="skill-category-header"><div class="skill-category-icon">P</div><div class="skill-category-title">Platforms & Execution</div></div>
+      <ul class="skill-list">
+        <li>Meta Business Suite <span class="skill-level skill-expert">Expert</span></li>
+        <li>Meta Ads Manager <span class="skill-level skill-expert">Expert</span></li>
+        <li>Instagram Strategy <span class="skill-level skill-expert">Expert</span></li>
+        <li>Facebook Community <span class="skill-level skill-expert">Expert</span></li>
+        <li>LinkedIn Campaigns <span class="skill-level skill-advanced">Advanced</span></li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <div class="skill-category-header"><div class="skill-category-icon">C</div><div class="skill-category-title">Creative & Content</div></div>
+      <ul class="skill-list">
+        <li>Editorial Planning <span class="skill-level skill-expert">Expert</span></li>
+        <li>Reels & Shorts <span class="skill-level skill-expert">Expert</span></li>
+        <li>Canva & Photoshop <span class="skill-level skill-expert">Expert</span></li>
+        <li>AI Workflows (ChatGPT, Canva AI) <span class="skill-level skill-advanced">Advanced</span></li>
+        <li>Copy & Script Development <span class="skill-level skill-advanced">Advanced</span></li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <div class="skill-category-header"><div class="skill-category-icon">A</div><div class="skill-category-title">Analytics & Optimisation</div></div>
+      <ul class="skill-list">
+        <li>Google Analytics <span class="skill-level skill-expert">Expert</span></li>
+        <li>A/B Testing <span class="skill-level skill-expert">Expert</span></li>
+        <li>Funnel Analysis <span class="skill-level skill-expert">Expert</span></li>
+        <li>ROI / ROAS Reporting <span class="skill-level skill-expert">Expert</span></li>
+        <li>GDPR / DSGVO Compliance <span class="skill-level skill-expert">Expert</span></li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <div class="skill-category-header"><div class="skill-category-icon">O</div><div class="skill-category-title">CRM & Operations</div></div>
+      <ul class="skill-list">
+        <li>Salesforce <span class="skill-level skill-advanced">Advanced</span></li>
+        <li>Locobuzz <span class="skill-level skill-advanced">Advanced</span></li>
+        <li>CRM Segmentation <span class="skill-level skill-advanced">Advanced</span></li>
+        <li>Excel & Budget Planning <span class="skill-level skill-expert">Expert</span></li>
+        <li>Stakeholder Management <span class="skill-level skill-expert">Expert</span></li>
+      </ul>
+    </div>
+  </div></div>
+</section>
+
+<!-- Analysis -->
+<section id="analysis">
+  <div class="lang-de"><div class="section-header">
+    <div class="section-label">Methoden</div>
+    <h2 class="section-title">Diagnose & Entscheidungsfindung</h2>
+    <p class="section-desc">Strukturiertes Denken für komplexe Probleme — von Root-Cause-Analyse bis strategischer Validierung.</p>
+  </div>
+  <div class="analysis-grid">
+    <div class="analysis-card">
+      <h3>Ishikawa-Diagramm</h3>
+      <p class="de-title">Fishbone-Analyse · Root-Cause-Discovery</p>
+      <div class="context">Resembles a fish skeleton: the Head is the problem, the Spine links cause categories, Bones represent major buckets, and Ribs list specific drivers.</div>
+      <h4 style="color:var(--accent);margin:14px 0 8px;font-size:14px;">Service-Kategorien: Die 6 Ms</h4>
+      <div class="fishbone-cats">
+        <div class="fishbone-cat"><strong>Manpower</strong>Skills, Training, Ermüdung, Engagement</div>
+        <div class="fishbone-cat"><strong>Methods</strong>Prozesse, Verfahren, Workflows</div>
+        <div class="fishbone-cat"><strong>Machines</strong>Tools, CRM, Produktionstechnik</div>
+        <div class="fishbone-cat"><strong>Materials</strong>Rohinputs, FAQs, Informationen</div>
+        <div class="fishbone-cat"><strong>Measurement</strong>KPIs, CSAT, Inspektionsstandards</div>
+        <div class="fishbone-cat"><strong>Environment</strong>Arbeitsplatz, Lärm, Remote-Setup</div>
+      </div>
+      <p style="margin-top:12px;font-size:13px;color:var(--muted);"><strong>Meine Anwendung (Tata CLiQ):</strong> SLA unter 95% → 6-Ms-Analyse → Root Causes: unerfahrene Agenten, keine Eskalationsmatrix, CRM nicht integriert, unvollständige FAQs, keine Echtzeit-Dashboards, hohe Fluktuation.</p>
+      <div class="result-box">Ergebnis: SLA → 95%+ · CSAT ~+20% · Negatives Sentiment ~−18%</div>
+    </div>
+    <div class="analysis-card">
+      <h3>SWOT-Analyse</h3>
+      <p class="de-title">Strategische Validierung vor Rollout</p>
+      <div class="context">Angewendet auf Team-Performance-Reviews und Initiative-Greenlighting.</div>
+      <div class="swot-grid">
+        <div class="swot-item swot-s"><strong>STRENGTHS</strong>Etablierte Agentur-Partnerschaften, bewährte Festival-Frameworks, interkulturelle Kompetenz</div>
+        <div class="swot-item swot-w"><strong>WEAKNESSES</strong>Begrenzte In-House-Video-Kapazität, externe Creative-Abhängigkeit</div>
+        <div class="swot-item swot-o"><strong>OPPORTUNITIES</strong>Festival-Traffic-Peaks, EU-Markt-Adaptierbarkeit, AI-Content-Produktion</div>
+        <div class="swot-item swot-t"><strong>THREATS</strong>Steigende Wettbewerber-Werbeausgaben in Peak-Saisons, Plattform-Algorithmus-Änderungen</div>
+      </div>
+      <p style="margin-top:12px;font-size:13px;color:var(--muted);"><strong>Beispiel (Kotak Prime Reels):</strong> SWOT vor Launch → risikominimierter Rollout mit +28% Engagement-Wachstum.</p>
+      <div class="result-box">Ergebnis: Risikominimierte Rollouts · Datengetriebene Go/No-Go-Entscheidungen</div>
+    </div>
+  </div></div>
+  <div class="lang-en"><div class="section-header">
+    <div class="section-label">Methods</div>
+    <h2 class="section-title">How I Diagnose & Decide</h2>
+    <p class="section-desc">Structured thinking for complex problems — from root-cause analysis to strategic validation.</p>
+  </div>
+  <div class="analysis-grid">
+    <div class="analysis-card">
+      <h3>Ishikawa Diagram</h3>
+      <p class="de-title">Fishbone Analysis · Root-Cause Discovery</p>
+      <div class="context">Resembles a fish skeleton: the Head is the problem, the Spine links cause categories, Bones represent major buckets, and Ribs list specific drivers.</div>
+      <h4 style="color:var(--accent);margin:14px 0 8px;font-size:14px;">Service Categories: The 6 Ms</h4>
+      <div class="fishbone-cats">
+        <div class="fishbone-cat"><strong>Manpower</strong>Skills, training, fatigue, engagement</div>
+        <div class="fishbone-cat"><strong>Methods</strong>Processes, procedures, workflows</div>
+        <div class="fishbone-cat"><strong>Machines</strong>Tools, CRM, production tech</div>
+        <div class="fishbone-cat"><strong>Materials</strong>Raw inputs, FAQs, information</div>
+        <div class="fishbone-cat"><strong>Measurement</strong>KPIs, CSAT, inspection standards</div>
+        <div class="fishbone-cat"><strong>Environment</strong>Workspace, noise, remote setup</div>
+      </div>
+      <p style="margin-top:12px;font-size:13px;color:var(--muted);"><strong>My Application (Tata CLiQ):</strong> SLA below 95% → 6 Ms analysis → root causes: inexperienced agents, no escalation matrix, CRM not integrated, incomplete FAQs, no real-time dashboards, high turnover.</p>
+      <div class="result-box">Result: SLA → 95%+ · CSAT ~+20% · Negative sentiment ~−18%</div>
+    </div>
+    <div class="analysis-card">
+      <h3>SWOT Analysis</h3>
+      <p class="de-title">Strategic Validation Before Rollout</p>
+      <div class="context">Applied to team performance reviews and initiative green-lighting.</div>
+      <div class="swot-grid">
+        <div class="swot-item swot-s"><strong>STRENGTHS</strong>Established agency partnerships, proven festival frameworks, cross-cultural fluency</div>
+        <div class="swot-item swot-w"><strong>WEAKNESSES</strong>Limited in-house video capability, external creative dependency</div>
+        <div class="swot-item swot-o"><strong>OPPORTUNITIES</strong>Festival traffic peaks, EU market adaptability, AI content production</div>
+        <div class="swot-item swot-t"><strong>THREATS</strong>Rising competitor ad spend in peak seasons, platform algorithm shifts</div>
+      </div>
+      <p style="margin-top:12px;font-size:13px;color:var(--muted);"><strong>Example (Kotak Prime Reels):</strong> SWOT before launch → risk-mitigated rollout with +28% engagement growth.</p>
+      <div class="result-box">Result: Risk-minimised rollouts · Data-driven go/no-go calls</div>
+    </div>
+  </div></div>
+</section>
+
+<!-- Why Germany -->
+<section id="why-germany">
+  <div class="lang-de"><div class="section-header">
+    <div class="section-label">Warum Deutschland</div>
+    <h2 class="section-title">Mein Weg nach Berlin</h2>
+    <p class="section-desc">Langfristige Perspektive, strukturierte Integration und berufliche Weiterentwicklung im deutschen Markt.</p>
+  </div>
+  <div class="why-germany-grid">
+    <div class="why-germany-card">
+      <div class="icon">🇩🇪</div>
+      <h3>Langfristige Perspektive</h3>
+      <p>Mein Ziel ist eine dauerhafte berufliche und persönliche Integration in Deutschland. Die Chancenkarte ermöglicht mir unbeschränkten Arbeitsmarktzugang. Ich plane, meinen Wohnsitz dauerhaft in Berlin zu etablieren und beruflich aufzusteigen.</p>
+    </div>
+    <div class="why-germany-card">
+      <div class="icon">📈</div>
+      <h3>Berufliche Weiterentwicklung</h3>
+      <p>Deutschland bietet optimale Bedingungen für Customer Experience und Digital Operations — strukturierte Prozesse, datengetriebene Kultur und hohe Qualitätsstandards. Meine indische Erfahrung in Skalierung und Cross-Cultural Marketing ergänzt den deutschen Markt ideal.</p>
+    </div>
+    <div class="why-germany-card">
+      <div class="icon">🎯</div>
+      <h3>Deutsch-Sprachentwicklung</h3>
+      <p>Aktuell B1, systematischer Aufbau auf B2 bis Q4 2026. Intensivkurs mit berufsbezogenem Fokus (Marketing, Kundenkommunikation, Projektmanagement). Ziel: Verhandlungssicheres Deutsch für interne Stakeholder-Kommunikation.</p>
+    </div>
+    <div class="why-germany-card">
+      <div class="icon">🤝</div>
+      <h3>Kulturelle Integration</h3>
+      <p>Aktive Teilnahme am Berliner Berufsnetzwerk (LinkedIn, XING, Meetups). Vertraut mit deutscher Arbeitskultur: Pünktlichkeit, Sachlichkeit, Gründlichkeit, Teamorientierung und Work-Life-Balance. Bereit, mich vollständig in deutsche Teams zu integrieren.</p>
+    </div>
+  </div></div>
+  <div class="lang-en">
+  <div class="section-header">
+    <div class="section-label">Why Germany</div>
+    <h2 class="section-title">My Path to Berlin</h2>
+    <p class="section-desc">Long-term perspective, structured integration, and professional development in the German market.</p>
+  </div>
+  <div class="why-germany-grid">
+    <div class="why-germany-card">
+      <div class="icon">🇩🇪</div>
+      <h3>Long-Term Perspective</h3>
+      <p>My goal is permanent professional and personal integration in Germany. The Chancenkarte gives me unrestricted labour market access. I plan to establish my residence permanently in Berlin and advance professionally.</p>
+    </div>
+    <div class="why-germany-card">
+      <div class="icon">📈</div>
+      <h3>Professional Development</h3>
+      <p>Germany offers optimal conditions for customer experience and digital operations — structured processes, data-driven culture, and high quality standards. My Indian experience in scaling and cross-cultural marketing ideally complements the German market.</p>
+    </div>
+    <div class="why-germany-card">
+      <div class="icon">🎯</div>
+      <h3>German Language Development</h3>
+      <p>Currently B1, systematic build-up to B2 by Q4 2026. Intensive course with professional focus (marketing, customer communication, project management). Goal: negotiation-level German for internal stakeholder communication.</p>
+    </div>
+    <div class="why-germany-card">
+      <div class="icon">🤝</div>
+      <h3>Cultural Integration</h3>
+      <p>Active participation in Berlin's professional network (LinkedIn, XING, meetups). Familiar with German work culture: punctuality, objectivity, thoroughness, team orientation, and work-life balance. Ready to fully integrate into German teams.</p>
+    </div>
+  </div>
 </div>
 </section>
 
-<!-- Skills Section -->
-<section id="skills">
-  <div class="section-header">
-    <div class="section-label">Capabilities</div>
-    <h2 class="section-title">Tools & Expertise</h2>
-    <p class="section-desc">Tools and capabilities developed over seven years of hands-on execution.</p>
-  </div>
-
-  <div class="skills-grid">
-    <div class="skill-category">
-      <div class="skill-category-header">
-        <div class="skill-category-icon">P</div>
-        <div class="skill-category-title">Platforms & Campaign Execution</div>
-      </div>
-      <ul class="skill-list">
-        <li>Meta Business Suite</li>
-        <li>Instagram Strategy & Execution</li>
-        <li>Facebook Community Management</li>
-        <li>YouTube Ads & SEO</li>
-        <li>CTR / CPC Optimisation</li>
-        <li>Lookalike & Custom Audience Building</li>
-      </ul>
-    </div>
-
-    <div class="skill-category">
-      <div class="skill-category-header">
-        <div class="skill-category-icon">C</div>
-        <div class="skill-category-title">Content Strategy & Creative Execution</div>
-      </div>
-      <ul class="skill-list">
-        <li>Editorial Planning</li>
-        <li>Reels & Shorts Strategy</li>
-        <li>Canva, Photoshop & Creative Design</li>
-        <li>AI-Assisted Workflows (ChatGPT, Canva AI)</li>
-        <li>Script Development</li>
-      </ul>
-    </div>
-
-    <div class="skill-category">
-      <div class="skill-category-header">
-        <div class="skill-category-icon">A</div>
-        <div class="skill-category-title">Analytics & Optimisation</div>
-      </div>
-      <ul class="skill-list">
-        <li>Meta Ads Manager</li>
-        <li>Google Analytics</li>
-        <li>A/B Testing & Experimentation</li>
-        <li>Funnel Analysis & Optimisation</li>
-        <li>Weekly & Monthly Performance Dashboards</li>
-        <li>ROI / ROAS Measurement</li>
-        <li>DSGVO / GDPR Compliance</li>
-      </ul>
-    </div>
-
-    <div class="skill-category">
-      <div class="skill-category-header">
-        <div class="skill-category-icon">O</div>
-        <div class="skill-category-title">CRM & Operations</div>
-      </div>
-      <ul class="skill-list">
-        <li>Salesforce</li>
-        <li>Locobuzz</li>
-        <li>CRM Data Segmentation</li>
-        <li>Excel & Marketing Budget Planning</li>
-        <li>Stakeholder Management</li>
-      </ul>
-    </div>
-  </div>
-
-  
-
-<!-- Certifications -->
 <!-- Testimonials -->
-<section>
-  <div class="section-header">
-    <div class="section-label">Testimonials</div>
-    <h2 class="section-title">What Colleagues Say</h2>
-    <p class="section-desc">Direct feedback from former managers and team members.</p>
+<section id="testimonials">
+  <div class="lang-de"><div class="section-header">
+    <div class="section-label">Stimmen</div>
+    <h2 class="section-title">Arbeitszeugnisse & Referenzen</h2>
+    <p class="section-desc">Direktes Feedback von ehemaligen Vorgesetzten. Formelle Arbeitszeugnisse auf Anfrage verfügbar.</p>
   </div>
-
-  <div class="testimonials-grid" style="display:grid;grid-template-columns:1fr;gap:24px;max-width:800px;margin:0 auto;">
-    <div class="testimonial-card" style="background:white;border:1px solid var(--border);border-radius:16px;padding:24px;box-shadow:var(--shadow);position:relative;">
-      <div style="font-size:48px;color:var(--accent);line-height:1;position:absolute;top:20px;left:24px;opacity:0.3;">"</div>
-      <p style="font-size:14px;color:var(--slate);line-height:1.7;margin-bottom:16px;padding-left:16px;position:relative;z-index:1;">I had the privilege of working with Chaitrali when she was managing the non-voice operations for Tata CliQ. This was 0 to 1, the growth phase for the company and she was responsible for managing critical teams with limited resources and she did that outstandingly. She is sincere, focused, passionate, curious to learn and implement new ideas but what sets her apart from others is that she is a people's person. She is the kind of person you can leave at the deep end of a pool without extensive support or follow up and she will figure out her way on her own and then help others based on her experience.</p>
-      <div style="display:flex;align-items:center;gap:16px;border-top:1px solid var(--border);padding-top:20px;">
-        <div style="width:48px;height:48px;background:var(--cream);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;color:var(--accent);">RF</div>
-        <div>
-          <div style="font-size:14px;font-weight:700;color:var(--ink);">Ruchir Falodiya</div>
-          <div style="font-size:12px;color:var(--muted);">Former Manager, Tata CliQ · LinkedIn Recommendation</div>
-        </div>
+  <div class="testimonial-card">
+    <div class="quote-mark">"</div>
+    <p class="testimonial-text">I had the privilege of working with Chaitrali when she was managing the non-voice operations for Tata CliQ. This was 0 to 1, the growth phase for the company and she was responsible for managing critical teams with limited resources and she did that outstandingly. She is sincere, focused, passionate, curious to learn and implement new ideas but what sets her apart from others is that she is a people's person. She is the kind of person you can leave at the deep end of a pool without extensive support or follow up and she will figure out her way on her own and then help others based on her experience.</p>
+    <div class="testimonial-author">
+      <div class="testimonial-avatar">RF</div>
+      <div>
+        <div class="testimonial-author-name">Ruchir Falodiya</div>
+        <div class="testimonial-author-role">Former Manager, Tata CLiQ · LinkedIn Recommendation · 2019</div>
       </div>
     </div>
   </div>
+  <div style="text-align:center; margin-top:24px; font-size:13px; color:var(--muted);">
+    <strong>Arbeitszeugnisse auf Anfrage verfügbar</strong> — Kotak Mahindra Prime, Kotak Mahindra Bank, Tata CLiQ, Ola Cabs, Sutherland Global Services
+  </div></div>
+  <div class="lang-en"><div class="section-header">
+    <div class="section-label">Voices</div>
+    <h2 class="section-title">What Colleagues Say</h2>
+    <p class="section-desc">Direct feedback from former managers.</p>
+  </div>
+  <div class="testimonial-card">
+    <div class="quote-mark">"</div>
+    <p class="testimonial-text">I had the privilege of working with Chaitrali when she was managing the non-voice operations for Tata CliQ. This was 0 to 1, the growth phase for the company and she was responsible for managing critical teams with limited resources and she did that outstandingly. She is sincere, focused, passionate, curious to learn and implement new ideas but what sets her apart from others is that she is a people's person. She is the kind of person you can leave at the deep end of a pool without extensive support or follow up and she will figure out her way on her own and then help others based on her experience.</p>
+    <div class="testimonial-author">
+      <div class="testimonial-avatar">RF</div>
+      <div>
+        <div class="testimonial-author-name">Ruchir Falodiya</div>
+        <div class="testimonial-author-role">Former Manager, Tata CLiQ · LinkedIn Recommendation</div>
+      </div>
+    </div>
+  </div></div>
 </section>
 
-<section>
-  <div class="section-header">
-    <div class="section-label">Education</div>
-    <h2 class="section-title">Degrees & Certifications</h2>
-    <p class="section-desc">Continuous learning across digital marketing, analytics, data science, and emerging technology.</p>
+<!-- Hobbies -->
+<section id="hobbies">
+  <div class="lang-de"><div class="section-header">
+    <div class="section-label">Über die Arbeit hinaus</div>
+    <h2 class="section-title">Interessen & Hobbys</h2>
+    <p class="section-desc">Kreative Disziplinen, die Aufmerksamkeit für Details und Geduld schärfen — im Einklang mit Work-Life-Balance.</p>
   </div>
+  <div class="hobbies-grid">
+    <div class="hobby-card">
+      <div class="emoji">🎨</div>
+      <h4>Gravel Art</h4>
+      <p class="de-hobby">Präzision & Textur</p>
+      <p>Schichtung von Farbe und Komposition mit akribischer Sorgfalt — eine Denkweise, die ich in jeden Creative Review einbringe.</p>
+    </div>
+    <div class="hobby-card">
+      <div class="emoji">🌿</div>
+      <h4>Gartenarbeit</h4>
+      <p class="de-hobby">Geduld & langfristige Planung</p>
+      <p>Vom Samen zur Blüte. Spiegelt Campaign-Lifecycle-Stewardship und Beziehungspflege wider.</p>
+    </div>
+    <div class="hobby-card">
+      <div class="emoji">🍳</div>
+      <h4>Kochen</h4>
+      <p class="de-hobby">Experimentierfreude & Fusion</p>
+      <p>Balance von Kreativität mit messbaren Ergebnissen — dieselbe Logik hinter jedem A/B-Test.</p>
+    </div>
+  </div></div>
+  <div class="lang-en"><div class="section-header">
+    <div class="section-label">Beyond Work</div>
+    <h2 class="section-title">Interests & Hobbies</h2>
+    <p class="section-desc">Creative disciplines that sharpen attention to detail and patience.</p>
+  </div>
+  <div class="hobbies-grid">
+    <div class="hobby-card">
+      <div class="emoji">🎨</div>
+      <h4>Gravel Art</h4>
+      <p class="de-hobby">Precision & texture</p>
+      <p>Layering colour and composition with meticulous care — a mindset I bring to every creative review.</p>
+    </div>
+    <div class="hobby-card">
+      <div class="emoji">🌿</div>
+      <h4>Gardening</h4>
+      <p class="de-hobby">Patience & long-term planning</p>
+      <p>From seed to bloom. Mirrors campaign lifecycle stewardship and relationship cultivation.</p>
+    </div>
+    <div class="hobby-card">
+      <div class="emoji">🍳</div>
+      <h4>Cooking</h4>
+      <p class="de-hobby">Experimentation & fusion</p>
+      <p>Balancing creativity with measurable outcomes — the same logic behind every A/B test I run.</p>
+    </div>
+  </div></div>
+</section>
 
+<!-- Awards -->
+<section id="awards">
+  <div class="lang-de"><div class="section-header">
+    <div class="section-label">Anerkennung</div>
+    <h2 class="section-title">Auszeichnungen & Erfolge</h2>
+    <p class="section-desc">Peer- und Führungskraft-Anerkennung über 18 Jahre Berufserfahrung.</p>
+  </div>
+  <div class="awards-grid">
+    <div class="award-item"><strong>"League of Extraordinary"</strong> — Tata Business Support Services<br><span>Outstanding Performance & Extraordinary Contribution · Okt 2016</span></div>
+    <div class="award-item"><strong>"Coach the Coach"</strong> — Team Lead Development Boot Camp<br><span>Interner Coach für Team-Lead-Entwicklung · Tata BSS</span></div>
+    <div class="award-item"><strong>Frontline Leadership</strong> — Sutherland Global Services / AT&T OMC<br><span>Leadership-Entwicklungsprogramm · Aneesh Nair, Somnath Deb</span></div>
+    <div class="award-item"><strong>Top SME in Exception Manager</strong> — Sutherland / AT&T UCSDC<br><span>2x aufeinanderfolgend: April 2014 & Mai 2014 · Subject Matter Expert</span></div>
+    <div class="award-item"><strong>Achievement Award — Best Performing Support Tech</strong> — Sutherland / Symantec<br><span>3x: Juni 2009 · Okt 2010 · Okt 2011 · Sustained Excellence</span></div>
+    <div class="award-item"><strong>Best Floor Support</strong> — Sutherland Global Services<br><span>Monatliche Performance-Auszeichnung · Juni 2009 · Ramesh K Narain, Jestin Joseph</span></div>
+    <div class="award-item"><strong>"Value Driven People Culture" Brand Pin</strong> — Kotak Life Insurance<br><span>Outstanding contribution in critical situation · Ruchira Bhardwaja, President & CHRO · Jul 2022</span></div>
+  </div></div>
+  <div class="lang-en"><div class="section-header">
+    <div class="section-label">Recognition</div>
+    <h2 class="section-title">Awards & Achievements</h2>
+    <p class="section-desc">Peer and leadership recognition across an eighteen-year career.</p>
+  </div>
+  <div class="awards-grid">
+    <div class="award-item"><strong>"League of Extraordinary"</strong> — Tata Business Support Services<br><span>Outstanding Performance & Extraordinary Contribution · Oct 2016</span></div>
+    <div class="award-item"><strong>"Coach the Coach"</strong> — Team Lead Development Boot Camp<br><span>Internal coach for team lead development · Tata BSS</span></div>
+    <div class="award-item"><strong>Frontline Leadership</strong> — Sutherland Global Services / AT&T OMC<br><span>Leadership development programme · Aneesh Nair, Somnath Deb</span></div>
+    <div class="award-item"><strong>Top SME in Exception Manager</strong> — Sutherland / AT&T UCSDC<br><span>2x consecutive: April 2014 & May 2014 · Subject Matter Expert</span></div>
+    <div class="award-item"><strong>Achievement Award — Best Performing Support Tech</strong> — Sutherland / Symantec<br><span>3x: June 2009 · Oct 2010 · Oct 2011 · Sustained Excellence</span></div>
+    <div class="award-item"><strong>Best Floor Support</strong> — Sutherland Global Services<br><span>Monthly Performance Award · June 2009 · Ramesh K Narain, Jestin Joseph</span></div>
+    <div class="award-item"><strong>"Value Driven People Culture" Brand Pin</strong> — Kotak Life Insurance<br><span>Outstanding contribution in critical situation · Ruchira Bhardwaja, President & CHRO · Jul 2022</span></div>
+  </div></div>
+</section>
+
+<!-- Certs -->
+<section id="certs">
+  <div class="lang-de"><div class="section-header">
+    <div class="section-label">Qualifikationen</div>
+    <h2 class="section-title">Zertifizierungen & Ausbildung</h2>
+    <p class="section-desc">Neueste zuerst — kontinuierliche Weiterbildung in Marketing, Analytik und Emerging Tech.</p>
+  </div>
   <div class="certs-grid">
     <div class="cert-card">
       <div class="cert-year">2026</div>
@@ -1561,155 +1812,277 @@
       <div class="cert-org">Google</div>
       <div class="cert-modules">AI-Powered Campaigns · Performance Max · Smart Bidding · Automated Insights · ROAS Optimisation</div>
     </div>
-
     <div class="cert-card">
       <div class="cert-year">2025</div>
       <h3 class="cert-title">Python for Data Science</h3>
-      <div class="cert-org">Certification</div>
+      <div class="cert-org">Learnbay</div>
       <div class="cert-modules">Data Science · Python Programming · Data Analysis · Statistical Computing</div>
     </div>
-
     <div class="cert-card">
       <div class="cert-year">2022</div>
       <h3 class="cert-title">Advanced Certificate — Digital Marketing & Communication</h3>
       <div class="cert-org">MICA (UpGrad)</div>
       <div class="cert-modules">Social Media Strategy · Content Marketing · Performance Campaigns · Analytics · Brand Communication</div>
     </div>
-
     <div class="cert-card">
       <div class="cert-year">2005</div>
-      <h3 class="cert-title">Bachelor's Degree</h3>
+      <h3 class="cert-title">Bachelor's Degree — Communication, Media Studies & Liberal Arts</h3>
       <div class="cert-org">Bharatiya Vidya Bhavan, Mumbai, India</div>
-      <div class="cert-modules">Communication, Media Studies, and Liberal Arts</div>
+      <div class="cert-modules">Communication · Media Studies · Liberal Arts</div>
     </div>
+  </div></div>
+  <div class="lang-en"><div class="section-header">
+    <div class="section-label">Credentials</div>
+    <h2 class="section-title">Certifications & Education</h2>
+    <p class="section-desc">Latest first — continuous upskilling in marketing, analytics, and emerging tech.</p>
   </div>
+  <div class="certs-grid">
+    <div class="cert-card">
+      <div class="cert-year">2026</div>
+      <h3 class="cert-title">Google Ads AI-Powered Performance Certificate</h3>
+      <div class="cert-org">Google</div>
+      <div class="cert-modules">AI-Powered Campaigns · Performance Max · Smart Bidding · Automated Insights · ROAS Optimisation</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-year">2025</div>
+      <h3 class="cert-title">Python for Data Science</h3>
+      <div class="cert-org">Learnbay</div>
+      <div class="cert-modules">Data Science · Python Programming · Data Analysis · Statistical Computing</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-year">2022</div>
+      <h3 class="cert-title">Advanced Certificate — Digital Marketing & Communication</h3>
+      <div class="cert-org">MICA (UpGrad)</div>
+      <div class="cert-modules">Social Media Strategy · Content Marketing · Performance Campaigns · Analytics · Brand Communication</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-year">2005</div>
+      <h3 class="cert-title">Bachelor's Degree — Communication, Media Studies & Liberal Arts</h3>
+      <div class="cert-org">Bharatiya Vidya Bhavan, Mumbai, India</div>
+      <div class="cert-modules">Communication · Media Studies · Liberal Arts</div>
+    </div>
+  </div></div>
 </section>
 
-<!-- Contact Section -->
+<!-- Contact -->
 <section class="contact-section" id="contact">
-  <div class="contact-inner">
+  <div class="lang-de"><div class="contact-inner">
     <div class="contact-content">
-      <h2>Contact</h2>
-      <p>Available for full-time roles in performance marketing, social media, and content. Berlin or remote.</p>
-
+      <h2>Kontakt <em>aufnehmen</em></h2>
+      <p>Verfügbar für Vollzeit-Positionen in Customer Experience, Digital Operations und Performance Marketing. Berlin oder Remote.</p>
       <div class="contact-info">
         <div class="contact-item">
           <div class="contact-item-icon">@</div>
-          <div>
-            <div style="font-size:12px;color:var(--warm);margin-bottom:2px;">Email</div>
-            <a href="mailto:chaitrali.borade01@gmail.com">chaitrali.borade01@gmail.com</a>
-          </div>
+          <div><div style="font-size:11px;color:var(--warm);margin-bottom:2px;">E-Mail</div><a href="mailto:chaitrali.borade01@gmail.com">chaitrali.borade01@gmail.com</a></div>
         </div>
         <div class="contact-item">
           <div class="contact-item-icon">T</div>
-          <div>
-            <div style="font-size:12px;color:var(--warm);margin-bottom:2px;">Phone</div>
-            <a href="tel:+4915567059398">+49 155 6705 9398</a>
-          </div>
+          <div><div style="font-size:11px;color:var(--warm);margin-bottom:2px;">Telefon</div><a href="tel:+4915567059398">+49 155 6705 9398</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <div><div style="font-size:11px;color:var(--warm);margin-bottom:2px;">Adresse</div><span>Residenzstrasse, 13409 Berlin, Deutschland</span></div>
         </div>
         <div class="contact-item">
           <div class="contact-item-icon">L</div>
-          <div>
-            <div style="font-size:12px;color:var(--warm);margin-bottom:2px;">Location</div>
-            <span>Berlin, Germany</span>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-item-icon">in</div>
-          <div>
-            <div style="font-size:12px;color:var(--warm);margin-bottom:2px;">LinkedIn</div>
-            <a href="https://linkedin.com/in/chaitrali-borade" target="_blank">linkedin.com/in/chaitrali-borade</a>
-          </div>
+          <div><div style="font-size:11px;color:var(--warm);margin-bottom:2px;">LinkedIn</div><a href="https://linkedin.com/in/chaitrali-borade" target="_blank">linkedin.com/in/chaitrali-borade</a></div>
         </div>
         <div class="contact-item">
           <div class="contact-item-icon">X</div>
-          <div>
-            <div style="font-size:12px;color:var(--warm);margin-bottom:2px;">XING</div>
-            <a href="https://www.xing.com/profile/Chaitrali_Borade" target="_blank">xing.com/profile/Chaitrali_Borade</a>
-          </div>
+          <div><div style="font-size:11px;color:var(--warm);margin-bottom:2px;">XING</div><a href="https://www.xing.com/profile/Chaitrali_Borade" target="_blank">xing.com/profile/Chaitrali_Borade</a></div>
         </div>
       </div>
-
-      <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1);">
-        <p style="font-size: 13px; color: var(--warm); line-height: 1.6;">
-          <strong style="color: white;">Languages:</strong> English (C2 — business fluent), Hindi (native), Marathi (native), German (A2 — B1 course in progress, target B2 by Q4 2026)<br>
-          <strong style="color: white;">Work Permit:</strong> Unrestricted Labour Market Access<br>
-          <strong style="color: white;">Availability:</strong> Immediate start
-        </p>
+      <div class="contact-meta">
+        <strong>Sprachen:</strong> Deutsch (B1 — Grundkenntnisse, Ziel B2 bis Q4 2026), Englisch (C2 — verhandlungssicher), Hindi (Muttersprache), Marathi (Muttersprache)<br>
+        <strong>Arbeitserlaubnis:</strong> Unbeschränkter Arbeitsmarktzugang (Chancenkarte)<br>
+        <strong>Verfügbarkeit:</strong> Sofort<br>
+        <strong>Geburtsdatum/-ort:</strong> Mumbai, Indien<br>
+        <strong>Familienstand:</strong> Ledig
       </div>
     </div>
-
-    <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:40px;">
-      <h3 style="font-family:'Playfair Display',serif;font-size:24px;margin-bottom:16px;color:white;">Get in Touch</h3>
-      <p style="color:var(--warm);font-size:14px;line-height:1.6;margin-bottom:24px;">The fastest way to reach me is via email or LinkedIn. I typically respond within 24 hours on business days.</p>
-
-      <div style="display:flex;flex-direction:column;gap:16px;">
-        <a href="mailto:chaitrali.borade01@gmail.com" class="btn-primary" style="justify-content:center;">
-          Send Email
-        </a>
-        <a href="https://linkedin.com/in/chaitrali-borade" target="_blank" class="btn-secondary" style="justify-content:center;">
-          Connect on LinkedIn
-        </a>
+    <div class="contact-cta-box">
+      <h3>Vollständige Bewerbung anfordern</h3>
+      <p>Die schnellste Kontaktaufnahme ist per E-Mail oder LinkedIn. Ich antworte innerhalb von 24 Stunden an Werktagen. Für eine vollständige Bewerbung sende ich gerne Lebenslauf, Arbeitszeugnisse und Zertifikate zu.</p>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <a href="mailto:chaitrali.borade01@gmail.com" class="btn-primary" style="justify-content:center;">E-Mail senden</a>
+        <a href="https://linkedin.com/in/chaitrali-borade" target="_blank" class="btn-secondary" style="justify-content:center;">Auf LinkedIn verbinden</a>
       </div>
     </div>
-  </div>
+  </div></div>
+  <div class="lang-en"><div class="contact-inner">
+    <div class="contact-content">
+      <h2>Let's <em>Talk</em></h2>
+      <p>Available for full-time customer experience, digital operations, and performance marketing roles. Berlin or remote.</p>
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-item-icon">@</div>
+          <div><div style="font-size:11px;color:var(--warm);margin-bottom:2px;">Email</div><a href="mailto:chaitrali.borade01@gmail.com">chaitrali.borade01@gmail.com</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">T</div>
+          <div><div style="font-size:11px;color:var(--warm);margin-bottom:2px;">Phone</div><a href="tel:+4915567059398">+49 155 6705 9398</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">L</div>
+          <div><div style="font-size:11px;color:var(--warm);margin-bottom:2px;">Location</div><span>Berlin, Germany</span></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">in</div>
+          <div><div style="font-size:11px;color:var(--warm);margin-bottom:2px;">LinkedIn</div><a href="https://linkedin.com/in/chaitrali-borade" target="_blank">linkedin.com/in/chaitrali-borade</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">X</div>
+          <div><div style="font-size:11px;color:var(--warm);margin-bottom:2px;">XING</div><a href="https://www.xing.com/profile/Chaitrali_Borade" target="_blank">xing.com/profile/Chaitrali_Borade</a></div>
+        </div>
+      </div>
+      <div class="contact-meta">
+        <strong>Languages:</strong> English (C2 — business fluent), Hindi (native), Marathi (native), German (B1, progressing toward B2 by Q4 2026)<br>
+        <strong>Work Permit:</strong> Unrestricted Labour Market Access (Chancenkarte)<br>
+        <strong>Availability:</strong> Immediate start
+      </div>
+    </div>
+    <div class="contact-cta-box">
+      <h3>Get in Touch</h3>
+      <p>The fastest way to reach me is email or LinkedIn. I respond within 24 hours on business days.</p>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <a href="mailto:chaitrali.borade01@gmail.com" class="btn-primary" style="justify-content:center;">Send Email</a>
+        <a href="https://linkedin.com/in/chaitrali-borade" target="_blank" class="btn-secondary" style="justify-content:center;">Connect on LinkedIn</a>
+      </div>
+    </div>
+  </div></div>
 </section>
 
 <!-- Footer -->
 <footer>
-  <p>Chaitrali Borade · Performance Marketing & Social Media · Berlin, Germany</p>
-  <p style="margin-top:12px;font-size:12px;color:var(--muted);line-height:1.5;">
-    <strong style="color:var(--warm);">Legal Notice (Impressum):</strong> Chaitrali Borade, Berlin, Germany · 
-    <a href="mailto:chaitrali.borade01@gmail.com" style="color:var(--accent);">chaitrali.borade01@gmail.com</a> · 
-    +49 155 6705 9398 · 
-    <a href="https://linkedin.com/in/chaitrali-borade" target="_blank" style="color:var(--accent);">LinkedIn</a> · 
-    <a href="https://www.xing.com/profile/Chaitrali_Borade" target="_blank" style="color:var(--accent);">XING</a><br>
-    Responsible for content according to § 55 Abs. 2 RStV: Chaitrali Borade
+  <p>Chaitrali Borade · Customer Experience & Digital Operations · Berlin, Deutschland</p>
+  <div class="legal-links">
+    <a href="#impressum" class="lang-de">Impressum</a>
+    <a href="#impressum" class="lang-en">Legal Notice</a>
+    <a href="#datenschutz" class="lang-de">Datenschutzerklärung</a>
+    <a href="#datenschutz" class="lang-en">Privacy Policy</a>
+    <a href="#lebenslauf" class="lang-de">Lebenslauf herunterladen</a>
+    <a href="#lebenslauf" class="lang-en">Download CV</a>
+  </div>
+  <p class="impressum lang-de">
+    <strong>Impressum (§ 5 TMG):</strong><br>
+    Chaitrali Borade<br>
+    Residenzstrasse, 13409 Berlin, Deutschland<br>
+    E-Mail: <a href="mailto:chaitrali.borade01@gmail.com">chaitrali.borade01@gmail.com</a><br>
+    Telefon: +49 155 6705 9398<br>
+    LinkedIn: <a href="https://linkedin.com/in/chaitrali-borade" target="_blank">linkedin.com/in/chaitrali-borade</a><br>
+    XING: <a href="https://www.xing.com/profile/Chaitrali_Borade" target="_blank">xing.com/profile/Chaitrali_Borade</a><br><br>
+    Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV: Chaitrali Borade<br>
+    Vertretungsberechtigt: Chaitrali Borade
   </p>
-  <p style="margin-top:8px;font-size:11px;color:var(--muted);">
-    No cookies or tracking. Personal data processed only via direct email contact.
+  <p class="impressum lang-en">
+    <strong>Legal Notice (§ 5 TMG):</strong><br>
+    Chaitrali Borade<br>
+    Residenzstrasse, 13409 Berlin, Germany<br>
+    Email: <a href="mailto:chaitrali.borade01@gmail.com">chaitrali.borade01@gmail.com</a><br>
+    Phone: +49 155 6705 9398<br>
+    LinkedIn: <a href="https://linkedin.com/in/chaitrali-borade" target="_blank">linkedin.com/in/chaitrali-borade</a><br>
+    XING: <a href="https://www.xing.com/profile/Chaitrali_Borade" target="_blank">xing.com/profile/Chaitrali_Borade</a><br><br>
+    Responsible for content according to § 55 Abs. 2 RStV: Chaitrali Borade<br>
+    Represented by: Chaitrali Borade
   </p>
-  <p style="margin-top:16px;font-size:11px;color:var(--muted);">
-    © 2026 Chaitrali Borade
+  <p class="datenschutz lang-de">
+    <strong>Datenschutz (DSGVO):</strong><br>
+    Diese Website verarbeitet keine personenbezogenen Daten durch Cookies oder Tracking.<br>
+    Externe Dienste: Google Fonts (fonts.googleapis.com) — Datenübertragung in die USA gemäß EU-US Data Privacy Framework.<br>
+    Hosting: GitHub Pages — Datenverarbeitung gemäß GitHub Privacy Statement.<br>
+    Kontaktformular: Bei direkter E-Mail-Kontaktaufnahme werden Ihre Daten ausschließlich zur Bearbeitung Ihrer Anfrage verwendet (Art. 6 Abs. 1 lit. b DSGVO).<br>
+    Ihre Rechte: Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung (Art. 18), Widerspruch (Art. 21), Datenübertragbarkeit (Art. 20).<br>
+    Anfragen an: <a href="mailto:chaitrali.borade01@gmail.com">chaitrali.borade01@gmail.com</a>
   </p>
+  <p class="datenschutz lang-en">
+    <strong>Privacy Policy (GDPR):</strong><br>
+    This website does not process personal data through cookies or tracking.<br>
+    External services: Google Fonts (fonts.googleapis.com) — data transfer to the USA according to EU-US Data Privacy Framework.<br>
+    Hosting: GitHub Pages — data processing according to GitHub Privacy Statement.<br>
+    Contact: When contacting via email, your data is used exclusively to process your inquiry (Art. 6 para. 1 lit. b GDPR).<br>
+    Your rights: Access (Art. 15), Rectification (Art. 16), Erasure (Art. 17), Restriction (Art. 18), Objection (Art. 21), Data portability (Art. 20).<br>
+    Requests to: <a href="mailto:chaitrali.borade01@gmail.com">chaitrali.borade01@gmail.com</a>
+  </p>
+  <p style="margin-top:12px;font-size:11px;color:var(--muted);">© 2026 Chaitrali Borade · <span class="lang-de">Alle Rechte vorbehalten</span><span class="lang-en">All rights reserved</span></p>
 </footer>
 
 <script>
-  // Scroll animations
-  const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+  // Theme toggle
+  function toggleTheme() {
+    const html = document.documentElement;
+    const current = html.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+  }
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
+  // Language switch
+  function switchLang(lang) {
+    document.body.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang);
+    localStorage.setItem('lang', lang);
+
+    // Update button states
+    document.getElementById('btn-de').classList.toggle('active', lang === 'de');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+
+    // Update page title
+    if (lang === 'de') {
+      document.title = 'Chaitrali Borade — Customer Experience & Digitale Operations | Berlin';
+    } else {
+      document.title = 'Chaitrali Borade — Customer Experience & Digital Operations | Berlin';
+    }
+
+    // Update meta description
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      if (lang === 'de') {
+        metaDesc.setAttribute('content', 'Chaitrali Borade — Customer Experience & Digitale Operations. 7+ Jahre Erfahrung in Performance Marketing, Social Media und Contact Centre Operations. Berlin, Deutschland.');
+      } else {
+        metaDesc.setAttribute('content', 'Chaitrali Borade — Customer Experience and Digital Operations. 7+ years across performance marketing, social media, and contact centre operations. Based in Berlin, Germany.');
       }
-    });
-  }, observerOptions);
+    }
+  }
 
-  document.querySelectorAll('.metric-card, .campaign-card, .timeline-item, .skill-category, .cert-card').forEach(el => {
-    el.classList.add('fade-in');
+  // Initialize theme
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+
+  // Initialize language
+  const savedLang = localStorage.getItem('lang');
+  if (savedLang) {
+    switchLang(savedLang);
+  }
+
+  // Intersection Observer for fade-in animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { 
+      if (entry.isIntersecting) entry.target.classList.add('visible'); 
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.metric-card, .campaign-card, .timeline-item, .skill-category, .cert-card, .framework-card, .analysis-card, .hobby-card, .award-item, .testimonial-card, .why-germany-card').forEach(el => {
+    el.classList.add('fade-in'); 
     observer.observe(el);
   });
 
-  // Smooth scroll for nav links
+  // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
 
-  // Nav background on scroll
+  // Nav shadow on scroll
   const nav = document.querySelector('nav');
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.08)';
-    } else {
-      nav.style.boxShadow = 'none';
-    }
+    nav.style.boxShadow = window.scrollY > 50 ? '0 2px 20px rgba(0,0,0,0.08)' : 'none';
   });
 </script>
 
