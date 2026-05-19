@@ -496,21 +496,7 @@
   .cert-org { font-size: 13px; color: var(--muted); margin-bottom: 6px; }
   .cert-modules { font-size: 12px; color: var(--slate); line-height: 1.5; }
 
-  /* Why Germany Section */
-  .why-germany-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-  .why-germany-card {
-    background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
-    padding: 28px; transition: all 0.3s;
-  }
-  .why-germany-card:hover { transform: var(--card-hover); box-shadow: var(--shadow-lg); border-color: var(--accent); }
-  .why-germany-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; color: var(--ink); }
-  .why-germany-card p { font-size: 14px; color: var(--muted); line-height: 1.65; }
-  .why-germany-card .icon {
-    width: 44px; height: 44px; background: var(--accent); border-radius: 10px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 20px; margin-bottom: 16px; color: white;
-  }
-
+  
   /* Contact */
   .contact-section { background: var(--charcoal); color: white; padding: 72px 24px; }
   .contact-inner {
@@ -837,7 +823,7 @@ body[data-lang="de"] .hobby-card h4 {
         <li><a href="#campaigns">Kampagnen</a></li>
         <li><a href="#metrics">Kennzahlen</a></li>
         <li><a href="#skills">Kompetenzen</a></li>
-        <li><a href="#why-germany">Warum Deutschland</a></li>
+        <li><a href="#certs">Zertifizierungen</a></li>
         <li><a href="#contact">Kontakt</a></li>
       </ul>
       <ul class="nav-links lang-en">
@@ -846,7 +832,7 @@ body[data-lang="de"] .hobby-card h4 {
         <li><a href="#campaigns">Campaigns</a></li>
         <li><a href="#metrics">Impact</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#why-germany">Why Germany</a></li>
+        <li><a href="#certs">Credentials</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -869,16 +855,16 @@ body[data-lang="de"] .hobby-card h4 {
   <div class="hero-inner">
     <div class="hero-content">
       <div class="hero-pills">
-        <span class="pill pill-green"><span class="pill-dot"></span><span class="lang-de">Sofort verfügbar</span><span class="lang-en">Open to Work</span></span>
+        <span class="pill pill-green"><span class="pill-dot"></span><span class="lang-de">Sofort verfügbar</span><span class="lang-en">Available Immediately</span></span>
         <span class="pill pill-amber">Berlin, Germany</span>
-        <span class="pill pill-blue lang-de">Unbeschränkter Arbeitsmarktzugang</span>
+        <span class="pill pill-blue lang-de">Chancenkarte — uneingeschränkte Arbeitserlaubnis</span>
         <span class="pill pill-amber lang-en">Unrestricted Labour Market</span>
         <span class="pill pill-amber lang-de">Deutsch B1 · Englisch C2</span>
         <span class="pill pill-amber lang-en">German B1 · English C2</span>
       </div>
       <h1>Customer Experience <em>& <span class="lang-de">Digitale Operations</span><span class="lang-en">Digital Operations</span></em></h1>
-      <p class="hero-subtitle lang-de">7+ Jahre Berufserfahrung in Performance Marketing, Social Media und Contact Centre Operations. Branchen: Finanzdienstleistungen, E-Commerce, Logistik, BPO.</p>
-      <p class="hero-subtitle lang-en">Seven years shaping digital operations, customer experience, and performance marketing across fintech, e-commerce, and BPO.</p>
+      <p class="hero-subtitle lang-de">Performance Marketing Manager mit 7+ Jahren Erfahrung in Digital Operations und Customer Experience. Nachweisbare Erfolge: Aufbau digitaler Kanäle von Grund auf, 2,7 Mio. € Umsatzsteigerung, Management von Communities mit 1,8 Mio. Followern. Branchen: Finanzdienstleistungen, E-Commerce, Logistik, BPO.</p>
+      <p class="hero-subtitle lang-en">Performance Marketing Manager with 7+ years in digital operations and customer experience. Proven track record: built digital channels from zero, €2.7M revenue increase, managed communities of 1.8M followers. Industries: financial services, e-commerce, logistics, BPO.</p>
       <div class="hero-location">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         <span class="lang-de">Residenzstrasse, 13409 Berlin · Sofort verfügbar</span>
@@ -899,7 +885,7 @@ body[data-lang="de"] .hobby-card h4 {
   <div class="lang-de"><div class="section-header">
     <div class="section-label">Profil</div>
     <h2 class="section-title">Berufliches Profil</h2>
-    <p class="section-desc">Verbindung von operativer Umsetzung und strategischer Planung durch datengetriebene Methodik und strukturierte Prozesse.</p>
+    <p class="section-desc">Von drei Sprachen am Esstisch zu Growth Loops auf zwei Kontinenten. 18 Jahre Berufserfahrung — 8 Jahre Kundenbetreuung, 7+ Jahre Performance Marketing.</p>
   </div>
 
   <div class="about-grid">
@@ -907,10 +893,22 @@ body[data-lang="de"] .hobby-card h4 {
       <img src="chembur-photo.jpeg" alt="Chaitrali Borade — Professionelles Bewerbungsfoto">
     </div>
     <div class="about-text">
-      <p><strong>7+ Jahre Erfahrung</strong> in Performance Marketing und Digital Operations. Zuvor 11 Jahre in Kundenbetreuung und Contact Centre Management. Branchen: NBFC (Kfz-Finanzierung), Retail Banking, E-Commerce, Logistik, BPO.</p>
-      <p>Bei <strong>Kotak Mahindra Prime</strong> Aufbau der Social-Media-Präsenz von Grund auf, Einführung von QR-Code-Lead-Capture in 150+ Filialen, Integration mit Salesforce und OneDirect, Aufbau eines 40-Sitz Contact Centre mit ~35% Lead-Conversion-Rate. Sämtliche Initiativen mit Legal und Compliance abgestimmt — vollständige DSGVO-Konformität.</p>
-      <p>Bei <strong>Kotak Bank</strong> ORM-Management für Communities mit 1,5M+ Facebook- und 271K+ Instagram-Followern. Bei <strong>Tata CLiQ</strong> Aufbau der ORM-Abteilung von Null auf 95%+ SLA-Einhaltung.</p>
-      <p>Arbeitsweise geprägt von <strong>Sachlichkeit, Gründlichkeit und messbaren Ergebnissen</strong>. Jede kreative Entscheidung basiert auf Funnel-Stage-Analyse, jede Zielgruppensegmentierung auf Verhaltensdaten, jeder Report beantwortet eine konkrete Geschäftsfrage.</p>
+      <p>Ich wuchs in einem Haushalt auf, in dem drei Sprachen am Esstisch gesprochen wurden. Nicht, weil jemand versuchte, mehrsprachig zu sein — es war einfach so, wie wir lebten. Marathi, Hindi und Englisch flossen ineinander, und ich lernte früh, dass dieselbe Botschaft anders ankommt, je nachdem, wer zuhört und was er gerade braucht.</p>
+      <p>Dieser Instinkt formte alles, was danach kam.</p>
+      <p><strong>Acht Jahre in Call Centern, bevor ich jemals eine Anzeige schaltete.</strong> Nicht, weil ich verloren war. Sondern weil ich neugierig war auf das, was niemand sonst anschauen wollte: den Moment, in dem ein Kunde entscheidet, zu bleiben oder zu gehen. Bei Sutherland schrieb ich Skripte, die nicht wie Skripte klangen. Bei Ola war ich beim Launch von Ola Share dabei — das Chaos, das Skalieren, die Anrufe um 3 Uhr morgens, wenn noch nichts funktionierte. Ich wurde zu der Person, die Manager ins tiefe Ende des Pools warfen, ohne Schwimmweste. Ich fand heraus, wie man schwimmt. Dann lehrte ich es allen anderen.</p>
+      <p>Mein Manager bei Tata CLiQ schrieb etwas über mich, das ich immer bei mir behalte: <em>"Sie ist die Art von Person, die man ins tiefe Ende eines Pools werfen kann, ohne umfangreiche Unterstützung oder Nachfassen, und sie findet ihren eigenen Weg — und hilft dann anderen auf Basis ihrer Erfahrung."</em> Das ist kein Skill. Das ist ein Persönlichkeitsmerkmal. Ich kann es nicht abschalten.</p>
+      <p><strong>Ich baue Dinge von Null auf, weil ich nie gut darin war, an einer Lücke vorbeizugehen und so zu tun, als hätte ich sie nicht gesehen.</strong> Bei Kotak Mahindra Prime gab es keine Social-Media-Präsenz. Also baute ich eine auf — Instagram, Facebook, WhatsApp API, alles von einem leeren Bildschirm. Ich baute ein Contact Centre von einem leeren Boden. Ich baute QR-Codes in 150+ Filialen, als Leute noch dachten, QR-Codes seien ein Trend. Ich baute Compliance vom ersten Tag in den Prozess ein, weil ich gesehen habe, was passiert, wenn man sie nachträglich anbaut: Sie bricht.</p>
+      <p>Bei Tata CLiQ skalierte ich die ORM-Abteilung während der Wachstumsphase des Unternehmens — ich nahm das, was existierte, und machte es unter Druck funktionsfähig, mit begrenzten Ressourcen, als alles zu schnell ging.</p>
+      <p><strong>Ich führte Kampagnen in sechs Sprachen und lernte jedes Mal etwas Neues.</strong> Diwali-Kampagnen mit Ringelblumen-Girlanden und Pooja-Thalis, mit Pre-Approval-CTAs für Neuwagen. Holi-Kampagnen, bei denen ich die Goldpalette warf und zu Elektro-Blau, Pink und Gelb wechselte — weil die Bonussaison Energie brauchte, nicht Tradition. Onam-Kampagnen, bei denen ich lernen musste, was Kasavu-Tracht ist, weil generische indische Bildsprache die Menschen verfehlt hätte, die ich erreichen wollte. Ganesh Chaturthi-Grids, die nur funktionierten, wenn man alle drei Posts zusammen sah — ein Risiko, ein Wagnis, etwas, das hätte danebengehen können.</p>
+      <p>Jede Kampagne lehrte mich etwas, das ich vorher nicht wusste. Deshalb führe ich sie weiter.</p>
+      <p>Jede Zielgruppe wurde nach Verhalten segmentiert, nicht nach Annahme. Jede kreative Entscheidung war an eine Funnel-Stage gebunden. Und jede Initiative ging vom ersten Tag durch Legal und Compliance — DSGVO-Alignment eingebaut, nicht nachträglich angeflanscht.</p>
+      <p>Ich schaue auf deutsche Weihnachts-Autopromotionen, Frühlingsbonussaisons, regionale Erntefeste in Bayern oder Baden-Württemberg — und ich sehe dieselben Muster. Saisonale Intensität. Familien-Framing. Emotionales Storytelling. Flexible Zahlungsstrukturen. Die Tools ändern sich. Die menschliche Logik nicht.</p>
+      <p><strong>Ich zog mit einer Chancenkarte nach Berlin und mit viel Neugier.</strong> Ich baue mein Deutsch von B1 auf B2 bis Q4 2026 auf, mit beruflichem Fokus — Marketing-Vokabular, Stakeholder-Kommunikation, Projektmanagement. Ich bin aktiv im Berliner Berufsnetzwerk auf LinkedIn, XING und bei Meetups. Ich verstehe die deutsche Arbeitskultur: Pünktlichkeit, Sachlichkeit, Gründlichkeit, Teamorientierung, Work-Life-Balance. Ich bin nicht Deutsch. Ich werde nie Deutsch sein. Aber ich bin hier, und ich lerne, dazuzugehören, ohne so zu tun, als wäre ich schon da.</p>
+      <p><strong>Was ich über Growth glaube:</strong> Ich jage keine Hacks und nenne es Strategie. Ich glaube, dass hinter jeder CAC- (Customer Acquisition Cost) und LTV-Metrik (Lifetime Value) eine Person steht, die entscheidet, zu bleiben oder zu gehen. Ich glaube, dass der Unterschied zwischen Churn und Loyalität oft darauf zurückzuführen ist, ob dein Growth-Loop gebaut wurde, um zu dienen oder um zu extrahieren.</p>
+      <p>Am Sonntagmorgen gärtnere ich. Es lehrt mich, dass man eine Tomate nicht schneller wachsen lassen kann, indem man an ihr zieht — man kann nur die Bedingungen schaffen, in denen Wachstum unvermeidlich wird. Ich koche für Freunde, wenn Worte versagen, denn die besten Growth-Strategien, wie die besten Mahlzeiten, kommen aus dem Verständnis dessen, was Menschen wirklich brauchen, nicht aus dem, was du ihnen verkaufen willst. Ich praktiziere Kieskunst — kleine, unvollkommene Stücke anordnen, bis sie etwas Unerwartet-Ganzes formen.</p>
+      <p>So nähere ich mich auch dem Growth Marketing an. Nicht als Sammlung von Taktiken zum Testen, sondern als Ökosystem, in dem jedes Experiment, jeder Kanal, jeder Kunden-Touchpoint in etwas Größeres einfließt.</p>
+      <p><strong>Was ich suche:</strong> Nicht nur eine Position, sondern einen Ort, an dem ich langfristig wachsen kann — mit dem gleichen Geduld und Bedacht, mit dem ich einen Garten pflege. Ein Team, das den Wert von operativer Kundennähe schätzt. Ein Unternehmen, das menschliches Wachstum über schnelles Skalieren stellt.</p>
+      <p>Ich würde das gerne mit Ihnen aufbauen.</p>
 
       <div class="about-highlights">
         <div class="about-highlight">
@@ -950,7 +948,7 @@ body[data-lang="de"] .hobby-card h4 {
       <div class="icon">👤</div>
       <h3>Wer ich bin</h3>
       <p class="de-sub">Hintergrund & DNA</p>
-      <p>7+ Jahre in Performance Marketing und Digital Operations. 11 Jahre Kundenbetreuung zuvor. Branchen: NBFC, Retail Banking, E-Commerce, Logistik, BPO. Ansässig in Berlin mit unbeschränktem Arbeitsmarktzugang.</p>
+      <p>7+ Jahre in Performance Marketing und Digital Operations. 8 Jahre Kundenbetreuung zuvor. Branchen: NBFC, Retail Banking, E-Commerce, Logistik, BPO. Ansässig in Berlin mit unbeschränktem Arbeitsmarktzugang.</p>
       <ul>
         <li>Meta Ads Execution & Funnel-Optimierung</li>
         <li>Interkulturelle Kampagnen in 6+ Sprachen</li>
@@ -962,7 +960,7 @@ body[data-lang="de"] .hobby-card h4 {
       <div class="icon">🎯</div>
       <h3>Was ich liefere</h3>
       <p class="de-sub">Kompetenzen & Mehrwert</p>
-      <p>Messbare Ergebnisse durch diszipliniertes Experimentieren, strukturierte Analyse und Stakeholder-Alignment vom Kickoff bis zur Retrospektive.</p>
+      <p>Performance Marketing und Social Media mit messbaren Ergebnissen: Meta Ads Execution, A/B-Testing, Funnel-Optimierung, AI-gestützte Content-Produktion. Diszipliniertes Experimentieren, strukturierte Analyse und Stakeholder-Alignment vom Kickoff bis zur Retrospektive.</p>
       <ul>
         <li>A/B-Tests & iterative CTR-Verbesserungen</li>
         <li>AI-gestützte Creative Pipelines (ChatGPT, Canva AI)</li>
@@ -974,8 +972,8 @@ body[data-lang="de"] .hobby-card h4 {
   </div></div>
   <div class="lang-en"><div class="section-header">
     <div class="section-label">Profile</div>
-    <h2 class="section-title">Value Proposition</h2>
-    <p class="section-desc">From customer operations to digital marketing — I bridge execution and strategy with data-driven clarity.</p>
+    <h2 class="section-title">My Story</h2>
+    <p class="section-desc">From three languages at the dinner table to building growth loops across two continents.</p>
   </div>
 
   <div class="about-grid">
@@ -983,9 +981,22 @@ body[data-lang="de"] .hobby-card h4 {
       <img src="chembur-photo.jpeg" alt="Chaitrali Borade">
     </div>
     <div class="about-text">
-      <p>I spent eleven years in customer operations before pivoting to digital marketing in 2016. That operational backbone shapes how I run campaigns today — every creative decision is tied to a funnel stage, every audience segment is rooted in behaviour, and every report answers a business question.</p>
-      <p>At Kotak Mahindra Prime, I built the brand's social presence from scratch, launched a 40-seat lead conversion centre, and rolled out QR-based lead capture across 150+ branches — all while keeping Legal and Compliance in the loop from day one. At Kotak Bank, I managed ORM for communities of 1.5M+ on Facebook and 271K+ on Instagram. At Tata CLiQ, I took ORM from zero to 95%+ SLA adherence.</p>
-      <p>I work across Meta Business Suite, Google Analytics, Salesforce, and AI-assisted creative workflows. GDPR/DSGVO compliance is baked into my process, not bolted on afterwards.</p>
+      <p>I grew up in a household where three languages were spoken at the dinner table. Not because anyone was trying to be multilingual — it was simply how we lived. Marathi, Hindi, and English flowed into each other, and I learned early that the same message lands differently depending on who is listening and what they need right now.</p>
+      <p>That instinct shaped everything that came after.</p>
+      <p><strong>I spent 8 years in call centres before I ever ran an ad.</strong> Not because I was lost. Because I was curious about the thing no one else wanted to look at: the moment a customer decides to stay or leave. At Sutherland, I wrote scripts that didn't sound like scripts. At Ola, I was there for the Ola Share launch — the chaos, the scaling, the 3 AM calls when nothing was working yet. I became the person managers would drop into the deep end without a life jacket. I would figure out the swim. Then I would teach everyone else.</p>
+      <p>My manager at Tata CLiQ wrote something about me that I keep close: <em>"She is the kind of person you can leave at the deep end of a pool without extensive support or follow up and she will figure out her way on her own and then help others based on her experience."</em> That is not a skill. That is a personality trait. I cannot turn it off.</p>
+      <p><strong>I build things from zero because I have never been good at walking past a gap and pretending I did not see it.</strong> At Kotak Mahindra Prime, there was no social media presence. So I built one — Instagram, Facebook, WhatsApp API, all from a blank screen. I built a contact centre from an empty floor. I built QR codes into 150+ branches when people still thought QR codes were a fad. I built compliance into the process from day one because I have seen what happens when you bolt it on afterwards: it breaks.</p>
+      <p>At Tata CLiQ, I scaled the ORM department during the company's growth phase — taking what existed and making it work under pressure, with limited resources, when everything was moving too fast.</p>
+      <p><strong>I ran campaigns in six languages and I still learned something every time.</strong> Diwali campaigns with marigold garlands and pooja thalis, with pre-approval CTAs for new cars. Holi campaigns where I threw out the gold palette and went electric blue, hot pink, bright yellow — because bonus season needed energy, not tradition. Onam campaigns where I had to learn what Kasavu attire was, because generic Indian imagery would have missed the people I was trying to reach. Ganesh Chaturthi grids that only worked if you saw all three posts together — a risk, a gamble, a thing that could have fallen flat.</p>
+      <p>Every campaign taught me something I did not know before. That is why I keep running them.</p>
+      <p>Every audience was segmented by behaviour, not assumption. Every creative decision was tied to a funnel stage. And every initiative went through Legal and Compliance from day one — GDPR/DSGVO alignment baked in, not bolted on afterwards.</p>
+      <p>I look at German Christmas auto promotions, spring bonus seasons, regional harvest festivals in Bavaria or Baden-Württemberg — and I see the same patterns. Seasonal intensity. Family framing. Emotional storytelling. Flexible payment structures. The tools change. The human logic does not.</p>
+      <p><strong>I moved to Berlin with a Chancenkarte and a lot of curiosity.</strong> I am building my German from B1 to B2 by Q4 2026, with professional focus — marketing vocabulary, stakeholder communication, project management. I am active in Berlin's professional network on LinkedIn, XING, and at meetups. I understand German work culture: punctuality, objectivity, thoroughness, team orientation, work-life balance. I am not German. I will never be German. But I am here, and I am learning to belong without pretending I already do.</p>
+      <p><strong>What I believe about growth:</strong> I do not chase hacks and call it strategy. I believe that behind every CAC (Customer Acquisition Cost) and LTV (Lifetime Value) metric is a person deciding whether to stay or leave. I believe the difference between churn and loyalty often comes down to whether your growth loop was built to serve them or to extract from them.</p>
+      <p>On Sunday mornings, I garden. It teaches me that you cannot force a tomato to grow faster by pulling on it — you can only create the conditions where growth becomes inevitable. I cook for friends when words fail, because the best growth strategies, like the best meals, come from understanding what people actually need, not what you want to sell them. I practice gravel art — arranging small, imperfect pieces until they form something unexpectedly whole.</p>
+      <p>That is how I approach growth marketing too. Not as a collection of tactics to test, but as an ecosystem where every experiment, every channel, every customer touchpoint feeds into something larger than itself.</p>
+      <p><strong>What I am looking for:</strong> Not just a position, but a place to grow long-term — with the same patience and care I bring to gardening. A team that values operational customer proximity. A company that prioritises human growth over rapid scaling.</p>
+      <p>I would love to build that with you.</p>
 
       <div class="about-highlights">
         <div class="about-highlight">
@@ -1025,7 +1036,7 @@ body[data-lang="de"] .hobby-card h4 {
       <div class="icon">👤</div>
       <h3>Who I Am</h3>
       <p class="de-sub">Background & DNA</p>
-      <p>7+ years in performance marketing and digital operations. 11 years in customer ops before that. Industries: NBFC, retail banking, e-commerce, logistics, BPO. Based in Berlin with unrestricted labour market access.</p>
+      <p>7+ years in performance marketing and digital operations. 8 years in customer ops before that. Industries: NBFC, retail banking, e-commerce, logistics, BPO. Based in Berlin with unrestricted labour market access.</p>
       <ul>
         <li>Meta Ads execution & funnel optimisation</li>
         <li>Cross-cultural campaigns in 6+ languages</li>
@@ -1037,7 +1048,7 @@ body[data-lang="de"] .hobby-card h4 {
       <div class="icon">🎯</div>
       <h3>What I Deliver</h3>
       <p class="de-sub">Skills & Value</p>
-      <p>Measurable outcomes through disciplined experimentation, structured analysis, and stakeholder alignment from kickoff to retrospective.</p>
+      <p>Performance marketing and social media with measurable outcomes: Meta Ads execution, A/B testing, funnel optimisation, AI-assisted content production. Disciplined experimentation, structured analysis, and stakeholder alignment from kickoff to retrospective.</p>
       <ul>
         <li>A/B tests & iterative CTR improvements</li>
         <li>AI-assisted creative pipelines (ChatGPT, Canva AI)</li>
@@ -1058,34 +1069,39 @@ body[data-lang="de"] .hobby-card h4 {
   </div>
   <div class="metrics-grid">
     <div class="metric-card">
-      <div class="metric-number">1,5M<span>+</span></div>
-      <div class="metric-label">Facebook-Community</div>
-      <div class="metric-context">ORM-Management bei Kotak Bank</div>
+      <div class="metric-number">1,8M<span>+</span></div>
+      <div class="metric-label">Gesamt-Community</div>
+      <div class="metric-context">Facebook + Instagram bei Kotak Bank (Follower bei Übernahme)</div>
     </div>
     <div class="metric-card">
-      <div class="metric-number">271K<span>+</span></div>
-      <div class="metric-label">Instagram-Follower</div>
-      <div class="metric-context">ORM-Management bei Kotak Bank</div>
+      <div class="metric-number">+55</div>
+      <div class="metric-label">NPS-Steigerung</div>
+      <div class="metric-context">Von -20 auf +35 bei Kotak Bank durch Social-Strategien</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-number">20K<span>+</span></div>
+      <div class="metric-label">Leads/Monat</div>
+      <div class="metric-context">Qualifizierte Leads bei Kotak Mahindra Prime Ltd.</div>
     </div>
     <div class="metric-card">
       <div class="metric-number">40</div>
       <div class="metric-label">Mitarbeiter</div>
-      <div class="metric-context">Contact Centre aufgebaut bei Kotak Prime</div>
+      <div class="metric-context">Contact Centre von Null aufgebaut bei Kotak Mahindra Prime Ltd.</div>
     </div>
     <div class="metric-card">
       <div class="metric-number">95<span>%+</span></div>
       <div class="metric-label">SLA-Einhaltung</div>
-      <div class="metric-context">Tata CLiQ ORM-Abteilung</div>
+      <div class="metric-context">Tata CLiQ ORM-Abteilung (von Null aufgebaut)</div>
     </div>
     <div class="metric-card">
       <div class="metric-number">35<span>%</span></div>
       <div class="metric-label">Lead-Conversion</div>
-      <div class="metric-context">Kotak Prime Contact Centre</div>
+      <div class="metric-context">Kotak Mahindra Prime Ltd. Contact Centre (durchschnittliche Conversion-Rate)</div>
     </div>
     <div class="metric-card">
       <div class="metric-number">150<span>+</span></div>
       <div class="metric-label">Filialen</div>
-      <div class="metric-context">QR-Lead-Capture implementiert</div>
+      <div class="metric-context">QR-Lead-Capture in 150+ Filialen implementiert</div>
     </div>
   </div></div>
   <div class="lang-en"><div class="section-header">
@@ -1095,19 +1111,39 @@ body[data-lang="de"] .hobby-card h4 {
   </div>
   <div class="metrics-grid">
     <div class="metric-card">
-      <div class="metric-number">1.5M<span>+</span></div>
-      <div class="metric-label">Facebook Community</div>
-      <div class="metric-context">ORM management at Kotak Bank</div>
+      <div class="metric-number">1.8M<span>+</span></div>
+      <div class="metric-label">Total Community</div>
+      <div class="metric-context">Facebook + Instagram at Kotak Bank (followers at handover)</div>
     </div>
     <div class="metric-card">
-      <div class="metric-number">271K<span>+</span></div>
-      <div class="metric-label">Instagram Followers</div>
-      <div class="metric-context">ORM management at Kotak Bank</div>
+      <div class="metric-number">+55</div>
+      <div class="metric-label">NPS Improvement</div>
+      <div class="metric-context">From -20 to +35 at Kotak Bank through social strategies</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-number">20K<span>+</span></div>
+      <div class="metric-label">Leads/Month</div>
+      <div class="metric-context">Qualified leads at Kotak Mahindra Prime Ltd.</div>
     </div>
     <div class="metric-card">
       <div class="metric-number">40</div>
       <div class="metric-label">Officers</div>
-      <div class="metric-context">Contact centre launched at Kotak Prime</div>
+      <div class="metric-context">Contact centre built from zero at Kotak Mahindra Prime Ltd.</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-number">95<span>%+</span></div>
+      <div class="metric-label">SLA Adherence</div>
+      <div class="metric-context">Tata CLiQ ORM department (built from zero)</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-number">35<span>%</span></div>
+      <div class="metric-label">Lead Conversion</div>
+      <div class="metric-context">Kotak Mahindra Prime Ltd. contact centre (average conversion rate)</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-number">150<span>+</span></div>
+      <div class="metric-label">Branches</div>
+      <div class="metric-context">QR lead capture deployed across 150+ branches</div>
     </div>
   </div></div>
 </section>
@@ -1117,7 +1153,7 @@ body[data-lang="de"] .hobby-card h4 {
   <div class="lang-de"><div class="section-header">
     <div class="section-label">Berufserfahrung</div>
     <h2 class="section-title">Werdegang</h2>
-    <p class="section-desc">18 Jahre in 5 Positionen und 4 Branchen — die letzten 7 Jahre in Digital Operations und Customer Experience.</p>
+    <p class="section-desc">18 Jahre Berufserfahrung in 5 Positionen und 4 Branchen — 8 Jahre Kundenbetreuung, 7+ Jahre in Digital Marketing & Operations.</p>
   </div>
 
   <div class="timeline">
@@ -1128,20 +1164,24 @@ body[data-lang="de"] .hobby-card h4 {
           <div class="timeline-title">Performance Marketing & Social Media Manager</div>
           <div class="timeline-period">10/2022 – 01/2026</div>
         </div>
-        <div class="timeline-company">Kotak Mahindra Prime Ltd · <span class="sector">Finanzdienstleistungen (NBFC)</span> · Mumbai · ~8.500 Mitarbeiter</div>
+        <div class="timeline-company">Kotak Mahindra Prime Ltd. · <span class="sector">Finanzdienstleistungen (NBFC — Non-Banking Financial Company)</span> · Mumbai · ~8.500 Mitarbeiter</div>
         <div class="timeline-body">
           <ul>
-            <li>Aufbau der Instagram- und Facebook-Präsenz von Grund auf; monatliche Kampagnen mit Agenturen, 24h Turnaround.</li>
-            <li>QR-Code-Lead-Capture in 150+ Filialen, Integration mit Salesforce und OneDirect — Beschwerden um 5% reduziert.</li>
-            <li>WhatsApp Business API mit CRM-Integration zur Automatisierung von Enterprise-Kommunikation.</li>
-            <li>Echtzeit-Creative-Produktion und Social Strategy für Händler-Promotions.</li>
-            <li>Aufbau eines 40-Sitz Lead-Conversion Contact Centre von Null, Wissensdatenbank-Zentralisierung, ~35% Lead-Conversion.</li>
-            <li>Community Management mit &lt;10-min Response Time, zero Crisis-Eskalationen.</li>
-            <li>Legal- und Compliance-Freigabe aller Initiativen, vollständige DSGVO/DSGVO-Alignment.</li>
-            <li>Abrechnung und Rechnungsstellung für externe Dienstleister.</li>
+            <li>Aufbau der Instagram- und Facebook-Präsenz von Grund auf; monatliche Festival-Kampagnen mit externen Agenturen, 24h Turnaround-Zyklen.</li>
+            <li>Steigerung des Neugeschäfts um 2,7 Mio. € (35% Conversion Rate) durch integrierte Paid-Acquisition- und Lead-Generierungskampagnen; Skalierung auf 20.000 qualifizierte Leads/Monat.</li>
+            <li>QR-Code-Lead-Capture in 150+ Filialen implementiert, Integration mit Salesforce und OneDirect — Steigerung der Lead-Erfassung um 10%, Beschwerden um 5% reduziert.</li>
+            <li>WhatsApp Business API mit CRM-Integration zur Automatisierung von Enterprise-Kundenkommunikation.</li>
+            <li>Echtzeit-Creative-Produktion (Canva, Photoshop) und Social Strategy für Händler-Promotions.</li>
+            <li>Aufbau eines 40-Sitz Lead-Conversion Contact Centre von Null: Rekrutierung, Schulung, Wissensdatenbank, Eskalationsmatrix — 35% Lead-Conversion-Rate.</li>
+            <li>Aufbau der ORM-Abteilung (Online Reputation Management) von Null: Response-Time-Frameworks, Eskalationsmatrix, Qualitätsstandards.</li>
+            <li>Community Management mit durchschnittlich &lt;10-min Response Time, zero Crisis-Eskalationen über 3+ Jahre.</li>
+            <li>Ishikawa-Analyse (6 Ms) beim Contact-Centre-Aufbau für Root-Cause-Erkennung und strukturierte Problemlösung.</li>
+            <li>SWOT-Analyse (Strengths, Weaknesses, Opportunities, Threats) vor jedem Kampagnen-Launch und bei Officer-Performance-Reviews für datengetriebene Go/No-Go-Entscheidungen.</li>
+            <li>Legal- und Compliance-Freigabe aller Initiativen; vollständige DSGVO-Alignment dokumentiert.</li>
+            <li>Abrechnung, Budgetplanung und Rechnungsstellung für externe Kreativ- und Medien-Dienstleister.</li>
           </ul>
         </div>
-        <div class="timeline-skills"><strong>Schlüsselkompetenzen:</strong> Meta Ads Manager · A/B-Testing · Salesforce · WhatsApp Business API · DSGVO-Compliance</div>
+        <div class="timeline-skills"><strong>Schlüsselkompetenzen:</strong> Meta Ads Manager · A/B-Testing · ORM-Aufbau · Salesforce · WhatsApp Business API · Ishikawa-Analyse · SWOT-Analyse · DSGVO-Compliance</div>
       </div>
     </div>
 
@@ -1155,11 +1195,15 @@ body[data-lang="de"] .hobby-card h4 {
         <div class="timeline-company">Kotak Mahindra Bank Ltd · <span class="sector">Retail Banking</span> · Mumbai · ~116.000 Mitarbeiter</div>
         <div class="timeline-body">
           <ul>
-            <li>ORM-Management für 1,5M+ Facebook- und 271K+ Instagram-Communities.</li>
-            <li>Adaption globaler Brand Messaging für regionale Zielgruppen in diversen Märkten.</li>
-            <li>Community-Engagement-Programme, Kundenbindung um 15% YoY gesteigert.</li>
-            <li>Produkt-Storytelling-Kampagnen für Cross-Sell-Initiativen, Adoptionsrate um 12% verbessert.</li>
-            <li>Brand-Konsistenz und regulatorische Compliance in stark regulierter Branche.</li>
+            <li>ORM-Management für 1,5M+ Facebook- und 271K+ Instagram-Communities; durchschnittliche Response Time &lt;10 Minuten.</li>
+            <li>Steigerung des Net Promoter Score (NPS) von -20 auf +35 durch Social-Strategien mit hoher Interaktion für eine Community mit über 1,8 Mio. Followern.</li>
+            <li>Analyse von Funnel-Abbruchpunkten mithilfe von Social Listening und CRM-Daten; direkte Nutzung der Erkenntnisse für Paid-Campaign-Targeting und kreative Iterationen.</li>
+            <li>Adaption globaler Brand Messaging für regionale Zielgruppen in diversen indischen Märkten (6+ Sprachen).</li>
+            <li>Community-Engagement-Programme konzipiert und umgesetzt; Kundenbindung um 15% YoY gesteigert.</li>
+            <li>Produkt-Storytelling-Kampagnen für Cross-Sell-Initiativen; Adoptionsrate um 12% verbessert.</li>
+            <li>Reduzierung regulatorischer Risiken durch Senkung der RBI-Strafkosten um 10%, erreicht durch Optimierung von Beschwerdebearbeitungsprozessen und strikte Einhaltung von SLA-Fristen.</li>
+            <li>Brand-Konsistenz und regulatorische Compliance (RBI-Vorschriften (Reserve Bank of India — indische Zentralbank)) in stark regulierter Finanzbranche sichergestellt.</li>
+            <li>Content-Kalender und Editorial Planning mit 100% Stakeholder-Freigaberate.</li>
           </ul>
         </div>
         <div class="timeline-skills"><strong>Schlüsselkompetenzen:</strong> Community Management · ORM · Content Strategy · Interkulturelles Marketing · Stakeholder Management</div>
@@ -1176,14 +1220,14 @@ body[data-lang="de"] .hobby-card h4 {
         <div class="timeline-company">Tata Business Support Services (Tata CLiQ) · <span class="sector">E-Commerce</span> · ~2.700 Mitarbeiter</div>
         <div class="timeline-body">
           <ul>
-            <li>Aufbau der ORM-Abteilung von Null während der Wachstumsphase von Tata CLiQ.</li>
-            <li>Führung cross-channel Teams (E-Mail, Chat, Inbound, Outbound, Social) mit 95%+ SLA-Einhaltung.</li>
-            <li>Ishikawa-Analyse zur Identifikation von Root Causes hinter Service-Lücken.</li>
-            <li>CSAT um ~20% verbessert, negatives Sentiment um ~18% reduziert.</li>
-            <li>Brand-Interaktionen über alle Plattformen mit strukturierten Eskalations-Frameworks.</li>
+            <li>Leitung der ORM-Abteilung bei Tata CLiQ (E-Commerce-Plattform) während der Wachstumsphase.</li>
+            <li>Führung eines 70-köpfigen Multi-Channel-Betriebs (E-Mail, Chat, Inbound, Outbound, Social) mit 95%+ SLA-Einhaltung (Service Level Agreement).</li>
+            <li>Kundenzufriedenheit (CSAT) um 20% verbessert, negatives Sentiment um 18% reduziert durch gezielte Prozessoptimierung.</li>
+            <li>Brand-Interaktionen über alle Plattformen mit strukturierten Eskalations-Frameworks und Response-Time-Monitoring.</li>
+            <li>Echtzeit-Floor-Support und Quality Assurance für operative Exzellenz.</li>
           </ul>
         </div>
-        <div class="timeline-skills"><strong>Schlüsselkompetenzen:</strong> ORM · Team Leadership · Ishikawa-Analyse · SLA Management · Cross-Channel Operations</div>
+        <div class="timeline-skills"><strong>Schlüsselkompetenzen:</strong> ORM · Team Leadership · SLA Management · Cross-Channel Operations · Prozessoptimierung</div>
       </div>
     </div>
 
@@ -1197,10 +1241,13 @@ body[data-lang="de"] .hobby-card h4 {
         <div class="timeline-company">ANI Technologies (Ola Cabs) · <span class="sector">Logistik</span> · ~7.000 Mitarbeiter</div>
         <div class="timeline-body">
           <ul>
-            <li>Führung von Inbound- und Outbound-Call-Centre-Operationen während des Ola Share Launches.</li>
-            <li>Kundenanfragen, Onboarding-Kommunikation und Issue Resolution im Massenmaßstab.</li>
-            <li>SLA-Einhaltung und Qualitätsstandards während rapiden Wachstums.</li>
-            <li>Unterstützung des Go-to-Market für neues Ride-Sharing-Produkt.</li>
+            <li>Führung von Inbound- und Outbound-Call-Centre-Operationen während des Ola Share Launches (neues Ride-Sharing-Produkt).</li>
+            <li>Umsetzung von Ola Share-Sicherheitsintegrationen und Sicherstellung operativer Standards für Millionen von Nutzer:innen während des nationalen Produktlaunches.</li>
+            <li>Kundenanfragen, Onboarding-Kommunikation und Issue Resolution im Massenmaßstab mit strukturierten Skripten.</li>
+            <li>Leitung des Eskalationsteams und Erreichen einer durchschnittlichen Lösungszeit von 48 Stunden bei konsistenter KPI-Einhaltung.</li>
+            <li>SLA-Einhaltung und Qualitätsstandards während rapiden Wachstums (Team-Expansion von 12 auf 35 Agenten in 4 Monaten).</li>
+            <li>Skript-Optimierung und Schulungsmaterialien für neue Agenten entwickelt; Handling Time um 15% reduziert.</li>
+            <li>Go-to-Market-Unterstützung für Ride-Sharing-Produkt mit Fokus auf Kundenakquise und Retention.</li>
           </ul>
         </div>
         <div class="timeline-skills"><strong>Schlüsselkompetenzen:</strong> Call Centre Operations · Launch Support · SLA Management · Quality Assurance · Training Delivery</div>
@@ -1211,27 +1258,30 @@ body[data-lang="de"] .hobby-card h4 {
       <div class="timeline-dot"></div>
       <div class="timeline-content">
         <div class="timeline-header">
-          <div class="timeline-title">Subject Matter Expert — Communication Training</div>
+          <div class="timeline-title">Subject Matter Expert — Product & Process Training</div>
           <div class="timeline-period">10/2007 – 08/2015</div>
         </div>
-        <div class="timeline-company">Sutherland Global Services · <span class="sector">BPO</span> · ~40.000 Mitarbeiter</div>
+        <div class="timeline-company">Sutherland Global Services · <span class="sector">BPO</span> · Symantec & AT&T Prozesse · ~40.000 Mitarbeiter</div>
         <div class="timeline-body">
           <ul>
-            <li>Konzeption von Kommunikationstrainings für Kundensupport-Teams.</li>
-            <li>Optimierung von Skripten und Service-Messaging, Handling Time um 15% reduziert.</li>
-            <li>Quality Scores um 25% verbessert, First-Contact-Resolution um 18% gesteigert.</li>
-            <li>Mehrere Auszeichnungen für Floor Support und SME-Leadership.</li>
-            <li>Echtzeit-Floor-Support für operative Exzellenz.</li>
+            <li>Produkt- und Prozesstraining für Symantec (Sicherheitssoftware) und AT&T (Telekommunikation) Kundensupport-Teams.</li>
+            <li>Tiefes Produktwissen in Symantec Security-Lösungen und AT&T Service-Prozessen; komplexe technische Troubleshooting-Szenarien.</li>
+            <li>Steigerung des Umsatzes um 10% durch Konzeption und Umsetzung eines spezialisierten Upselling-Trainingsprogramms für neue Mitarbeitende.</li>
+            <li>Vervierfachung der Kundenbindung von 10% auf 40% bei rückerstattungsorientierten Nutzer:innen durch Training zur effektiven Kommunikation des Mehrwerts automatischer Verlängerungen.</li>
+            <li>Skript-Optimierung und Service-Messaging; Handling Time um 15% reduziert durch präzisere Dialogführung.</li>
+            <li>Quality Scores um 25% verbessert, First-Contact-Resolution um 18% gesteigert durch strukturierte Produkttrainings.</li>
+            <li>Echtzeit-Floor-Support für operative Exzellenz und Agenten-Coaching bei technischen Eskalationen.</li>
+            <li>Mehrfache Auszeichnungen: Best Floor Support (Juni 2009), Top SME in Exception Manager (2x 2014), Best Performing Support Tech (3x 2009–2011).</li>
           </ul>
         </div>
-        <div class="timeline-skills"><strong>Schlüsselkompetenzen:</strong> Communication Training · Skript-Optimierung · Quality Assurance · Floor Support · SME Leadership</div>
+        <div class="timeline-skills"><strong>Schlüsselkompetenzen:</strong> Product & Process Training · Skript-Optimierung · Quality Assurance · Floor Support · SME Leadership · Symantec · AT&T</div>
       </div>
     </div>
   </div></div>
   <div class="lang-en"><div class="section-header">
     <div class="section-label">Career</div>
     <h2 class="section-title">Professional Journey</h2>
-    <p class="section-desc">Eighteen years across five roles and four industries — the last seven in digital operations and customer experience.</p>
+    <p class="section-desc">Eighteen years across five roles and four industries — eight in customer operations, seven+ in digital marketing & operations.</p>
   </div>
 
   <div class="timeline">
@@ -1242,20 +1292,24 @@ body[data-lang="de"] .hobby-card h4 {
           <div class="timeline-title">Performance Marketing & Social Media Manager</div>
           <div class="timeline-period">10/2022 – 01/2026</div>
         </div>
-        <div class="timeline-company">Kotak Mahindra Prime Ltd · <span class="sector">Financial Services (NBFC)</span> · Mumbai · ~8,500 employees</div>
+        <div class="timeline-company">Kotak Mahindra Prime Ltd. · <span class="sector">Financial Services (NBFC — Non-Banking Financial Company)</span> · Mumbai · ~8,500 employees</div>
         <div class="timeline-body">
           <ul>
-            <li>Built the brand's first Instagram and Facebook presence from scratch; partnered with agencies to ship one campaign per month on a 24-hour turnaround.</li>
-            <li>Deployed QR codes across 150+ branches for lead capture, integrated with Salesforce and OneDirect — reduced complaints 5%.</li>
-            <li>Launched WhatsApp Business API integrated with CRM to automate enterprise communication workflows.</li>
-            <li>Directed real-time creative production and social strategy for dealer-partner promotions.</li>
-            <li>Built a 40-seat lead conversion contact centre from zero, centralising knowledge bases and hitting ~35% lead conversion.</li>
-            <li>Led community management with sub-10-minute response times and zero crisis escalations.</li>
-            <li>Secured Legal and Compliance sign-off on all initiatives with full GDPR/DSGVO alignment.</li>
-            <li>Managed departmental financial operations including billing and vendor invoicing.</li>
+            <li>Built the brand's first Instagram and Facebook presence from scratch; partnered with agencies to ship monthly festival campaigns on a 24-hour turnaround cycle.</li>
+            <li>Increased new business by €2.7M (35% conversion rate) through integrated paid acquisition and lead generation campaigns; scaled to 20,000 qualified leads/month.</li>
+            <li>Deployed QR codes across 150+ branches for lead capture, integrated with Salesforce and OneDirect — increased lead capture 10%, reduced complaints 5%.</li>
+            <li>Launched WhatsApp Business API integrated with CRM to automate enterprise customer communication workflows.</li>
+            <li>Directed real-time creative production (Canva, Photoshop) and social strategy for dealer-partner promotions.</li>
+            <li>Built a 40-seat lead conversion contact centre from zero: recruitment, training, knowledge base, escalation matrix — achieved 35% lead conversion rate.</li>
+            <li>Built the ORM (Online Reputation Management) department from zero: response-time frameworks, escalation matrix, quality standards.</li>
+            <li>Led community management with average sub-10-minute response times and zero crisis escalations over 3+ years.</li>
+            <li>Applied Ishikawa analysis (6 Ms) during contact centre setup for root-cause identification and structured problem-solving.</li>
+            <li>Conducted SWOT analysis before every campaign launch and during officer performance reviews for data-driven go/no-go decisions.</li>
+            <li>Secured Legal and Compliance sign-off on all initiatives; full GDPR/DSGVO alignment documented.</li>
+            <li>Managed departmental financial operations including billing, budget planning, and vendor invoicing.</li>
           </ul>
         </div>
-        <div class="timeline-skills"><strong>Key Skills:</strong> Meta Ads Manager · A/B Testing · Salesforce · WhatsApp Business API · GDPR Compliance</div>
+        <div class="timeline-skills"><strong>Key Skills:</strong> Meta Ads Manager · A/B Testing · ORM Build · Salesforce · WhatsApp Business API · Ishikawa Analysis · SWOT Analysis (Strengths, Weaknesses, Opportunities, Threats) · GDPR Compliance</div>
       </div>
     </div>
 
@@ -1269,11 +1323,15 @@ body[data-lang="de"] .hobby-card h4 {
         <div class="timeline-company">Kotak Mahindra Bank Ltd · <span class="sector">Retail Banking</span> · Mumbai · ~116,000 employees</div>
         <div class="timeline-body">
           <ul>
-            <li>Managed ORM for 1.5M+ Facebook and 271K+ Instagram communities.</li>
-            <li>Adapted global brand messaging for regional audiences across diverse markets.</li>
-            <li>Drove community engagement programmes that lifted customer retention 15% YoY.</li>
+            <li>Managed ORM for 1.5M+ Facebook and 271K+ Instagram communities; average response time under 10 minutes.</li>
+            <li>Increased Net Promoter Score (NPS) from -20 to +35 through high-interaction social strategies for a community of 1.8M+ followers.</li>
+            <li>Analysed funnel drop-off points using social listening and CRM data; directly applied insights for paid campaign targeting and creative iterations.</li>
+            <li>Adapted global brand messaging for regional audiences across diverse Indian markets (6+ languages).</li>
+            <li>Designed and executed community engagement programmes that lifted customer retention 15% YoY.</li>
             <li>Ran product storytelling campaigns for cross-sell initiatives, improving adoption 12%.</li>
-            <li>Maintained brand consistency and regulatory compliance in a heavily regulated sector.</li>
+            <li>Reduced regulatory risks by lowering RBI penalty costs 10%, achieved through optimisation of complaint handling processes and strict adherence to SLA deadlines.</li>
+            <li>Maintained brand consistency and regulatory compliance (RBI regulations (Reserve Bank of India)) in a heavily regulated financial sector.</li>
+            <li>Content calendars and editorial planning with 100% stakeholder approval rate.</li>
           </ul>
         </div>
         <div class="timeline-skills"><strong>Key Skills:</strong> Community Management · ORM · Content Strategy · Cross-Cultural Marketing · Stakeholder Management</div>
@@ -1290,14 +1348,14 @@ body[data-lang="de"] .hobby-card h4 {
         <div class="timeline-company">Tata Business Support Services (Tata CLiQ) · <span class="sector">E-Commerce</span> · ~2,700 employees</div>
         <div class="timeline-body">
           <ul>
-            <li>Built the ORM line of business from zero during Tata CLiQ's growth phase.</li>
-            <li>Supervised cross-channel teams (email, chat, inbound, outbound, social) with 95%+ SLA adherence.</li>
-            <li>Applied Ishikawa analysis to identify root causes behind service gaps.</li>
-            <li>Improved CSAT roughly 20% and trimmed negative sentiment around 18%.</li>
-            <li>Managed brand interactions across all platforms with structured resolution frameworks.</li>
+            <li>Led the ORM department at Tata CLiQ (e-commerce platform) during its growth phase.</li>
+            <li>Led a 70-person multi-channel operation (email, chat, inbound, outbound, social) with 95%+ SLA adherence.</li>
+            <li>Improved CSAT 20% and trimmed negative sentiment 18% through targeted process optimisation.</li>
+            <li>Managed brand interactions across all platforms with structured resolution frameworks and response-time monitoring.</li>
+            <li>Real-time floor support and quality assurance for operational excellence.</li>
           </ul>
         </div>
-        <div class="timeline-skills"><strong>Key Skills:</strong> ORM · Team Leadership · Ishikawa Analysis · SLA Management · Cross-Channel Operations</div>
+        <div class="timeline-skills"><strong>Key Skills:</strong> ORM · Team Leadership · SLA Management · Cross-Channel Operations · Process Optimisation</div>
       </div>
     </div>
 
@@ -1311,10 +1369,13 @@ body[data-lang="de"] .hobby-card h4 {
         <div class="timeline-company">ANI Technologies (Ola Cabs) · <span class="sector">Logistics</span> · ~7,000 employees</div>
         <div class="timeline-body">
           <ul>
-            <li>Led inbound and outbound call centre operations during the Ola Share launch.</li>
-            <li>Handled customer queries, onboarding communications, and issue resolution at scale.</li>
-            <li>Maintained SLA adherence and quality standards through rapid growth.</li>
-            <li>Supported go-to-market execution for a new ride-sharing product.</li>
+            <li>Led inbound and outbound call centre operations during the Ola Share launch (new ride-sharing product).</li>
+            <li>Implemented Ola Share safety integrations and ensured operational standards for millions of users during the national product launch.</li>
+            <li>Handled customer queries, onboarding communications, and issue resolution at scale with structured scripts.</li>
+            <li>Led the escalation team and achieved an average resolution time of 48 hours with consistent KPI adherence.</li>
+            <li>Maintained SLA adherence and quality standards through rapid growth (team expansion from 12 to 35 agents in 4 months).</li>
+            <li>Developed script optimisation and training materials for new agents; reduced handling time 15%.</li>
+            <li>Supported go-to-market execution for ride-sharing product with focus on customer acquisition and retention.</li>
           </ul>
         </div>
         <div class="timeline-skills"><strong>Key Skills:</strong> Call Centre Operations · Launch Support · SLA Management · Quality Assurance · Training Delivery</div>
@@ -1325,20 +1386,23 @@ body[data-lang="de"] .hobby-card h4 {
       <div class="timeline-dot"></div>
       <div class="timeline-content">
         <div class="timeline-header">
-          <div class="timeline-title">Subject Matter Expert — Communication Training</div>
+          <div class="timeline-title">Subject Matter Expert — Product & Process Training</div>
           <div class="timeline-period">10/2007 – 08/2015</div>
         </div>
-        <div class="timeline-company">Sutherland Global Services · <span class="sector">BPO</span> · ~40,000 employees</div>
+        <div class="timeline-company">Sutherland Global Services · <span class="sector">BPO</span> · Symantec & AT&T Processes · ~40,000 employees</div>
         <div class="timeline-body">
           <ul>
-            <li>Designed communication training programmes for customer support teams.</li>
-            <li>Optimised scripts and service messaging, cutting handling time 15%.</li>
-            <li>Improved quality scores 25% and first-contact resolution 18%.</li>
-            <li>Earned multiple awards for floor support and SME leadership.</li>
-            <li>Provided real-time floor support for operational excellence.</li>
+            <li>Product and process training for Symantec (security software) and AT&T (telecommunications) customer support teams.</li>
+            <li>Deep product knowledge in Symantec security solutions and AT&T service processes; complex technical troubleshooting scenarios.</li>
+            <li>Increased revenue 10% through design and implementation of a specialised upselling training programme for new employees.</li>
+            <li>Quadrupled customer retention from 10% to 40% for refund-oriented users through training on effectively communicating the value of automatic renewals.</li>
+            <li>Optimised scripts and service messaging; cut handling time 15% through more precise dialogue guidance.</li>
+            <li>Improved quality scores 25% and first-contact resolution 18% through structured product training programmes.</li>
+            <li>Real-time floor support for operational excellence and agent coaching on technical escalations.</li>
+            <li>Multiple awards: Best Floor Support (June 2009), Top SME in Exception Manager (2x 2014), Best Performing Support Tech (3x 2009–2011).</li>
           </ul>
         </div>
-        <div class="timeline-skills"><strong>Key Skills:</strong> Communication Training · Script Optimisation · Quality Assurance · Floor Support · SME Leadership</div>
+        <div class="timeline-skills"><strong>Key Skills:</strong> Product & Process Training · Script Optimisation · Quality Assurance · Floor Support · SME Leadership · Symantec · AT&T</div>
       </div>
     </div>
   </div></div>
@@ -1497,112 +1561,162 @@ body[data-lang="de"] .hobby-card h4 {
   <div class="lang-de"><div class="section-header">
     <div class="section-label">Kompetenzen</div>
     <h2 class="section-title">Tools & Expertise</h2>
-    <p class="section-desc">Stack aufgebaut über 7 Jahre praktischer Umsetzung.</p>
+    <p class="section-desc">Stack aufgebaut über 7 Jahre praktischer Umsetzung in Marketing, Vertrieb und Customer Experience.</p>
   </div>
   <div class="skills-grid">
     <div class="skill-category">
-      <div class="skill-category-header"><div class="skill-category-icon">P</div><div class="skill-category-title">Plattformen & Umsetzung</div></div>
+      <div class="skill-category-header"><div class="skill-category-icon">P</div><div class="skill-category-title">Plattformen & Kampagnenmanagement</div></div>
       <ul class="skill-list">
-        <li>Meta Business Suite <span class="skill-level skill-expert">Sehr gute Kenntnisse</span></li>
-        <li>Meta Ads Manager <span class="skill-level skill-expert">Sehr gute Kenntnisse</span></li>
-        <li>Instagram Strategie <span class="skill-level skill-expert">Sehr gute Kenntnisse</span></li>
-        <li>Facebook Community <span class="skill-level skill-expert">Sehr gute Kenntnisse</span></li>
-        <li>LinkedIn Kampagnen <span class="skill-level skill-advanced">Gute Kenntnisse</span></li>
+        <li>Meta Business Suite <span class="skill-level skill-expert">Experte</span></li>
+        <li>Meta Ads Manager <span class="skill-level skill-expert">Experte</span></li>
+        <li>Google Ads (KI-gestützt) <span class="skill-level skill-advanced">Fortgeschritten</span></li>
+        <li>LinkedIn Campaign Manager <span class="skill-level skill-advanced">Fortgeschritten</span></li>
+        <li>Instagram & Facebook Strategie <span class="skill-level skill-expert">Experte</span></li>
+        <li>WhatsApp Business API <span class="skill-level skill-advanced">Fortgeschritten</span></li>
+        <li>SEO/SEM Strategie & Briefings <span class="skill-level skill-advanced">Fortgeschritten</span></li>
       </ul>
     </div>
     <div class="skill-category">
-      <div class="skill-category-header"><div class="skill-category-icon">C</div><div class="skill-category-title">Creative & Content</div></div>
+      <div class="skill-category-header"><div class="skill-category-icon">A</div><div class="skill-category-title">Analyse, Tracking & Optimierung</div></div>
       <ul class="skill-list">
-        <li>Editorial Planning <span class="skill-level skill-expert">Sehr gute Kenntnisse</span></li>
-        <li>Reels & Shorts <span class="skill-level skill-expert">Sehr gute Kenntnisse</span></li>
-        <li>Canva & Photoshop <span class="skill-level skill-expert">Sehr gute Kenntnisse</span></li>
-        <li>AI Workflows (ChatGPT, Canva AI) <span class="skill-level skill-advanced">Gute Kenntnisse</span></li>
-        <li>Copy & Script Development <span class="skill-level skill-advanced">Gute Kenntnisse</span></li>
+        <li>Google Analytics 4 (GA4) <span class="skill-level skill-expert">Experte</span></li>
+        <li>Google Tag Manager <span class="skill-level skill-advanced">Fortgeschritten</span></li>
+        <li>A/B-Testing & Experimente <span class="skill-level skill-expert">Experte</span></li>
+        <li>Funnel-Analyse & CRO <span class="skill-level skill-expert">Experte</span></li>
+        <li>ROI / ROAS Reporting <span class="skill-level skill-expert">Experte</span></li>
+        <li>UTM-Attribution & Tracking <span class="skill-level skill-advanced">Fortgeschritten</span></li>
+        <li>Social Listening <span class="skill-level skill-advanced">Fortgeschritten</span></li>
       </ul>
     </div>
     <div class="skill-category">
-      <div class="skill-category-header"><div class="skill-category-icon">A</div><div class="skill-category-title">Analyse & Optimierung</div></div>
+      <div class="skill-category-header"><div class="skill-category-icon">C</div><div class="skill-category-title">Creative Production & Content</div></div>
       <ul class="skill-list">
-        <li>Google Analytics <span class="skill-level skill-expert">Sehr gute Kenntnisse</span></li>
-        <li>A/B-Testing <span class="skill-level skill-expert">Sehr gute Kenntnisse</span></li>
-        <li>Funnel-Analyse <span class="skill-level skill-expert">Sehr gute Kenntnisse</span></li>
-        <li>ROI / ROAS Reporting <span class="skill-level skill-expert">Sehr gute Kenntnisse</span></li>
-        <li>GDPR / DSGVO Compliance <span class="skill-level skill-expert">Sehr gute Kenntnisse</span></li>
+        <li>Editorial Planning & Content-Kalender <span class="skill-level skill-expert">Experte</span></li>
+        <li>Reels, Shorts & Video-Content <span class="skill-level skill-expert">Experte</span></li>
+        <li>Canva & Photoshop <span class="skill-level skill-expert">Experte</span></li>
+        <li>KI-gestützte Content-Produktion <span class="skill-level skill-expert">Experte</span></li>
+        <li>Copywriting & Skriptentwicklung <span class="skill-level skill-advanced">Fortgeschritten</span></li>
       </ul>
     </div>
     <div class="skill-category">
-      <div class="skill-category-header"><div class="skill-category-icon">O</div><div class="skill-category-title">CRM & Operations</div></div>
+      <div class="skill-category-header"><div class="skill-category-icon">O</div><div class="skill-category-title">CRM, Operations & Projektmanagement</div></div>
       <ul class="skill-list">
-        <li>Salesforce <span class="skill-level skill-advanced">Gute Kenntnisse</span></li>
-        <li>Locobuzz <span class="skill-level skill-advanced">Gute Kenntnisse</span></li>
-        <li>CRM-Segmentierung <span class="skill-level skill-advanced">Gute Kenntnisse</span></li>
-        <li>Excel & Budget Planning <span class="skill-level skill-expert">Sehr gute Kenntnisse</span></li>
-        <li>Stakeholder Management <span class="skill-level skill-expert">Sehr gute Kenntnisse</span></li>
+        <li>Salesforce CRM <span class="skill-level skill-advanced">Fortgeschritten</span></li>
+        <li>Salesforce Marketing Cloud <span class="skill-level skill-advanced">Fortgeschritten</span></li>
+        <li>Locobuzz <span class="skill-level skill-advanced">Fortgeschritten</span></li>
+        <li>CRM-Segmentierung <span class="skill-level skill-advanced">Fortgeschritten</span></li>
+        <li>Excel & Budgetplanung <span class="skill-level skill-expert">Experte</span></li>
+        <li>Stakeholder-Management <span class="skill-level skill-expert">Experte</span></li>
       </ul>
     </div>
     <div class="skill-category">
+      <div class="skill-category-header"><div class="skill-category-icon">V</div><div class="skill-category-title">Vertrieb & Akquise</div></div>
+      <ul class="skill-list">
+        <li>Lead-Generierung & Conversion <span class="skill-level skill-expert">Experte</span></li>
+        <li>Upselling & Cross-Selling <span class="skill-level skill-expert">Experte</span></li>
+        <li>Contact Centre Management <span class="skill-level skill-expert">Experte</span></li>
+        <li>Verkaufsgespräche & Closing <span class="skill-level skill-advanced">Fortgeschritten</span></li>
+        <li>Kundenbindung & Retention <span class="skill-level skill-expert">Experte</span></li>
+        <li>Produktschulung & Enablement <span class="skill-level skill-expert">Experte</span></li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <div class="skill-category-header"><div class="skill-category-icon">T</div><div class="skill-category-title">Technologie & Datenschutz</div></div>
+      <ul class="skill-list">
+        <li>Python (Data Science) <span class="skill-level skill-basic">Grundlagen</span></li>
+        <li>Symantec Security Solutions <span class="skill-level skill-advanced">Fortgeschritten</span></li>
+        <li>LogMeIn Remote Access <span class="skill-level skill-advanced">Fortgeschritten</span></li>
+        <li>DSGVO / GDPR Compliance <span class="skill-level skill-expert">Experte</span></li>
+      </ul>
+    </div>
+    <div class="skill-category" style="grid-column: 1 / -1;">
       <div class="skill-category-header"><div class="skill-category-icon">S</div><div class="skill-category-title">Sprachen</div></div>
-      <ul class="skill-list">
-        <li>Deutsch <span class="skill-level skill-advanced">B1 (Ziel: B2 bis Q4 2026)</span></li>
+      <ul class="skill-list" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;">
+        <li>Deutsch <span class="skill-level skill-advanced">B1 (Ziel B2 bis Q4 2026)</span></li>
         <li>Englisch <span class="skill-level skill-expert">C2 — Verhandlungssicher</span></li>
         <li>Hindi <span class="skill-level skill-expert">Muttersprache</span></li>
         <li>Marathi <span class="skill-level skill-expert">Muttersprache</span></li>
-      </ul>
-    </div>
-    <div class="skill-category">
-      <div class="skill-category-header"><div class="skill-category-icon">T</div><div class="skill-category-title">Technologie & Weiterbildung</div></div>
-      <ul class="skill-list">
-        <li>Python (Data Science) <span class="skill-level skill-basic">Grundkenntnisse</span></li>
-        <li>Google Ads AI-Powered <span class="skill-level skill-advanced">Gute Kenntnisse</span></li>
-        <li>WhatsApp Business API <span class="skill-level skill-advanced">Gute Kenntnisse</span></li>
-        <li>Datenschutzrecht (DSGVO) <span class="skill-level skill-expert">Sehr gute Kenntnisse</span></li>
       </ul>
     </div>
   </div></div>
   <div class="lang-en"><div class="section-header">
     <div class="section-label">Capabilities</div>
     <h2 class="section-title">Tools & Expertise</h2>
-    <p class="section-desc">Stack built over seven years of hands-on execution.</p>
+    <p class="section-desc">Stack built over seven years of hands-on execution in marketing, sales, and customer experience.</p>
   </div>
   <div class="skills-grid">
     <div class="skill-category">
-      <div class="skill-category-header"><div class="skill-category-icon">P</div><div class="skill-category-title">Platforms & Execution</div></div>
+      <div class="skill-category-header"><div class="skill-category-icon">P</div><div class="skill-category-title">Platforms & Campaign Management</div></div>
       <ul class="skill-list">
         <li>Meta Business Suite <span class="skill-level skill-expert">Expert</span></li>
         <li>Meta Ads Manager <span class="skill-level skill-expert">Expert</span></li>
-        <li>Instagram Strategy <span class="skill-level skill-expert">Expert</span></li>
-        <li>Facebook Community <span class="skill-level skill-expert">Expert</span></li>
-        <li>LinkedIn Campaigns <span class="skill-level skill-advanced">Advanced</span></li>
+        <li>Google Ads (AI-Powered) <span class="skill-level skill-advanced">Advanced</span></li>
+        <li>LinkedIn Campaign Manager <span class="skill-level skill-advanced">Advanced</span></li>
+        <li>Instagram & Facebook Strategy <span class="skill-level skill-expert">Expert</span></li>
+        <li>WhatsApp Business API <span class="skill-level skill-advanced">Advanced</span></li>
+        <li>SEO/SEM Strategy & Briefings <span class="skill-level skill-advanced">Advanced</span></li>
       </ul>
     </div>
     <div class="skill-category">
-      <div class="skill-category-header"><div class="skill-category-icon">C</div><div class="skill-category-title">Creative & Content</div></div>
+      <div class="skill-category-header"><div class="skill-category-icon">A</div><div class="skill-category-title">Analytics, Tracking & Optimisation</div></div>
       <ul class="skill-list">
-        <li>Editorial Planning <span class="skill-level skill-expert">Expert</span></li>
-        <li>Reels & Shorts <span class="skill-level skill-expert">Expert</span></li>
-        <li>Canva & Photoshop <span class="skill-level skill-expert">Expert</span></li>
-        <li>AI Workflows (ChatGPT, Canva AI) <span class="skill-level skill-advanced">Advanced</span></li>
-        <li>Copy & Script Development <span class="skill-level skill-advanced">Advanced</span></li>
-      </ul>
-    </div>
-    <div class="skill-category">
-      <div class="skill-category-header"><div class="skill-category-icon">A</div><div class="skill-category-title">Analytics & Optimisation</div></div>
-      <ul class="skill-list">
-        <li>Google Analytics <span class="skill-level skill-expert">Expert</span></li>
-        <li>A/B Testing <span class="skill-level skill-expert">Expert</span></li>
-        <li>Funnel Analysis <span class="skill-level skill-expert">Expert</span></li>
+        <li>Google Analytics 4 (GA4) <span class="skill-level skill-expert">Expert</span></li>
+        <li>Google Tag Manager <span class="skill-level skill-advanced">Advanced</span></li>
+        <li>A/B Testing & Experimentation <span class="skill-level skill-expert">Expert</span></li>
+        <li>Funnel Analysis & CRO <span class="skill-level skill-expert">Expert</span></li>
         <li>ROI / ROAS Reporting <span class="skill-level skill-expert">Expert</span></li>
-        <li>GDPR / DSGVO Compliance <span class="skill-level skill-expert">Expert</span></li>
+        <li>UTM Attribution & Tracking <span class="skill-level skill-advanced">Advanced</span></li>
+        <li>Social Listening <span class="skill-level skill-advanced">Advanced</span></li>
       </ul>
     </div>
     <div class="skill-category">
-      <div class="skill-category-header"><div class="skill-category-icon">O</div><div class="skill-category-title">CRM & Operations</div></div>
+      <div class="skill-category-header"><div class="skill-category-icon">C</div><div class="skill-category-title">Creative Production & Content</div></div>
       <ul class="skill-list">
-        <li>Salesforce <span class="skill-level skill-advanced">Advanced</span></li>
+        <li>Editorial Planning & Content Calendars <span class="skill-level skill-expert">Expert</span></li>
+        <li>Reels, Shorts & Video Content <span class="skill-level skill-expert">Expert</span></li>
+        <li>Canva & Photoshop <span class="skill-level skill-expert">Expert</span></li>
+        <li>AI-Assisted Content Production <span class="skill-level skill-expert">Expert</span></li>
+        <li>Copywriting & Script Development <span class="skill-level skill-advanced">Advanced</span></li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <div class="skill-category-header"><div class="skill-category-icon">O</div><div class="skill-category-title">CRM, Operations & Project Management</div></div>
+      <ul class="skill-list">
+        <li>Salesforce CRM <span class="skill-level skill-advanced">Advanced</span></li>
+        <li>Salesforce Marketing Cloud <span class="skill-level skill-advanced">Advanced</span></li>
         <li>Locobuzz <span class="skill-level skill-advanced">Advanced</span></li>
         <li>CRM Segmentation <span class="skill-level skill-advanced">Advanced</span></li>
         <li>Excel & Budget Planning <span class="skill-level skill-expert">Expert</span></li>
         <li>Stakeholder Management <span class="skill-level skill-expert">Expert</span></li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <div class="skill-category-header"><div class="skill-category-icon">S</div><div class="skill-category-title">Sales & Acquisition</div></div>
+      <ul class="skill-list">
+        <li>Lead Generation & Conversion <span class="skill-level skill-expert">Expert</span></li>
+        <li>Upselling & Cross-Selling <span class="skill-level skill-expert">Expert</span></li>
+        <li>Contact Centre Management <span class="skill-level skill-expert">Expert</span></li>
+        <li>Sales Conversations & Closing <span class="skill-level skill-advanced">Advanced</span></li>
+        <li>Customer Retention & Loyalty <span class="skill-level skill-expert">Expert</span></li>
+        <li>Product Training & Sales Enablement <span class="skill-level skill-expert">Expert</span></li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <div class="skill-category-header"><div class="skill-category-icon">T</div><div class="skill-category-title">Technology & Data Protection</div></div>
+      <ul class="skill-list">
+        <li>Python (Data Science) <span class="skill-level skill-basic">Basic</span></li>
+        <li>Symantec Security Solutions <span class="skill-level skill-advanced">Advanced</span></li>
+        <li>LogMeIn Remote Access <span class="skill-level skill-advanced">Advanced</span></li>
+        <li>GDPR / DSGVO Compliance <span class="skill-level skill-expert">Expert</span></li>
+      </ul>
+    </div>
+    <div class="skill-category" style="grid-column: 1 / -1;">
+      <div class="skill-category-header"><div class="skill-category-icon">L</div><div class="skill-category-title">Languages</div></div>
+      <ul class="skill-list" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;">
+        <li>German <span class="skill-level skill-advanced">B1 (Target B2 by Q4 2026)</span></li>
+        <li>English <span class="skill-level skill-expert">C2 — Business Fluent</span></li>
+        <li>Hindi <span class="skill-level skill-expert">Native</span></li>
+        <li>Marathi <span class="skill-level skill-expert">Native</span></li>
       </ul>
     </div>
   </div></div>
@@ -1629,8 +1743,8 @@ body[data-lang="de"] .hobby-card h4 {
         <div class="fishbone-cat"><strong>Measurement</strong>KPIs, CSAT, Inspektionsstandards</div>
         <div class="fishbone-cat"><strong>Environment</strong>Arbeitsplatz, Lärm, Remote-Setup</div>
       </div>
-      <p style="margin-top:12px;font-size:13px;color:var(--muted);"><strong>Meine Anwendung (Tata CLiQ):</strong> SLA unter 95% → 6-Ms-Analyse → Root Causes: unerfahrene Agenten, keine Eskalationsmatrix, CRM nicht integriert, unvollständige FAQs, keine Echtzeit-Dashboards, hohe Fluktuation.</p>
-      <div class="result-box">Ergebnis: SLA → 95%+ · CSAT ~+20% · Negatives Sentiment ~−18%</div>
+      <p style="margin-top:12px;font-size:13px;color:var(--muted);"><strong>Meine Anwendung (Kotak Mahindra Prime Ltd. Contact Centre):</strong> Beim Aufbau des 40-Sitz Lead-Conversion Contact Centre von Null — 6-Ms-Analyse identifizierte Root Causes: unzureichende Agenten-Schulung, fehlende Eskalationsmatrix, CRM nicht vollständig integriert, unvollständige Wissensdatenbank, keine Echtzeit-Performance-Dashboards, hohe Fluktuation in der Anfangsphase.</p>
+      <div class="result-box">Ergebnis: Contact Centre erfolgreich aufgebaut · 35% Lead-Conversion · Wissensdatenbank zentralisiert · SLA-Framework etabliert</div>
     </div>
     <div class="analysis-card">
       <h3>SWOT-Analyse</h3>
@@ -1642,8 +1756,8 @@ body[data-lang="de"] .hobby-card h4 {
         <div class="swot-item swot-o"><strong>OPPORTUNITIES</strong>Festival-Traffic-Peaks, EU-Markt-Adaptierbarkeit, AI-Content-Produktion</div>
         <div class="swot-item swot-t"><strong>THREATS</strong>Steigende Wettbewerber-Werbeausgaben in Peak-Saisons, Plattform-Algorithmus-Änderungen</div>
       </div>
-      <p style="margin-top:12px;font-size:13px;color:var(--muted);"><strong>Beispiel (Kotak Prime Reels):</strong> SWOT vor Launch → risikominimierter Rollout mit +28% Engagement-Wachstum.</p>
-      <div class="result-box">Ergebnis: Risikominimierte Rollouts · Datengetriebene Go/No-Go-Entscheidungen</div>
+      <p style="margin-top:12px;font-size:13px;color:var(--muted);"><strong>Beispiel (Kampagnen-Launch & Performance Review):</strong> SWOT vor jedem Kampagnen-Launch und bei Officer-Performance-Reviews — identifiziert Stärken zur Nutzung, Schwächen zur Adressierung, Chancen zur Maximierung und Risiken zur Minimierung. Datengetriebene Go/No-Go-Entscheidungen für jeden Rollout.</p>
+      <div class="result-box">Ergebnis: Risikominimierte Rollouts · Strukturierte Performance-Reviews · Datengetriebene Entscheidungen</div>
     </div>
   </div></div>
   <div class="lang-en"><div class="section-header">
@@ -1665,8 +1779,8 @@ body[data-lang="de"] .hobby-card h4 {
         <div class="fishbone-cat"><strong>Measurement</strong>KPIs, CSAT, inspection standards</div>
         <div class="fishbone-cat"><strong>Environment</strong>Workspace, noise, remote setup</div>
       </div>
-      <p style="margin-top:12px;font-size:13px;color:var(--muted);"><strong>My Application (Tata CLiQ):</strong> SLA below 95% → 6 Ms analysis → root causes: inexperienced agents, no escalation matrix, CRM not integrated, incomplete FAQs, no real-time dashboards, high turnover.</p>
-      <div class="result-box">Result: SLA → 95%+ · CSAT ~+20% · Negative sentiment ~−18%</div>
+      <p style="margin-top:12px;font-size:13px;color:var(--muted);"><strong>My Application (Kotak Mahindra Prime Ltd. Contact Centre):</strong> When building the 40-seat lead conversion contact centre from zero — 6 Ms analysis identified root causes: insufficient agent training, missing escalation matrix, CRM not fully integrated, incomplete knowledge base, no real-time performance dashboards, high turnover during ramp-up.</p>
+      <div class="result-box">Result: Contact centre successfully launched · 35% lead conversion · Knowledge base centralised · SLA framework established</div>
     </div>
     <div class="analysis-card">
       <h3>SWOT Analysis</h3>
@@ -1678,71 +1792,14 @@ body[data-lang="de"] .hobby-card h4 {
         <div class="swot-item swot-o"><strong>OPPORTUNITIES</strong>Festival traffic peaks, EU market adaptability, AI content production</div>
         <div class="swot-item swot-t"><strong>THREATS</strong>Rising competitor ad spend in peak seasons, platform algorithm shifts</div>
       </div>
-      <p style="margin-top:12px;font-size:13px;color:var(--muted);"><strong>Example (Kotak Prime Reels):</strong> SWOT before launch → risk-mitigated rollout with +28% engagement growth.</p>
-      <div class="result-box">Result: Risk-minimised rollouts · Data-driven go/no-go calls</div>
+      <p style="margin-top:12px;font-size:13px;color:var(--muted);"><strong>Example (Campaign Launch & Performance Review):</strong> SWOT conducted before every campaign launch and during officer performance reviews — identifies strengths to leverage, weaknesses to address, opportunities to maximise, and threats to mitigate. Data-driven go/no-go decisions for every rollout.</p>
+      <div class="result-box">Result: Risk-minimised rollouts · Structured performance reviews · Data-driven decisions</div>
     </div>
   </div></div>
 </section>
 
 <!-- Why Germany -->
-<section id="why-germany">
-  <div class="lang-de"><div class="section-header">
-    <div class="section-label">Warum Deutschland</div>
-    <h2 class="section-title">Mein Weg nach Berlin</h2>
-    <p class="section-desc">Langfristige Perspektive, strukturierte Integration und berufliche Weiterentwicklung im deutschen Markt.</p>
-  </div>
-  <div class="why-germany-grid">
-    <div class="why-germany-card">
-      <div class="icon">🇩🇪</div>
-      <h3>Langfristige Perspektive</h3>
-      <p>Mein Ziel ist eine dauerhafte berufliche und persönliche Integration in Deutschland. Die Chancenkarte ermöglicht mir unbeschränkten Arbeitsmarktzugang. Ich plane, meinen Wohnsitz dauerhaft in Berlin zu etablieren und beruflich aufzusteigen.</p>
-    </div>
-    <div class="why-germany-card">
-      <div class="icon">📈</div>
-      <h3>Berufliche Weiterentwicklung</h3>
-      <p>Deutschland bietet optimale Bedingungen für Customer Experience und Digital Operations — strukturierte Prozesse, datengetriebene Kultur und hohe Qualitätsstandards. Meine indische Erfahrung in Skalierung und Cross-Cultural Marketing ergänzt den deutschen Markt ideal.</p>
-    </div>
-    <div class="why-germany-card">
-      <div class="icon">🎯</div>
-      <h3>Deutsch-Sprachentwicklung</h3>
-      <p>Aktuell B1, systematischer Aufbau auf B2 bis Q4 2026. Intensivkurs mit berufsbezogenem Fokus (Marketing, Kundenkommunikation, Projektmanagement). Ziel: Verhandlungssicheres Deutsch für interne Stakeholder-Kommunikation.</p>
-    </div>
-    <div class="why-germany-card">
-      <div class="icon">🤝</div>
-      <h3>Kulturelle Integration</h3>
-      <p>Aktive Teilnahme am Berliner Berufsnetzwerk (LinkedIn, XING, Meetups). Vertraut mit deutscher Arbeitskultur: Pünktlichkeit, Sachlichkeit, Gründlichkeit, Teamorientierung und Work-Life-Balance. Bereit, mich vollständig in deutsche Teams zu integrieren.</p>
-    </div>
-  </div></div>
-  <div class="lang-en">
-  <div class="section-header">
-    <div class="section-label">Why Germany</div>
-    <h2 class="section-title">My Path to Berlin</h2>
-    <p class="section-desc">Long-term perspective, structured integration, and professional development in the German market.</p>
-  </div>
-  <div class="why-germany-grid">
-    <div class="why-germany-card">
-      <div class="icon">🇩🇪</div>
-      <h3>Long-Term Perspective</h3>
-      <p>My goal is permanent professional and personal integration in Germany. The Chancenkarte gives me unrestricted labour market access. I plan to establish my residence permanently in Berlin and advance professionally.</p>
-    </div>
-    <div class="why-germany-card">
-      <div class="icon">📈</div>
-      <h3>Professional Development</h3>
-      <p>Germany offers optimal conditions for customer experience and digital operations — structured processes, data-driven culture, and high quality standards. My Indian experience in scaling and cross-cultural marketing ideally complements the German market.</p>
-    </div>
-    <div class="why-germany-card">
-      <div class="icon">🎯</div>
-      <h3>German Language Development</h3>
-      <p>Currently B1, systematic build-up to B2 by Q4 2026. Intensive course with professional focus (marketing, customer communication, project management). Goal: negotiation-level German for internal stakeholder communication.</p>
-    </div>
-    <div class="why-germany-card">
-      <div class="icon">🤝</div>
-      <h3>Cultural Integration</h3>
-      <p>Active participation in Berlin's professional network (LinkedIn, XING, meetups). Familiar with German work culture: punctuality, objectivity, thoroughness, team orientation, and work-life balance. Ready to fully integrate into German teams.</p>
-    </div>
-  </div>
-</div>
-</section>
+
 
 <!-- Testimonials -->
 <section id="testimonials">
@@ -1763,7 +1820,7 @@ body[data-lang="de"] .hobby-card h4 {
     </div>
   </div>
   <div style="text-align:center; margin-top:24px; font-size:13px; color:var(--muted);">
-    <strong>Arbeitszeugnisse auf Anfrage verfügbar</strong> — Kotak Mahindra Prime, Kotak Mahindra Bank, Tata CLiQ, Ola Cabs, Sutherland Global Services
+    <strong>Arbeitszeugnisse auf Anfrage verfügbar</strong> — Kotak Mahindra Prime Ltd., Kotak Mahindra Bank, Tata CLiQ, Ola Cabs, Sutherland Global Services
   </div></div>
   <div class="lang-en"><div class="section-header">
     <div class="section-label">Voices</div>
@@ -1874,45 +1931,81 @@ body[data-lang="de"] .hobby-card h4 {
   <div class="lang-de"><div class="section-header">
     <div class="section-label">Qualifikationen</div>
     <h2 class="section-title">Zertifizierungen & Ausbildung</h2>
-    <p class="section-desc">Neueste zuerst — kontinuierliche Weiterbildung in Marketing, Analytik und Emerging Tech.</p>
+    <p class="section-desc">Neueste zuerst — kontinuierliche Weiterbildung in Marketing, Datenschutz und Emerging Tech.</p>
   </div>
   <div class="certs-grid">
     <div class="cert-card">
       <div class="cert-year">2026</div>
-      <h3 class="cert-title">Google Ads AI-Powered Performance Certificate</h3>
-      <div class="cert-org">Google</div>
-      <div class="cert-modules">AI-Powered Campaigns · Performance Max · Smart Bidding · Automated Insights · ROAS Optimisation</div>
+      <h3 class="cert-title">GDPR Foundations</h3>
+      <div class="cert-org">Measured Collective</div>
+      <div class="cert-modules">Datenschutz-Grundlagen · DSGVO-Compliance · Datenverarbeitung · Betroffenenrechte · Dokumentationspflichten</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-year">2026</div>
+      <h3 class="cert-title">Data Protection Training</h3>
+      <div class="cert-org">eDSB-Deutschland — External Data Protection Officers & Data Protection Managers</div>
+      <div class="cert-modules">Mitarbeiter-Awareness · Art. 39(1)(b) DSGVO · Datenschutz-Management · 480/500 Punkte · Gültigkeit: 12 Monate</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-year">2026</div>
+      <h3 class="cert-title">Google Ads AI-Powered Performance</h3>
+      <div class="cert-org">Google Skillshop</div>
+      <div class="cert-modules">KI-gestützte Kampagnen · Performance Max · Smart Bidding · Automatisierte Insights · ROAS-Optimierung</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-year">2025</div>
+      <h3 class="cert-title">KI/ML für Geodatenanalyse</h3>
+      <div class="cert-org">ISRO — Indian Space Research Organisation</div>
+      <div class="cert-modules">Künstliche Intelligenz · Machine Learning · Geodatenanalyse · Fernerkundung · Datenverarbeitung</div>
     </div>
     <div class="cert-card">
       <div class="cert-year">2025</div>
       <h3 class="cert-title">Python for Data Science</h3>
       <div class="cert-org">Learnbay</div>
-      <div class="cert-modules">Data Science · Python Programming · Data Analysis · Statistical Computing</div>
+      <div class="cert-modules">Data Science · Python-Programmierung · Datenanalyse · Statistische Berechnung</div>
     </div>
     <div class="cert-card">
       <div class="cert-year">2022</div>
       <h3 class="cert-title">Advanced Certificate — Digital Marketing & Communication</h3>
-      <div class="cert-org">MICA (UpGrad)</div>
-      <div class="cert-modules">Social Media Strategy · Content Marketing · Performance Campaigns · Analytics · Brand Communication</div>
+      <div class="cert-org">MICA / UpGrad</div>
+      <div class="cert-modules">Social Media Strategie · Content Marketing · Performance Kampagnen · Analytics · Brand Communication</div>
     </div>
     <div class="cert-card">
       <div class="cert-year">2005</div>
-      <h3 class="cert-title">Bachelor's Degree — Communication, Media Studies & Liberal Arts</h3>
-      <div class="cert-org">Bharatiya Vidya Bhavan, Mumbai, India</div>
-      <div class="cert-modules">Communication · Media Studies · Liberal Arts</div>
+      <h3 class="cert-title">Bachelor — Communication, Media Studies & Liberal Arts</h3>
+      <div class="cert-org">Bharatiya Vidya Bhavan (Mumbai, Indien)</div>
+      <div class="cert-modules">Kommunikation · Medienstudien · Liberal Arts</div>
     </div>
   </div></div>
   <div class="lang-en"><div class="section-header">
     <div class="section-label">Credentials</div>
     <h2 class="section-title">Certifications & Education</h2>
-    <p class="section-desc">Latest first — continuous upskilling in marketing, analytics, and emerging tech.</p>
+    <p class="section-desc">Latest first — continuous upskilling in marketing, data protection, and emerging tech.</p>
   </div>
   <div class="certs-grid">
     <div class="cert-card">
       <div class="cert-year">2026</div>
-      <h3 class="cert-title">Google Ads AI-Powered Performance Certificate</h3>
-      <div class="cert-org">Google</div>
+      <h3 class="cert-title">GDPR Foundations</h3>
+      <div class="cert-org">Measured Collective</div>
+      <div class="cert-modules">Data Protection Basics · GDPR Compliance · Data Processing · Data Subject Rights · Documentation Obligations</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-year">2026</div>
+      <h3 class="cert-title">Data Protection Training</h3>
+      <div class="cert-org">eDSB-Deutschland — External Data Protection Officers & Data Protection Managers</div>
+      <div class="cert-modules">Employee Awareness · Art. 39(1)(b) GDPR · Data Protection Management · 480/500 Points · Validity: 12 Months</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-year">2026</div>
+      <h3 class="cert-title">Google Ads AI-Powered Performance</h3>
+      <div class="cert-org">Google Skillshop</div>
       <div class="cert-modules">AI-Powered Campaigns · Performance Max · Smart Bidding · Automated Insights · ROAS Optimisation</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-year">2025</div>
+      <h3 class="cert-title">AI/ML for Geodata Analysis</h3>
+      <div class="cert-org">ISRO — Indian Space Research Organisation</div>
+      <div class="cert-modules">Artificial Intelligence · Machine Learning · Geodata Analysis · Remote Sensing · Data Processing</div>
     </div>
     <div class="cert-card">
       <div class="cert-year">2025</div>
@@ -1923,13 +2016,13 @@ body[data-lang="de"] .hobby-card h4 {
     <div class="cert-card">
       <div class="cert-year">2022</div>
       <h3 class="cert-title">Advanced Certificate — Digital Marketing & Communication</h3>
-      <div class="cert-org">MICA (UpGrad)</div>
+      <div class="cert-org">MICA / UpGrad</div>
       <div class="cert-modules">Social Media Strategy · Content Marketing · Performance Campaigns · Analytics · Brand Communication</div>
     </div>
     <div class="cert-card">
       <div class="cert-year">2005</div>
-      <h3 class="cert-title">Bachelor's Degree — Communication, Media Studies & Liberal Arts</h3>
-      <div class="cert-org">Bharatiya Vidya Bhavan, Mumbai, India</div>
+      <h3 class="cert-title">Bachelor — Communication, Media Studies & Liberal Arts</h3>
+      <div class="cert-org">Bharatiya Vidya Bhavan (Mumbai, India)</div>
       <div class="cert-modules">Communication · Media Studies · Liberal Arts</div>
     </div>
   </div></div>
@@ -1964,11 +2057,11 @@ body[data-lang="de"] .hobby-card h4 {
         </div>
       </div>
       <div class="contact-meta">
-        <strong>Sprachen:</strong> Deutsch (B1 — Grundkenntnisse, Ziel B2 bis Q4 2026), Englisch (C2 — verhandlungssicher), Hindi (Muttersprache), Marathi (Muttersprache)<br>
-        <strong>Arbeitserlaubnis:</strong> Unbeschränkter Arbeitsmarktzugang (Chancenkarte)<br>
+        <strong>Sprachen:</strong> Deutsch (B1 — berufsfokussierte Weiterbildung, Ziel B2 bis Q4 2026), Englisch (C2 — verhandlungssicher), Hindi (Muttersprache), Marathi (Muttersprache)<br>
+        <strong>Aufenthaltstitel:</strong> Chancenkarte (§ 20a AufenthG) — uneingeschränkte Arbeitserlaubnis, kein Arbeitsplatzwechsel genehmigungspflichtig<br>
         <strong>Verfügbarkeit:</strong> Sofort<br>
-        <strong>Geburtsdatum/-ort:</strong> Mumbai, Indien<br>
-        <strong>Familienstand:</strong> Ledig
+        <strong>Arbeitszeugnisse:</strong> Auf Anfrage verfügbar (Kotak Mahindra Prime, Kotak Mahindra Bank, Tata CLiQ, Ola Cabs, Sutherland Global Services)<br>
+        <strong>Geburtsdatum/-ort:</strong> 31. März 1983, Mumbai, Indien
       </div>
     </div>
     <div class="contact-cta-box">
@@ -2007,9 +2100,11 @@ body[data-lang="de"] .hobby-card h4 {
         </div>
       </div>
       <div class="contact-meta">
-        <strong>Languages:</strong> English (C2 — business fluent), Hindi (native), Marathi (native), German (B1, progressing toward B2 by Q4 2026)<br>
-        <strong>Work Permit:</strong> Unrestricted Labour Market Access (Chancenkarte)<br>
-        <strong>Availability:</strong> Immediate start
+        <strong>Languages:</strong> English (C2 — business fluent), Hindi (native), Marathi (native), German (B1, professional focus, progressing toward B2 by Q4 2026)<br>
+        <strong>Residence Permit:</strong> Opportunity Card (Chancenkarte, § 20a Residence Act) — unrestricted work authorisation, no employer sponsorship required<br>
+        <strong>Availability:</strong> Immediate start<br>
+        <strong>References:</strong> Available upon request (Kotak Mahindra Prime, Kotak Mahindra Bank, Tata CLiQ, Ola Cabs, Sutherland Global Services)<br>
+        <strong>Date/Place of Birth:</strong> 31 March 1983, Mumbai, India
       </div>
     </div>
     <div class="contact-cta-box">
@@ -2027,12 +2122,12 @@ body[data-lang="de"] .hobby-card h4 {
 <footer>
   <p>Chaitrali Borade · Customer Experience & Digital Operations · Berlin, Deutschland</p>
   <div class="legal-links">
+    <a href="#certs" class="lang-de">Zertifizierungen</a>
+    <a href="#certs" class="lang-en">Credentials</a>
     <a href="#impressum" class="lang-de">Impressum</a>
     <a href="#impressum" class="lang-en">Legal Notice</a>
     <a href="#datenschutz" class="lang-de">Datenschutzerklärung</a>
     <a href="#datenschutz" class="lang-en">Privacy Policy</a>
-    <a href="#lebenslauf" class="lang-de">Lebenslauf herunterladen</a>
-    <a href="#lebenslauf" class="lang-en">Download CV</a>
   </div>
   <p class="impressum lang-de">
     <strong>Impressum (§ 5 TMG):</strong><br>
